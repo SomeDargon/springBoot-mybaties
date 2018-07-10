@@ -1,10 +1,17 @@
 package com.student.util.security;
 
 import com.student.entity.User;
+import com.student.shiro.UserRealm;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.mgt.RealmSecurityManager;
+import org.apache.shiro.session.Session;
+import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.subject.SimplePrincipalCollection;
+import org.apache.shiro.subject.Subject;
 
-import javax.security.auth.Subject;
 
-public class ShiroUtil {
+public class ShiroUtils {
+
     public static Subject getSubjct()
     {
         return SecurityUtils.getSubject();
@@ -20,13 +27,11 @@ public class ShiroUtil {
         getSubjct().logout();
     }
 
-    public static User getUser()
-    {
+    public static User getUser() {
         return (User) getSubjct().getPrincipal();
     }
 
-    public static void setUser(User user)
-    {
+    public static void setUser(User user) {
         Subject subject = getSubjct();
         PrincipalCollection principalCollection = subject.getPrincipals();
         String realmName = principalCollection.getRealmNames().iterator().next();
@@ -35,8 +40,7 @@ public class ShiroUtil {
         subject.runAs(newPrincipalCollection);
     }
 
-    public static void clearCachedAuthorizationInfo()
-    {
+    public static void clearCachedAuthorizationInfo() {
         RealmSecurityManager rsm = (RealmSecurityManager) SecurityUtils.getSecurityManager();
         UserRealm realm = (UserRealm) rsm.getRealms().iterator().next();
         realm.clearCachedAuthorizationInfo();
@@ -44,7 +48,7 @@ public class ShiroUtil {
 
     public static Long getUserId()
     {
-        return getUser().getUserId().longValue();
+        return getUser().getId().longValue();
     }
 
     public static String getLoginName()

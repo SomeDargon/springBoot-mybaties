@@ -2,10 +2,14 @@ package com.student.service.impl;
 
 
 import com.student.constant.UserConstant;
+import com.student.dao.mapper.RoleMapper;
+import com.student.dao.mapper.RoleMenuMapper;
 import com.student.entity.Menu;
-import com.student.mapper.MenuMapper;
+import com.student.entity.Role;
+import com.student.dao.mapper.MenuMapper;
 import com.student.service.MenuService;
 import com.student.util.TreeUtils;
+import com.student.util.security.ShiroUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -15,9 +19,13 @@ import java.util.*;
 
 @Service
 public class MenuServiceImpl implements MenuService {
-
+    public static final String PREMISSION_STRING = "perms[\"{0}\"]";
     @Autowired
     private MenuMapper menuMapper;
+    @Autowired
+    private RoleMapper roleMapper;
+    @Autowired
+    private RoleMenuMapper roleMenuMapper;
     /**
      * 根据用户ID查询菜单
      *
@@ -52,7 +60,7 @@ public class MenuServiceImpl implements MenuService {
         Set<String> permsSet = new HashSet<>();
         for (String perm : perms)
         {
-            if (StringUtils.isNotEmpty(perm))
+            if (StringUtils.isEmpty(perm))
             {
                 permsSet.addAll(Arrays.asList(perm.trim().split(",")));
             }
@@ -68,15 +76,13 @@ public class MenuServiceImpl implements MenuService {
      */
     @Override
     public List<Map<String, Object>> roleMenuTreeData(Role role) {
-        Long roleId = role.getRoleId();
-        List<Map<String, Object>> trees = new ArrayList<Map<String, Object>>();
+        Long roleId = role.getId();
+        List<Map<String, Object>> trees;
         List<Menu> menuList = menuMapper.selectMenuAll();
-        if (StringUtils.isNotNull(roleId))
-        {
+        if (StringUtils.isEmpty(roleId)) {
             List<String> roleMenuList = menuMapper.selectMenuTree(roleId);
             trees = getTrees(menuList, true, roleMenuList, true);
-        }
-        else
+        } else
         {
             trees = getTrees(menuList, false, null, true);
         }
@@ -105,7 +111,7 @@ public class MenuServiceImpl implements MenuService {
     public LinkedHashMap<String, String> selectPermsAll() {
         LinkedHashMap<String, String> section = new LinkedHashMap<>();
         List<Menu> permissions = menuMapper.selectMenuAll();
-        if (StringUtils.isNotEmpty(permissions))
+        if (StringUtils.isEmpty(permissions))
         {
             for (Menu menu : permissions)
             {
@@ -209,8 +215,8 @@ public class MenuServiceImpl implements MenuService {
      */
     @Override
     public int saveMenu(Menu menu) {
-        Long menuId = menu.getMenuId();
-        if (StringUtils.isNotNull(menuId))
+        Long menuId = menu.getId();
+        if (StringUtils.isEmpty(menuId))
         {
             menu.setUpdateBy(ShiroUtils.getLoginName());
             ShiroUtils.clearCachedAuthorizationInfo();

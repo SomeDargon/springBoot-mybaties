@@ -1,8 +1,11 @@
 package com.student.service;
 
 import com.student.entity.Menu;
+import com.student.entity.Role;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public interface MenuService {
 
@@ -12,7 +15,14 @@ public interface MenuService {
      * @param userId 用户ID
      * @return 菜单列表
      */
-    List<Menu> selectMenusByUserId(Long userId);
+     List<Menu> selectMenusByUserId(Long userId);
+
+    /**
+     * 查询菜单集合
+     *
+     * @return 所有菜单信息
+     */
+    List<Menu> selectMenuAll();
 
     /**
      * 根据用户ID查询权限
@@ -20,22 +30,29 @@ public interface MenuService {
      * @param userId 用户ID
      * @return 权限列表
      */
-    List<String> selectPermsByUserId(Long userId);
+    Set<String> selectPermsByUserId(Long userId);
 
     /**
      * 根据角色ID查询菜单
      *
-     * @param roleId 角色ID
+     * @param role 角色对象
      * @return 菜单列表
      */
-    List<String> selectMenuTree(Long roleId);
+    List<Map<String, Object>> roleMenuTreeData(Role role);
 
     /**
-     * 查询系统所有菜单
+     * 查询所有菜单信息
      *
      * @return 菜单列表
      */
-    List<Menu> selectMenuAll();
+    List<Map<String, Object>> menuTreeData();
+
+    /**
+     * 查询系统所有权限
+     *
+     * @return 权限列表
+     */
+    Map<String, String> selectPermsAll();
 
     /**
      * 删除菜单管理信息
@@ -62,28 +79,27 @@ public interface MenuService {
     int selectCountMenuByParentId(Long parentId);
 
     /**
-     * 新增菜单信息
+     * 查询菜单使用数量
      *
-     * @param menu 菜单信息
+     * @param menuId 菜单ID
      * @return 结果
      */
-    int insertMenu(Menu menu);
+    int selectCountRoleMenuByMenuId(Long menuId);
 
     /**
-     * 修改菜单信息
+     * 保存菜单信息
      *
      * @param menu 菜单信息
      * @return 结果
      */
-    int updateMenu(Menu menu);
+    int saveMenu(Menu menu);
 
     /**
      * 校验菜单名称是否唯一
      *
-     * @param menuName 菜单名称
+     * @param menu 菜单信息
      * @return 结果
      */
-    Menu checkMenuNameUnique(String menuName);
-
+    String checkMenuNameUnique(Menu menu);
 
 }
