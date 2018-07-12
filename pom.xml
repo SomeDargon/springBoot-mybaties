@@ -29,6 +29,8 @@
         <lombok.version>1.16.14</lombok.version>
         <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
         <shiro.version>1.4.0</shiro.version>
+        <fastjson.version>1.2.47</fastjson.version>
+        <bitwalker.version>1.19</bitwalker.version>
     </properties>
 
     <dependencies>
@@ -87,11 +89,6 @@
             <version>${lombok.version}</version>
         </dependency>
 
-        <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-securit</artifactId>
-        </dependency>
-
         <!-- 热部署组件 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -124,6 +121,21 @@
             <artifactId>shiro-ehcache</artifactId>
             <version>${shiro.version}</version>
         </dependency>
+
+        <!-- 阿里JSON解析器 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+
+        <!-- 解析客户端操作系统、浏览器等 -->
+        <dependency>
+            <groupId>eu.bitwalker</groupId>
+            <artifactId>UserAgentUtils</artifactId>
+            <version>${bitwalker.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
