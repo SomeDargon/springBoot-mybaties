@@ -1,6 +1,8 @@
 package com.student.shiro;
 
 import com.student.entity.User;
+import com.student.exception.user.UserPasswordNotMatchException;
+import com.student.exception.user.UserPasswordRetryLimitExceedException;
 import com.student.service.MenuService;
 import com.student.service.RoleService;
 import com.student.util.security.ShiroUtils;

@@ -1,6 +1,8 @@
 package com.student.util;
 
 import com.student.constant.Constants;
+import com.student.entity.Logininfor;
+import com.student.service.impl.LogininforServiceImpl;
 import com.student.util.security.ShiroUtils;
 import com.student.util.spring.SpringUtils;
 import eu.bitwalker.useragentutils.UserAgent;
