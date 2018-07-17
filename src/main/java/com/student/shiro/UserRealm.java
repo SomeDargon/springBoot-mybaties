@@ -1,8 +1,8 @@
 package com.student.shiro;
 
+import com.student.component.server.shiro.LoginService;
 import com.student.entity.User;
-import com.student.exception.user.UserPasswordNotMatchException;
-import com.student.exception.user.UserPasswordRetryLimitExceedException;
+import com.student.exception.user.*;
 import com.student.service.MenuService;
 import com.student.service.RoleService;
 import com.student.util.security.ShiroUtils;
@@ -12,18 +12,25 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class UserRealm extends AuthorizingRealm {
+
+    private static final Logger log = LoggerFactory.getLogger(UserRealm.class);
 
     @Autowired
     private RoleService roleService;
 
     @Autowired
     private MenuService menuService;
+    @Autowired
+    private LoginService loginService;
 
     /**
      * 授权
+     *
      * @param principalCollection
      * @return
      */
@@ -43,47 +50,30 @@ public class UserRealm extends AuthorizingRealm {
      * 登录认证
      */
     @Override
-    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException
-    {
+    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         UsernamePasswordToken upToken = (UsernamePasswordToken) token;
         String username = upToken.getUsername();
         String password = "";
-        if (upToken.getPassword() != null)
-        {
+        if (upToken.getPassword() != null) {
             password = new String(upToken.getPassword());
         }
 
         User user = null;
-        try
-        {
+        try {
             user = loginService.login(username, password);
-        }
-        catch (CaptchaException e)
-        {
+        } catch (CaptchaException e) {
             throw new AuthenticationException(e.getMessage(), e);
-        }
-        catch (UserNotExistsException e)
-        {
+        } catch (UserNotExistsException e) {
             throw new UnknownAccountException(e.getMessage(), e);
-        }
-        catch (UserPasswordNotMatchException e)
-        {
+        } catch (UserPasswordNotMatchException e) {
             throw new IncorrectCredentialsException(e.getMessage(), e);
-        }
-        catch (UserPasswordRetryLimitExceedException e)
-        {
+        } catch (UserPasswordRetryLimitExceedException e) {
             throw new ExcessiveAttemptsException(e.getMessage(), e);
-        }
-        catch (UserBlockedException e)
-        {
+        } catch (UserBlockedException e) {
             throw new LockedAccountException(e.getMessage(), e);
-        }
-        catch (RoleBlockedException e)
-        {
+        } catch (RoleBlockedException e) {
             throw new LockedAccountException(e.getMessage(), e);
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             log.info("对用户[" + username + "]进行登录验证..验证未通过{}", e.getMessage());
             throw new AuthenticationException(e.getMessage(), e);
         }

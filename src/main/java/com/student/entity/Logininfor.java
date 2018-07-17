@@ -15,8 +15,6 @@ import java.util.Date;
  */
 @Getter
 @Setter
-@Entity
-@Table
 public class Logininfor extends BaseEntity {
     private static final long serialVersionUID = 1L;
 

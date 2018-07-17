@@ -12,15 +12,12 @@ import javax.persistence.Table;
  */
 @Getter
 @Setter
-@Table(name = "user_post")
 public class UserPost
 {
     /** 用户ID */
-    @Column(name = "user_id")
     private Long userId;
 
     /** 岗位ID */
-    @Column(name = "post_id")
     private Long postId;
 
 

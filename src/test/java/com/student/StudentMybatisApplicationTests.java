@@ -10,13 +10,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class StudentMybatisApplicationTests {
-
     @Autowired
-    private UserMapper userMapper;
+//    private UserMapper userMapper;
+//
 
     @Test
     public void contextLoads() {
-        userMapper.findByState(1);
+//        userMapper.findByState(1);
     }
 
 }

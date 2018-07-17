@@ -10,6 +10,13 @@ import java.util.List;
 public interface UserMapper {
 
     /**
+     * 根据条件分页查询用户对象
+     *
+     * @param user 用户信息
+     * @return 用户信息集合信息
+     */
+    public List<User> selectUserList(User user);
+    /**
      * @param userName 用户名
      * @return 用户对象信息
      */

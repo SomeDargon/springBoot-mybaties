@@ -2,6 +2,7 @@ package com.student.entity;
 
 
 import lombok.Data;
+import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,32 +10,26 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Data
-@Table(name = "user")
-@Entity
 public class User extends BaseEntity {
 
     /**
      * 部门ID
      */
-    @Column(name = "dept_id")
     private Long deptId;
 
     /**
      * 部门父ID
      */
-    @Column(name = "paren_id")
     private Long parentId;
 
     /**
      * 登录名称
      */
-    @Column(name = "login_name")
     private String loginName;
 
     /**
      * 用户名称
      */
-    @Column(name = "user_name")
     private String userName;
 
     /**
@@ -45,7 +40,6 @@ public class User extends BaseEntity {
     /**
      * 手机号码
      */
-    @Column(name = "phone_number")
     private String phoneNumber;
 
     /**
@@ -73,7 +67,6 @@ public class User extends BaseEntity {
      */
     private String status;
 
-    @Column(name = "del_flag")
     private String delFlag;
 
     /**
@@ -105,5 +98,15 @@ public class User extends BaseEntity {
 
     public static boolean isAdmin(Long userId) {
         return userId != null && 1L == userId;
+    }
+
+    /**
+     * 生成随机盐
+     */
+    public void randomSalt() {
+        // 一个Byte占两个字节，此处生成的3字节，字符串长度为6
+        SecureRandomNumberGenerator secureRandom = new SecureRandomNumberGenerator();
+        String hex = secureRandom.nextBytes(3).toHex();
+        setSalt(hex);
     }
 }

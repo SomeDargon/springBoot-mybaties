@@ -1,8 +1,9 @@
 package com.student.service.impl;
 
 import com.student.component.server.shiro.PasswordService;
+import com.student.constant.UserConstants;
 import com.student.dao.mapper.*;
-import com.student.entity.User;
+import com.student.entity.*;
 import com.student.service.UserService;
 import com.student.support.Convert;
 import com.student.util.StringUtils;
@@ -36,12 +37,10 @@ public class UserServiceImpl implements UserService {
      * 根据条件分页查询用户对象
      *
      * @param user 用户信息
-     *
      * @return 用户信息集合信息
      */
     @Override
-    public List<User> selectUserList(User user)
-    {
+    public List<User> selectUserList(User user) {
         return userMapper.selectUserList(user);
     }
 
@@ -52,8 +51,7 @@ public class UserServiceImpl implements UserService {
      * @return 用户对象信息
      */
     @Override
-    public User selectUserByLoginName(String userName)
-    {
+    public User selectUserByLoginName(String userName) {
         return userMapper.selectUserByLoginName(userName);
     }
 
@@ -63,8 +61,7 @@ public class UserServiceImpl implements UserService {
      * @return 用户对象信息
      */
     @Override
-    public User selectUserByPhoneNumber(String phoneNumber)
-    {
+    public User selectUserByPhoneNumber(String phoneNumber) {
         return userMapper.selectUserByPhoneNumber(phoneNumber);
     }
 
@@ -75,8 +72,7 @@ public class UserServiceImpl implements UserService {
      * @return 用户对象信息
      */
     @Override
-    public User selectUserByEmail(String email)
-    {
+    public User selectUserByEmail(String email) {
         return userMapper.selectUserByEmail(email);
     }
 
@@ -87,8 +83,7 @@ public class UserServiceImpl implements UserService {
      * @return 用户对象信息
      */
     @Override
-    public User selectUserById(Long userId)
-    {
+    public User selectUserById(Long userId) {
         return userMapper.selectUserById(userId);
     }
 
@@ -99,8 +94,7 @@ public class UserServiceImpl implements UserService {
      * @return 结果
      */
     @Override
-    public int deleteUserById(Long userId)
-    {
+    public int deleteUserById(Long userId) {
         // 删除用户与角色关联
         userRoleMapper.deleteUserRoleByUserId(userId);
         // 删除用户与岗位表
@@ -115,13 +109,10 @@ public class UserServiceImpl implements UserService {
      * @return 结果
      */
     @Override
-    public void deleteUserByIds(String ids) throws Exception
-    {
+    public void deleteUserByIds(String ids) throws Exception {
         Long[] userIds = Convert.toLongArray(ids);
-        for (Long userId : userIds)
-        {
-            if (User.isAdmin(userId))
-            {
+        for (Long userId : userIds) {
+            if (User.isAdmin(userId)) {
                 throw new Exception("不允许删除超级管理员用户");
             }
         }
@@ -135,12 +126,10 @@ public class UserServiceImpl implements UserService {
      * @return 结果
      */
     @Override
-    public int saveUser(User user)
-    {
+    public int saveUser(User user) {
         int count = 0;
         Long userId = user.getId();
-        if (StringUtils.isNotNull(userId))
-        {
+        if (StringUtils.isNotNull(userId)) {
             user.setUpdateBy(ShiroUtils.getLoginName());
             // 修改用户信息
             count = updateUser(user);
@@ -153,9 +142,7 @@ public class UserServiceImpl implements UserService {
             // 新增用户与岗位管理
             insertUserPost(user);
 
-        }
-        else
-        {
+        } else {
             user.randomSalt();
             user.setPassword(passwordService.encryptPassword(user.getLoginName(), user.getPassword(), user.getSalt()));
             user.setCreateBy(ShiroUtils.getLoginName());
@@ -176,8 +163,7 @@ public class UserServiceImpl implements UserService {
      * @return 结果
      */
     @Override
-    public int updateUser(User user)
-    {
+    public int updateUser(User user) {
         return userMapper.updateUser(user);
     }
 
@@ -188,8 +174,7 @@ public class UserServiceImpl implements UserService {
      * @return 结果
      */
     @Override
-    public int resetUserPwd(User user)
-    {
+    public int resetUserPwd(User user) {
         user.randomSalt();
         user.setPassword(passwordService.encryptPassword(user.getLoginName(), user.getPassword(), user.getSalt()));
         return updateUser(user);
@@ -200,19 +185,16 @@ public class UserServiceImpl implements UserService {
      *
      * @param user 用户对象
      */
-    public void insertUserRole(User user)
-    {
+    public void insertUserRole(User user) {
         // 新增用户与角色管理
         List<UserRole> list = new ArrayList<UserRole>();
-        for (Long roleId : user.getRoleIds())
-        {
+        for (Long roleId : user.getRoleIds()) {
             UserRole ur = new UserRole();
-            ur.setUserId(user.getUserId());
+            ur.setId(user.getId());
             ur.setRoleId(roleId);
             list.add(ur);
         }
-        if (list.size() > 0)
-        {
+        if (list.size() > 0) {
             userRoleMapper.batchUserRole(list);
         }
     }
@@ -222,19 +204,16 @@ public class UserServiceImpl implements UserService {
      *
      * @param user 用户对象
      */
-    public void insertUserPost(User user)
-    {
+    public void insertUserPost(User user) {
         // 新增用户与岗位管理
         List<UserPost> list = new ArrayList<UserPost>();
-        for (Long postId : user.getPostIds())
-        {
+        for (Long postId : user.getPostIds()) {
             UserPost up = new UserPost();
-            up.setUserId(user.getUserId());
+            up.setUserId(user.getId());
             up.setPostId(postId);
             list.add(up);
         }
-        if (list.size() > 0)
-        {
+        if (list.size() > 0) {
             userPostMapper.batchUserPost(list);
         }
     }
@@ -246,11 +225,9 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     @Override
-    public String checkLoginNameUnique(String loginName)
-    {
+    public String checkLoginNameUnique(String loginName) {
         int count = userMapper.checkLoginNameUnique(loginName);
-        if (count > 0)
-        {
+        if (count > 0) {
             return UserConstants.USER_NAME_NOT_UNIQUE;
         }
         return UserConstants.USER_NAME_UNIQUE;
@@ -259,21 +236,16 @@ public class UserServiceImpl implements UserService {
     /**
      * 校验用户名称是否唯一
      *
-     * @param phonenumber 用户名
-     * @return
      */
     @Override
-    public String checkPhoneUnique(User user)
-    {
-        if (user.getUserId() == null)
-        {
-            user.setUserId(-1L);
+    public String checkPhoneUnique(User user) {
+        if (user.getId() == null) {
+            user.setId(-1L);
         }
-        Long userId = user.getUserId();
-        User info = userMapper.checkPhoneUnique(user.getPhonenumber());
-        if (StringUtils.isNotNull(info) && StringUtils.isNotNull(info.getUserId())
-                && info.getUserId().longValue() != userId.longValue())
-        {
+        Long userId = user.getId();
+        User info = userMapper.checkPhoneUnique(user.getPhoneNumber());
+        if (StringUtils.isNotNull(info) && StringUtils.isNotNull(info.getId())
+                && info.getId().longValue() != userId.longValue()) {
             return UserConstants.USER_PHONE_NOT_UNIQUE;
         }
         return UserConstants.USER_PHONE_UNIQUE;
@@ -282,21 +254,17 @@ public class UserServiceImpl implements UserService {
     /**
      * 校验email是否唯一
      *
-     * @param email 用户名
      * @return
      */
     @Override
-    public String checkEmailUnique(User user)
-    {
-        if (user.getUserId() == null)
-        {
-            user.setUserId(-1L);
+    public String checkEmailUnique(User user) {
+        if (user.getId() == null) {
+            user.setId(-1L);
         }
-        Long userId = user.getUserId();
+        Long userId = user.getId();
         User info = userMapper.checkEmailUnique(user.getEmail());
-        if (StringUtils.isNotNull(info) && StringUtils.isNotNull(info.getUserId())
-                && info.getUserId().longValue() != userId.longValue())
-        {
+        if (StringUtils.isNotNull(info) && StringUtils.isNotNull(info.getId())
+                && info.getId().longValue() != userId.longValue()) {
             return UserConstants.USER_EMAIL_NOT_UNIQUE;
         }
         return UserConstants.USER_EMAIL_UNIQUE;
@@ -309,16 +277,13 @@ public class UserServiceImpl implements UserService {
      * @return 结果
      */
     @Override
-    public String selectUserRoleGroup(Long userId)
-    {
+    public String selectUserRoleGroup(Long userId) {
         List<Role> list = roleMapper.selectRolesByUserId(userId);
         StringBuffer idsStr = new StringBuffer();
-        for (Role role : list)
-        {
+        for (Role role : list) {
             idsStr.append(role.getRoleName()).append(",");
         }
-        if (StringUtils.isNotEmpty(idsStr.toString()))
-        {
+        if (StringUtils.isNotEmpty(idsStr.toString())) {
             return idsStr.substring(0, idsStr.length() - 1);
         }
         return idsStr.toString();
@@ -331,16 +296,13 @@ public class UserServiceImpl implements UserService {
      * @return 结果
      */
     @Override
-    public String selectUserPostGroup(Long userId)
-    {
+    public String selectUserPostGroup(Long userId) {
         List<Post> list = postMapper.selectPostsByUserId(userId);
         StringBuffer idsStr = new StringBuffer();
-        for (Post post : list)
-        {
+        for (Post post : list) {
             idsStr.append(post.getPostName()).append(",");
         }
-        if (StringUtils.isNotEmpty(idsStr.toString()))
-        {
+        if (StringUtils.isNotEmpty(idsStr.toString())) {
             return idsStr.substring(0, idsStr.length() - 1);
         }
         return idsStr.toString();

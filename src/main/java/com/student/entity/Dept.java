@@ -6,9 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Entity
 @Data
-@Table(name = "dept")
 public class Dept extends BaseEntity {
 
     /** 父部门ID */
