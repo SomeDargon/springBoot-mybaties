@@ -15,8 +15,9 @@ import org.springframework.util.StringUtils;
 
 import java.util.*;
 
-@Service
+@Service("roleService")
 public class RoleServiceImpl implements RoleService {
+
     @Autowired
     private RoleMapper roleMapper;
 
@@ -33,8 +34,7 @@ public class RoleServiceImpl implements RoleService {
      * @return 角色数据集合信息
      */
     @Override
-    public List<Role> selectRoleList(Role role)
-    {
+    public List<Role> selectRoleList(Role role) {
         return roleMapper.selectRoleList(role);
     }
 
@@ -45,14 +45,11 @@ public class RoleServiceImpl implements RoleService {
      * @return 权限列表
      */
     @Override
-    public Set<String> selectRoleKeys(Long userId)
-    {
+    public Set<String> selectRoleKeys(Long userId) {
         List<Role> perms = roleMapper.selectRolesByUserId(userId);
         Set<String> permsSet = new HashSet<>();
-        for (Role perm : perms)
-        {
-            if (StringUtils.isEmpty(perms))
-            {
+        for (Role perm : perms) {
+            if (StringUtils.isEmpty(perms)) {
                 permsSet.addAll(Arrays.asList(perm.getRoleKey().trim().split(",")));
             }
         }
@@ -66,16 +63,12 @@ public class RoleServiceImpl implements RoleService {
      * @return 角色列表
      */
     @Override
-    public List<Role> selectRolesByUserId(Long userId)
-    {
+    public List<Role> selectRolesByUserId(Long userId) {
         List<Role> userRoles = roleMapper.selectRolesByUserId(userId);
         List<Role> roles = roleMapper.selectRolesAll();
-        for (Role role : roles)
-        {
-            for (Role userRole : userRoles)
-            {
-                if (role.getId() == userRole.getId())
-                {
+        for (Role role : roles) {
+            for (Role userRole : userRoles) {
+                if (role.getId() == userRole.getId()) {
                     role.setFlag(true);
                     break;
                 }
@@ -90,8 +83,7 @@ public class RoleServiceImpl implements RoleService {
      * @return 角色列表
      */
     @Override
-    public List<Role> selectRoleAll()
-    {
+    public List<Role> selectRoleAll() {
         return roleMapper.selectRolesAll();
     }
 
@@ -102,8 +94,7 @@ public class RoleServiceImpl implements RoleService {
      * @return 角色对象信息
      */
     @Override
-    public Role selectRoleById(Long roleId)
-    {
+    public Role selectRoleById(Long roleId) {
         return roleMapper.selectRoleById(roleId);
     }
 
@@ -114,8 +105,7 @@ public class RoleServiceImpl implements RoleService {
      * @return 结果
      */
     @Override
-    public boolean deleteRoleById(Long roleId)
-    {
+    public boolean deleteRoleById(Long roleId) {
         return roleMapper.deleteRoleById(roleId) > 0 ? true : false;
     }
 
@@ -128,11 +118,9 @@ public class RoleServiceImpl implements RoleService {
     @Override
     public void deleteRoleByIds(String ids) throws Exception {
         Long[] roleIds = Convert.toLongArray(ids);
-        for (Long roleId : roleIds)
-        {
+        for (Long roleId : roleIds) {
             Role role = selectRoleById(roleId);
-            if (countUserRoleByRoleId(roleId) > 0)
-            {
+            if (countUserRoleByRoleId(roleId) > 0) {
                 throw new Exception(String.format("%1$s已分配,不能删除", role.getRoleName()));
             }
         }
@@ -146,19 +134,15 @@ public class RoleServiceImpl implements RoleService {
      * @return 结果
      */
     @Override
-    public int saveRole(Role role)
-    {
+    public int saveRole(Role role) {
         Long roleId = role.getId();
-        if (StringUtils.isEmpty(roleId))
-        {
+        if (StringUtils.isEmpty(roleId)) {
             role.setUpdateBy(ShiroUtils.getLoginName());
             // 修改角色信息
             roleMapper.updateRole(role);
             // 删除角色与菜单关联
             roleMenuMapper.deleteRoleMenuByRoleId(roleId);
-        }
-        else
-        {
+        } else {
             role.setCreateBy(ShiroUtils.getLoginName());
             // 新增角色信息
             roleMapper.insertRole(role);
@@ -172,20 +156,17 @@ public class RoleServiceImpl implements RoleService {
      *
      * @param role 角色对象
      */
-    public int insertRoleMenu(Role role)
-    {
+    public int insertRoleMenu(Role role) {
         int rows = 1;
         // 新增用户与角色管理
         List<RoleMenu> list = new ArrayList<RoleMenu>();
-        for (Long menuId : role.getMenuIds())
-        {
+        for (Long menuId : role.getMenuIds()) {
             RoleMenu rm = new RoleMenu();
             rm.setId(role.getId());
             rm.setMenuId(menuId);
             list.add(rm);
         }
-        if (list.size() > 0)
-        {
+        if (list.size() > 0) {
             rows = roleMenuMapper.batchRoleMenu(list);
         }
         return rows;
@@ -198,16 +179,13 @@ public class RoleServiceImpl implements RoleService {
      * @return 结果
      */
     @Override
-    public String checkRoleNameUnique(Role role)
-    {
-        if (role.getId() == null)
-        {
+    public String checkRoleNameUnique(Role role) {
+        if (role.getId() == null) {
             role.setId(-1L);
         }
         Long roleId = role.getId();
         Role info = roleMapper.checkRoleNameUnique(role.getRoleName());
-        if (StringUtils.isEmpty(info) && StringUtils.isEmpty(info.getId()) && info.getId() != roleId)
-        {
+        if (StringUtils.isEmpty(info) && StringUtils.isEmpty(info.getId()) && info.getId() != roleId) {
             return UserConstant.ROLE_NAME_NOT_UNIQUE;
         }
         return UserConstant.ROLE_NAME_UNIQUE;
@@ -220,8 +198,7 @@ public class RoleServiceImpl implements RoleService {
      * @return 结果
      */
     @Override
-    public int countUserRoleByRoleId(Long roleId)
-    {
+    public int countUserRoleByRoleId(Long roleId) {
         return userRoleMapper.countUserRoleByRoleId(roleId);
     }
 

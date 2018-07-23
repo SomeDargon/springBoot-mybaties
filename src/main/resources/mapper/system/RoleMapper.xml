@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.student.dao.mapper.RoleMapper">
 
 	<resultMap type="Role" id="RoleResult">
-		<id     property="roleId"       column="role_id"        />
+		<id     property="id"       column="id"        />
 		<result property="roleName"     column="role_name"      />
 		<result property="roleKey"      column="role_key"       />
 		<result property="roleSort"     column="role_sort"      />
@@ -18,7 +18,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</resultMap>
 	
 	<sql id="selectRoleVo">
-        select role_id, role_name, role_key, role_sort, status, create_time, remark from sys_role
+        select id, role_name, role_key, role_sort, status, create_time, remark from sys_role
     </sql>
 	
 	<select id="selectRoleList" parameterType="Role" resultMap="RoleResult">
@@ -37,10 +37,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 
 	<select id="selectRolesByUserId" parameterType="Long" resultMap="RoleResult">
-		SELECT r.role_id, r.role_name, r.role_key
+		SELECT r.id, r.role_name, r.role_key
 		FROM sys_user u
 			 LEFT JOIN sys_user_role ur ON u.user_id = ur.user_id
-			 LEFT JOIN sys_role r ON ur.role_id = r.role_id
+			 LEFT JOIN sys_role r ON ur.id = r.id
 		WHERE ur.user_id = #{userId}
 	</select>
 	
@@ -50,7 +50,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<select id="selectRoleById" parameterType="Long" resultMap="RoleResult">
 		<include refid="selectRoleVo"/>
-		where role_id = #{roleId}
+		where id = #{id}
 	</select>
 	
 	<select id="checkRoleNameUnique" parameterType="String" resultMap="RoleResult">
@@ -59,13 +59,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<delete id="deleteRoleById" parameterType="Long">
- 		delete from sys_role where role_id = #{roleId}
+ 		delete from sys_role where id = #{id}
  	</delete>
  	
  	<delete id="deleteRoleByIds" parameterType="Long">
- 		delete from sys_role where role_id in
- 		<foreach collection="array" item="roleId" open="(" separator="," close=")">
- 			#{roleId}
+ 		delete from sys_role where id in
+ 		<foreach collection="array" item="id" open="(" separator="," close=")">
+ 			#{id}
         </foreach> 
  	</delete>
  	
@@ -81,12 +81,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			update_time = sysdate()
  		</set>
  		where 1=1
- 		<if test="roleId != null">and role_id = #{roleId}</if>
+ 		<if test="id != null">and id = #{id}</if>
 	</update>
  	
- 	<insert id="insertRole" parameterType="Role" useGeneratedKeys="true" keyProperty="roleId">
+ 	<insert id="insertRole" parameterType="Role" useGeneratedKeys="true" keyProperty="id">
  		insert into sys_role(
- 			<if test="roleId != null and roleId != 0">role_id,</if>
+ 			<if test="id != null and id != 0">id,</if>
  			<if test="roleName != null and roleName != ''">role_name,</if>
  			<if test="roleKey != null and roleKey != ''">role_key,</if>
  			<if test="roleSort != null and roleSort != ''">role_sort,</if>
@@ -95,7 +95,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			<if test="createBy != null and createBy != ''">create_by,</if>
  			create_time
  		)values(
- 			<if test="roleId != null and roleId != 0">#{roleId},</if>
+ 			<if test="id != null and id != 0">#{id},</if>
  			<if test="roleName != null and roleName != ''">#{roleName},</if>
  			<if test="roleKey != null and roleKey != ''">#{roleKey},</if>
  			<if test="roleSort != null and roleSort != ''">#{roleSort},</if>

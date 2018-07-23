@@ -72,13 +72,11 @@ public class User extends BaseEntity {
     /**
      * 最后登陆IP
      */
-    @Column(name = "login_ip")
     private String loginIp;
 
     /**
      * 最后登陆时间
      */
-    @Column(name = "login_date")
     private Date loginDate;
 
     /**

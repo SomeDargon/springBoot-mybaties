@@ -11,10 +11,12 @@ import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.crypto.hash.Md5Hash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.util.concurrent.atomic.AtomicInteger;
 
+@Component
 public class PasswordService {
 
     @Autowired

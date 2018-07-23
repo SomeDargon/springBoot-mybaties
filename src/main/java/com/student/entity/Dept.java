@@ -10,15 +10,12 @@ import javax.persistence.Table;
 public class Dept extends BaseEntity {
 
     /** 父部门ID */
-    @Column(name = "parent_id")
     private Long parentId;
 
     /** 部门名称 */
-    @Column(name = "dept_name")
     private String deptName;
 
     /** 显示顺序 */
-    @Column(name = "order_num")
     private String orderNum;
 
     /** 负责人 */
@@ -34,6 +31,5 @@ public class Dept extends BaseEntity {
     private String status;
 
     /** 父部门名称 */
-    @Column(name = "parent_name")
     private String parentName;
 }
