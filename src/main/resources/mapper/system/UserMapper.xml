@@ -53,8 +53,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<if test="status != null and status != ''">
 			AND u.status = #{status}
 		</if>
-		<if test="phone_number != null and phone_number != ''">
-			AND u.phone_number like concat('%', #{phone_number}, '%')
+		<if test="phoneNumber != null and phoneNumber != ''">
+			AND u.phone_number like concat('%', #{phoneNumber}, '%')
 		</if>
 		<if test="deptId != null and parentId != null and parentId != 0">
 			AND u.dept_id IN (SELECT t.id FROM sys_dept t WHERE t.id = #{deptId} OR t.parent_id = #{deptId})
@@ -66,9 +66,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		where u.login_name = #{userName}
 	</select>
 
-	<select id="selectUserByphone_number" parameterType="String" resultMap="UserResult">
+	<select id="selectUserByPhoneNumber" parameterType="String" resultMap="UserResult">
 		<include refid="selectUserVo"/>
-		where u.phone_number = #{phone_number}
+		where u.phone_number = #{phoneNumber}
 	</select>
 
 	<select id="selectUserByEmail" parameterType="String" resultMap="UserResult">
@@ -81,7 +81,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 
 	<select id="checkPhoneUnique" parameterType="String" resultMap="UserResult">
-		select id, phone_number from sys_user where phone_number=#{phone_number}
+		select id, phone_number from sys_user where phone_number=#{phoneNumber}
 	</select>
 
 	<select id="checkEmailUnique" parameterType="String" resultMap="UserResult">
@@ -111,7 +111,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			<if test="loginName != null and loginName != ''">login_name = #{loginName},</if>
  			<if test="userName != null and userName != ''">user_name = #{userName},</if>
  			<if test="email != null and email != ''">email = #{email},</if>
- 			<if test="phone_number != null and phone_number != ''">phone_number = #{phone_number},</if>
+ 			<if test="phoneNumber != null and phoneNumber != ''">phone_number = #{phoneNumber},</if>
  			<if test="sex != null and sex != ''">sex = #{sex},</if>
  			<if test="avatar != null and avatar != ''">avatar = #{avatar},</if>
  			<if test="password != null and password != ''">password = #{password},</if>
@@ -134,7 +134,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			<if test="loginName != null and loginName != ''">login_name,</if>
  			<if test="userName != null and userName != ''">user_name,</if>
  			<if test="email != null and email != ''">email,</if>
- 			<if test="phone_number != null and phone_number != ''">phone_number,</if>
+ 			<if test="phoneNumber != null and phoneNumber != ''">phone_number,</if>
  			<if test="sex != null and sex != ''">sex,</if>
  			<if test="password != null and password != ''">password,</if>
  			<if test="salt != null and salt != ''">salt,</if>
@@ -148,7 +148,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			<if test="loginName != null and loginName != ''">#{loginName},</if>
  			<if test="userName != null and userName != ''">#{userName},</if>
  			<if test="email != null and email != ''">#{email},</if>
- 			<if test="phone_number != null and phone_number != ''">#{phone_number},</if>
+ 			<if test="phoneNumber != null and phoneNumber != ''">#{phoneNumber},</if>
  			<if test="sex != null and sex != ''">#{sex},</if>
  			<if test="password != null and password != ''">#{password},</if>
  			<if test="salt != null and salt != ''">#{salt},</if>
@@ -180,7 +180,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			#{item.loginName},
 			#{item.userName},
 			#{item.email},
-			#{item.phone_number},
+			#{item.phoneNumber},
 			#{item.sex},
 			#{item.password},
 			#{item.salt},

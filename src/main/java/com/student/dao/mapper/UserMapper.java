@@ -15,7 +15,7 @@ public interface UserMapper {
      * @param user 用户信息
      * @return 用户信息集合信息
      */
-    public List<User> selectUserList(User user);
+    List<User> selectUserList(User user);
     /**
      * @param userName 用户名
      * @return 用户对象信息
@@ -89,10 +89,10 @@ public interface UserMapper {
     /**
      * 校验手机号码是否唯一
      *
-     * @param phonenumber 手机号码
+     * @param phoneNumber 手机号码
      * @return 结果
      */
-    User checkPhoneUnique(String phonenumber);
+    User checkPhoneUnique(String phoneNumber);
 
     /**
      * 校验email是否唯一
