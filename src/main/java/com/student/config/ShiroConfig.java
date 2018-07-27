@@ -1,6 +1,7 @@
 package com.student.config;
 
 import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
+import com.student.service.MenuService;
 import com.student.shiro.UserRealm;
 import com.student.shiro.filter.CaptchaValidateFilter;
 import com.student.shiro.filter.LogoutFilter;
@@ -8,6 +9,7 @@ import com.student.shiro.filter.OnlineSessionFilter;
 import com.student.shiro.filter.SyncOnlineSessionFilter;
 import com.student.shiro.session.OnlineSessionDAO;
 import com.student.shiro.session.OnlineSessionFactory;
+import com.student.util.spring.SpringUtils;
 import com.student.web.session.OnlineWebSessionManager;
 import com.student.web.session.SpringSessionValidationScheduler;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
@@ -234,7 +236,7 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/login", "anon,captchaValidate");
         filterChainDefinitionMap.put("/welcome", "anon,captchaValidate");
         // 系统权限列表
-        // filterChainDefinitionMap.putAll(SpringUtils.getBean(IMenuService.class).selectPermsAll());
+//        filterChainDefinitionMap.putAll(SpringUtils.getBean(MenuService.class).selectPermsAll());
 
         Map<String, Filter> filters = new LinkedHashMap<>();
         filters.put("onlineSession", onlineSessionFilter());

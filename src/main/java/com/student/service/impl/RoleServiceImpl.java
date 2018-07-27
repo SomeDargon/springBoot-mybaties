@@ -8,10 +8,10 @@ import com.student.entity.Role;
 import com.student.entity.RoleMenu;
 import com.student.service.RoleService;
 import com.student.support.Convert;
+import com.student.util.StringUtils;
 import com.student.util.security.ShiroUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
 import java.util.*;
 
@@ -49,7 +49,7 @@ public class RoleServiceImpl implements RoleService {
         List<Role> perms = roleMapper.selectRolesByUserId(userId);
         Set<String> permsSet = new HashSet<>();
         for (Role perm : perms) {
-            if (StringUtils.isEmpty(perms)) {
+            if (StringUtils.isNotEmpty(perms)) {
                 permsSet.addAll(Arrays.asList(perm.getRoleKey().trim().split(",")));
             }
         }
@@ -136,7 +136,7 @@ public class RoleServiceImpl implements RoleService {
     @Override
     public int saveRole(Role role) {
         Long roleId = role.getId();
-        if (StringUtils.isEmpty(roleId)) {
+        if (StringUtils.isNotNull(roleId)) {
             role.setUpdateBy(ShiroUtils.getLoginName());
             // 修改角色信息
             roleMapper.updateRole(role);
@@ -185,7 +185,7 @@ public class RoleServiceImpl implements RoleService {
         }
         Long roleId = role.getId();
         Role info = roleMapper.checkRoleNameUnique(role.getRoleName());
-        if (StringUtils.isEmpty(info) && StringUtils.isEmpty(info.getId()) && info.getId() != roleId) {
+        if (StringUtils.isNotNull(info) && StringUtils.isNotNull(info.getId()) && info.getId() != roleId) {
             return UserConstant.ROLE_NAME_NOT_UNIQUE;
         }
         return UserConstant.ROLE_NAME_UNIQUE;

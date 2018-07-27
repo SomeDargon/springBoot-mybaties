@@ -1,6 +1,7 @@
 package com.student.shiro;
 
 import com.student.component.server.shiro.LoginService;
+import com.student.entity.Role;
 import com.student.entity.User;
 import com.student.exception.user.*;
 import com.student.service.MenuService;
@@ -15,6 +16,8 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.Set;
 
 public class UserRealm extends AuthorizingRealm {
 
@@ -39,9 +42,11 @@ public class UserRealm extends AuthorizingRealm {
         Long userId = ShiroUtils.getUserId();
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         // 角色加入AuthorizationInfo认证对象
-        info.setRoles(roleService.selectRoleKeys(userId));
+        Set<String> roles = roleService.selectRoleKeys(userId);
+        info.setRoles(roles);
         // 权限加入AuthorizationInfo认证对象
-        info.setStringPermissions(menuService.selectPermsByUserId(userId));
+        Set<String> permissions = menuService.selectPermsByUserId(userId);
+        info.setStringPermissions(permissions);
         return info;
 
     }

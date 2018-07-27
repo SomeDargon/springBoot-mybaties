@@ -34,8 +34,7 @@ public class OnlineSessionFilter extends AccessControlFilter {
      * 表示是否允许访问；mappedValue就是[urls]配置中拦截器参数部分，如果允许访问返回true，否则false；
      */
     @Override
-    protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue)
-            throws Exception {
+    protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) {
         Subject subject = getSubject(request, response);
         if (subject == null || subject.getSession() == null) {
             return true;
@@ -45,7 +44,7 @@ public class OnlineSessionFilter extends AccessControlFilter {
             OnlineSession onlineSession = (OnlineSession) session;
             request.setAttribute(ShiroConstants.ONLINE_SESSION, onlineSession);
             // 把user对象设置进去
-            boolean isGuest = onlineSession.getUserId() == null || onlineSession.getUserId() == 0L;
+            boolean isGuest = onlineSession.getUserId() == null || onlineSession.getUserId() == 1L;
             if (isGuest == true) {
                 User user = ShiroUtils.getUser();
                 if (user != null) {

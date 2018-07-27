@@ -8,11 +8,11 @@ import com.student.entity.Menu;
 import com.student.entity.Role;
 import com.student.dao.mapper.MenuMapper;
 import com.student.service.MenuService;
+import com.student.util.StringUtils;
 import com.student.util.TreeUtils;
 import com.student.util.security.ShiroUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
 import java.text.MessageFormat;
 import java.util.*;
@@ -26,6 +26,7 @@ public class MenuServiceImpl implements MenuService {
     private RoleMapper roleMapper;
     @Autowired
     private RoleMenuMapper roleMenuMapper;
+
     /**
      * 根据用户ID查询菜单
      *
@@ -58,10 +59,8 @@ public class MenuServiceImpl implements MenuService {
     public Set<String> selectPermsByUserId(Long userId) {
         List<String> perms = menuMapper.selectPermsByUserId(userId);
         Set<String> permsSet = new HashSet<>();
-        for (String perm : perms)
-        {
-            if (StringUtils.isEmpty(perm))
-            {
+        for (String perm : perms) {
+            if (StringUtils.isNotNull(perm) && !perm.equals("")) {
                 permsSet.addAll(Arrays.asList(perm.trim().split(",")));
             }
         }
@@ -79,11 +78,10 @@ public class MenuServiceImpl implements MenuService {
         Long roleId = role.getId();
         List<Map<String, Object>> trees;
         List<Menu> menuList = menuMapper.selectMenuAll();
-        if (StringUtils.isEmpty(roleId)) {
+        if (StringUtils.isNotNull(roleId)) {
             List<String> roleMenuList = menuMapper.selectMenuTree(roleId);
             trees = getTrees(menuList, true, roleMenuList, true);
-        } else
-        {
+        } else {
             trees = getTrees(menuList, false, null, true);
         }
         return trees;
@@ -96,7 +94,7 @@ public class MenuServiceImpl implements MenuService {
      */
     @Override
     public List<Map<String, Object>> menuTreeData() {
-        List<Map<String, Object>> trees = new ArrayList<Map<String, Object>>();
+        List<Map<String, Object>> trees;
         List<Menu> menuList = menuMapper.selectMenuAll();
         trees = getTrees(menuList, false, null, false);
         return trees;
@@ -111,10 +109,8 @@ public class MenuServiceImpl implements MenuService {
     public LinkedHashMap<String, String> selectPermsAll() {
         LinkedHashMap<String, String> section = new LinkedHashMap<>();
         List<Menu> permissions = menuMapper.selectMenuAll();
-        if (StringUtils.isEmpty(permissions))
-        {
-            for (Menu menu : permissions)
-            {
+        if (StringUtils.isNotNull(permissions)) {
+            for (Menu menu : permissions) {
                 section.put(menu.getUrl(), MessageFormat.format(PREMISSION_STRING, menu.getPerms()));
             }
         }
@@ -124,28 +120,24 @@ public class MenuServiceImpl implements MenuService {
     /**
      * 对象转菜单树
      *
-     * @param menuList 菜单列表
-     * @param isCheck 是否需要选中
+     * @param menuList     菜单列表
+     * @param isCheck      是否需要选中
      * @param roleMenuList 角色已存在菜单列表
-     * @param permsFlag 是否需要显示权限标识
+     * @param permsFlag    是否需要显示权限标识
      * @return
      */
     public List<Map<String, Object>> getTrees(List<Menu> menuList, boolean isCheck, List<String> roleMenuList,
                                               boolean permsFlag) {
         List<Map<String, Object>> trees = new ArrayList<Map<String, Object>>();
-        for (Menu menu : menuList)
-        {
+        for (Menu menu : menuList) {
             Map<String, Object> deptMap = new HashMap<String, Object>();
             deptMap.put("id", menu.getId());
             deptMap.put("pId", menu.getParentId());
             deptMap.put("name", transMenuName(menu, roleMenuList, permsFlag));
             deptMap.put("title", menu.getMenuName());
-            if (isCheck)
-            {
+            if (isCheck) {
                 deptMap.put("checked", roleMenuList.contains(menu.getId() + menu.getPerms()));
-            }
-            else
-            {
+            } else {
                 deptMap.put("checked", false);
             }
             trees.add(deptMap);
@@ -156,8 +148,7 @@ public class MenuServiceImpl implements MenuService {
     public String transMenuName(Menu menu, List<String> roleMenuList, boolean permsFlag) {
         StringBuffer sb = new StringBuffer();
         sb.append(menu.getMenuName());
-        if (permsFlag)
-        {
+        if (permsFlag) {
             sb.append("<font color=\"#888\">&nbsp;&nbsp;&nbsp;" + menu.getPerms() + "</font>");
         }
         return sb.toString();
@@ -216,14 +207,11 @@ public class MenuServiceImpl implements MenuService {
     @Override
     public int saveMenu(Menu menu) {
         Long menuId = menu.getId();
-        if (StringUtils.isEmpty(menuId))
-        {
+        if (StringUtils.isNotNull(menuId)) {
             menu.setUpdateBy(ShiroUtils.getLoginName());
             ShiroUtils.clearCachedAuthorizationInfo();
             return menuMapper.updateMenu(menu);
-        }
-        else
-        {
+        } else {
             menu.setCreateBy(ShiroUtils.getLoginName());
             ShiroUtils.clearCachedAuthorizationInfo();
             return menuMapper.insertMenu(menu);
@@ -238,15 +226,13 @@ public class MenuServiceImpl implements MenuService {
      */
     @Override
     public String checkMenuNameUnique(Menu menu) {
-        if (menu.getId() == null)
-        {
+        if (menu.getId() == null) {
             menu.setId(-1L);
         }
         Long menuId = menu.getId();
         Menu info = menuMapper.checkMenuNameUnique(menu.getMenuName());
-        if (StringUtils.isEmpty(info) && StringUtils.isEmpty(info.getId())
-                && info.getId().longValue() != menuId.longValue())
-        {
+        if (StringUtils.isNotNull(info) && StringUtils.isNotNull(info.getId())
+                && info.getId().longValue() != menuId.longValue()) {
             return UserConstant.MENU_NAME_NOT_UNIQUE;
         }
         return UserConstant.MENU_NAME_UNIQUE;

@@ -40,7 +40,7 @@ public class UserController extends BaseController {
     private PostService postService;
 
     @RequiresPermissions("system:user:view")
-    @GetMapping()
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public String user() {
         return prefix + "/user";
     }
