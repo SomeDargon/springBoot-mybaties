@@ -9,12 +9,10 @@ import javax.persistence.Table;
 
 /**
  * 岗位对象 sys_post
- * 
  */
 @Getter
 @Setter
-public class Post extends BaseEntity
-{
+public class Post extends BaseEntity {
     private static final long serialVersionUID = 1L;
 
     private String postCode;

@@ -1,6 +1,6 @@
 package com.student.service.impl;
 
-import com.student.component.server.shiro.PasswordService;
+import com.student.component.server.PasswordService;
 import com.student.constant.UserConstants;
 import com.student.dao.mapper.*;
 import com.student.entity.*;
@@ -192,7 +192,7 @@ public class UserServiceImpl implements UserService {
         List<UserRole> list = new ArrayList<UserRole>();
         for (Long roleId : user.getRoleIds()) {
             UserRole ur = new UserRole();
-            ur.setId(user.getId());
+            ur.setUserId(user.getId());
             ur.setRoleId(roleId);
             list.add(ur);
         }

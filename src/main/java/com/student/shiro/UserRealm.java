@@ -1,7 +1,6 @@
 package com.student.shiro;
 
-import com.student.component.server.shiro.LoginService;
-import com.student.entity.Role;
+import com.student.component.server.LoginService;
 import com.student.entity.User;
 import com.student.exception.user.*;
 import com.student.service.MenuService;

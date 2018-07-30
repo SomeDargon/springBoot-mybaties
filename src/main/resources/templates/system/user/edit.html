@@ -6,7 +6,7 @@
 <body class="white-bg">
 	<div class="wrapper wrapper-content animated fadeInRight ibox-content">
 		<form class="form-horizontal m" id="form-user-edit" th:object="${user}">
-			<input name="userId"  type="hidden"  th:field="*{userId}" />
+			<input name="userId"  type="hidden"  th:field="*{id}" />
 			<input name="deptId"  type="hidden"  th:field="*{deptId}" id="treeId"/>
 			<div class="form-group">
 				<label class="col-sm-3 control-label ">登录名称：</label>
@@ -35,7 +35,7 @@
 			<div class="form-group">
 				<label class="col-sm-3 control-label">手机：</label>
 				<div class="col-sm-8">
-					<input class="form-control" type="text" name="phonenumber" id="phonenumber" th:field="*{phonenumber}">
+					<input class="form-control" type="text" name="phoneNumber" id="phoneNumber" th:field="*{phoneNumber}">
 				</div>
 			</div>
 			<div class="form-group">
@@ -62,7 +62,7 @@
 				<label class="col-sm-3 control-label">岗位：</label>
 				<div class="col-sm-8">
 					<select id="post" name="post" class="form-control select2-hidden-accessible" multiple="">
-						<option th:each="post:${posts}" th:value="${post.postId}" th:text="${post.postName}" th:selected="${post.flag}"></option>
+						<option th:each="post:${posts}" th:value="${post.id}" th:text="${post.postName}" th:selected="${post.flag}"></option>
 					</select>
 					
 				</div>
@@ -71,7 +71,7 @@
 				<label class="col-sm-3 control-label">角色：</label>
 				<div class="col-sm-8">
 					<label th:each="role:${roles}" class="checkbox-inline i-checks">
-						<input name="role" type="checkbox" th:value="${role.roleId}" th:text="${role.roleName}" th:checked="${role.flag}">
+						<input name="role" type="checkbox" th:value="${role.id}" th:text="${role.roleName}" th:checked="${role.flag}">
 					</label>
 				</div>
 			</div>
@@ -104,8 +104,8 @@
                         type: "post",
                         dataType: "json",
                         data: {
-                        	"userId": function() {
-                                return $("input[name='userId']").val();
+                        	"id": function() {
+                                return $("input[name='id']").val();
                             },
                 			"email": function() {
                                 return $("input[name='email']").val();
@@ -117,7 +117,7 @@
                         }
                     }
         		},
-        		phonenumber:{
+        		phoneNumber:{
         			required:true,
         			isPhone:true,
                     remote: {
@@ -125,11 +125,11 @@
                         type: "post",
                         dataType: "json",
                         data: {
-                        	"userId": function() {
-                                return $("input[name='userId']").val();
+                        	"id": function() {
+                                return $("input[name='id']").val();
                             },
-                			"phonenumber": function() {
-                                return $("input[name='phonenumber']").val();
+                			"phoneNumber": function() {
+                                return $("input[name='phoneNumber']").val();
                             }
                         },
                         dataFilter: function (data, type) {
@@ -143,7 +143,7 @@
         		"email": {
                     remote: "Email已经存在"
                 },
-        		"phonenumber":{
+        		"phoneNumber":{
                 	remote: "手机号码已经存在"
         		}
             },
@@ -153,11 +153,11 @@
         });
 
         function edit() {
-        	var userId = $("input[name='userId']").val();
+        	var userId = $("input[name='id']").val();
         	var deptId = $("input[name='deptId']").val();
         	var userName = $("input[name='userName']").val();
         	var email = $("input[name='email']").val();
-        	var phonenumber = $("input[name='phonenumber']").val();
+        	var phoneNumber = $("input[name='phoneNumber']").val();
         	var sex = $("#sex option:selected").val();
         	var status = $("input[name='status']").is(':checked') == true ? 0 : 1;
         	var roleIds = $.form.selectCheckeds("role");
@@ -167,11 +167,11 @@
         		type : "POST",
         		url : ctx + "system/user/save",
         		data : {
-        			"userId": userId,
+        			"id": userId,
         			"deptId": deptId,
         			"userName": userName,
         			"email": email,
-        			"phonenumber": phonenumber,
+        			"phoneNumber": phoneNumber,
         			"sex": sex,
         			"status": status,
         			"roleIds": roleIds,

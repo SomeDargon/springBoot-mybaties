@@ -1,4 +1,4 @@
-package com.student.component.server.shiro;
+package com.student.component.server;
 
 import com.student.constant.Constants;
 import com.student.entity.User;
