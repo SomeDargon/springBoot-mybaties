@@ -2,12 +2,14 @@ package com.student.entity;
 
 
 import com.student.util.AddressUtils;
+import lombok.Data;
 
 import java.util.Date;
 
 /**
  * 当前在线会话 sys_user_online
  */
+@Data
 public class UserOnline extends BaseEntity {
     private static final long serialVersionUID = 1L;
     /**
@@ -90,108 +92,5 @@ public class UserOnline extends BaseEntity {
         return online;
     }
 
-    public String getSessionId() {
-        return sessionId;
-    }
-
-    public void setSessionId(String sessionId) {
-        this.sessionId = sessionId;
-    }
-
-    public String getDeptName() {
-        return deptName;
-    }
-
-    public void setDeptName(String deptName) {
-        this.deptName = deptName;
-    }
-
-    public String getLoginName() {
-        return loginName;
-    }
-
-    public void setLoginName(String loginName) {
-        this.loginName = loginName;
-    }
-
-    public String getIpaddr() {
-        return ipaddr;
-    }
-
-    public void setIpaddr(String ipaddr) {
-        this.ipaddr = ipaddr;
-    }
-
-    public String getLonginLocation() {
-        return longinLocation;
-    }
-
-    public void setLonginLocation(String longinLocation) {
-        this.longinLocation = longinLocation;
-    }
-
-    public String getBrowser() {
-        return browser;
-    }
-
-    public void setBrowser(String browser) {
-        this.browser = browser;
-    }
-
-    public String getOs() {
-        return os;
-    }
-
-    public void setOs(String os) {
-        this.os = os;
-    }
-
-    public Date getStartTimestamp() {
-        return startTimestamp;
-    }
-
-    public void setStartTimestamp(Date startTimestamp) {
-        this.startTimestamp = startTimestamp;
-    }
-
-    public Date getLastAccessTime() {
-        return lastAccessTime;
-    }
-
-    public void setLastAccessTime(Date lastAccessTime) {
-        this.lastAccessTime = lastAccessTime;
-    }
-
-    public Long getExpireTime() {
-        return expireTime;
-    }
-
-    public void setExpireTime(Long expireTime) {
-        this.expireTime = expireTime;
-    }
-
-    public OnlineSession.OnlineStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(OnlineSession.OnlineStatus status) {
-        this.status = status;
-    }
-
-    public OnlineSession getSession() {
-        return session;
-    }
-
-    public void setSession(OnlineSession session) {
-        this.session = session;
-    }
-
-    @Override
-    public String toString() {
-        return "UserOnline [sessionId=" + sessionId + ", deptName=" + deptName + ", loginName=" + loginName
-                + ", ipaddr=" + ipaddr + ", browser=" + browser + ", os=" + os + ", startTimestamp=" + startTimestamp
-                + ", lastAccessTime=" + lastAccessTime + ", expireTime=" + expireTime + ", status=" + status
-                + ", session=" + session + "]";
-    }
 
 }

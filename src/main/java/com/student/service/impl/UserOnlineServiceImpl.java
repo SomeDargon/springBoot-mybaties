@@ -1,6 +1,6 @@
 package com.student.service.impl;
 
-import com.student.dao.mapper.UserOnlineMapper;
+import com.student.dao.mapper.monitor.UserOnlineMapper;
 import com.student.entity.UserOnline;
 import com.student.service.UserOnlineService;
 import com.student.shiro.session.OnlineSessionDAO;

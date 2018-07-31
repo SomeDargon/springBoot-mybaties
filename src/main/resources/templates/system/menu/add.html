@@ -6,7 +6,7 @@
 <body class="white-bg">
 	<div class="wrapper wrapper-content animated fadeInRight ibox-content">
 		<form class="form-horizontal m" id="form-menu-add">
-			<input id="treeId" name="parentId" type="hidden" th:value="${menu.menuId}" />
+			<input id="treeId" name="parentId" type="hidden" th:value="${menu.id}" />
 			<div class="form-group">
 				<label class="col-sm-3 control-label ">上级菜单：</label>
 				<div class="col-sm-8">
@@ -144,9 +144,9 @@
 
         /*菜单管理-新增-选择菜单树*/
         function selectMenuTree() {
-        	var menuId = $("#treeId").val();
-        	if(menuId > 0) {
-        		var url = prefix + "/selectMenuTree/" + menuId;
+        	var id = $("#treeId").val();
+        	if(id > 0) {
+        		var url = prefix + "/selectMenuTree/" + id;
         		$.modal.open("选择菜单", url, '380', '380');
         	}
         	else {

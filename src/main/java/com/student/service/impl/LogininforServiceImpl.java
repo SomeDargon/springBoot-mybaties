@@ -1,6 +1,6 @@
 package com.student.service.impl;
 
-import com.student.dao.mapper.LogininforMapper;
+import com.student.dao.mapper.monitor.LogininforMapper;
 import com.student.entity.Logininfor;
 import com.student.service.LogininforService;
 import com.student.support.Convert;

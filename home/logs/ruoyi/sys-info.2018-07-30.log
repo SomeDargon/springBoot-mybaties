@@ -1,0 +1,1055 @@
+10:28:51.063 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 5588 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+10:28:51.070 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+10:28:53.575 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+10:28:53.576 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+10:28:54.248 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+10:28:54.759 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+10:28:56.081 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+10:28:56.098 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+10:28:56.099 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+10:28:56.108 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+10:28:56.345 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+10:28:56.982 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+10:28:57.104 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+10:28:57.107 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+10:28:57.178 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+10:28:57.425 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+10:28:59.510 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+10:29:01.504 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+10:29:01.527 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+10:29:01.592 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+10:29:01.643 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+10:29:01.660 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+10:29:01.706 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 11.824 seconds (JVM running for 15.172)
+10:36:05.791 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+10:36:05.861 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+10:36:05.886 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+10:36:06.864 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+10:36:07.458 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. [1] sessions were stopped.
+10:40:54.397 [http-nio-80-exec-1] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Error][验证码错误]
+10:41:00.262 [http-nio-80-exec-8] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+10:46:06.907 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+10:46:06.907 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+10:56:06.945 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+10:56:06.961 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+11:06:06.969 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+11:06:06.972 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+11:06:42.246 [Thread-32] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
+11:06:42.814 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 5588 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:06:42.814 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:12:43.725 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 5588 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:12:43.726 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:13:01.836 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 5588 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:13:01.836 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:15:52.313 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 5588 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:15:52.313 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:15:55.874 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 5588 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:15:55.874 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:16:07.007 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+11:16:30.005 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 5588 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:16:30.005 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:16:38.663 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 5588 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:16:38.663 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:17:05.243 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 5588 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:17:05.243 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:17:18.084 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 5588 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:17:18.084 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:17:25.333 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 5588 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:17:25.333 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:17:39.510 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 8532 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:17:39.525 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:17:41.612 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+11:17:41.612 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+11:17:42.034 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+11:17:42.642 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+11:17:43.890 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+11:17:43.890 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+11:17:43.890 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+11:17:43.906 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+11:17:44.046 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+11:17:44.608 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+11:17:44.686 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+11:17:44.686 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+11:17:44.748 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+11:17:45.013 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+11:17:46.787 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+11:17:48.394 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+11:17:48.409 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+11:17:48.472 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+11:17:48.503 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+11:17:48.519 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+11:17:48.550 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 10.07 seconds (JVM running for 13.357)
+11:18:12.385 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11:18:12.421 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+11:18:12.437 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+11:18:13.438 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+11:18:13.775 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. [1] sessions were stopped.
+11:18:22.090 [http-nio-80-exec-4] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Error][验证码错误]
+11:19:07.001 [http-nio-80-exec-1] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+11:29:51.880 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 7344 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:29:51.880 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:29:54.398 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+11:29:54.398 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+11:29:54.976 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+11:29:55.398 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+11:29:56.818 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+11:29:56.834 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+11:29:56.834 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+11:29:56.834 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+11:29:57.052 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+11:29:57.637 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+11:29:57.715 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+11:29:57.730 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+11:29:57.793 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+11:29:58.027 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+11:29:59.936 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+11:30:01.832 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+11:30:01.848 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+11:30:01.910 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+11:30:01.942 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+11:30:01.973 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+11:30:02.020 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 11.292 seconds (JVM running for 14.472)
+11:30:33.304 [http-nio-80-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11:30:33.363 [http-nio-80-exec-2] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+11:30:33.367 [http-nio-80-exec-2] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+11:30:34.367 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+11:30:34.378 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+11:30:38.179 [http-nio-80-exec-8] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+11:33:18.438 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 5800 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:33:18.454 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:33:20.784 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+11:33:20.784 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+11:33:21.283 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+11:33:21.798 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+11:33:23.032 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+11:33:23.047 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+11:33:23.047 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+11:33:23.047 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+11:33:23.189 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+11:33:23.735 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+11:33:23.813 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+11:33:23.813 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+11:33:23.875 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+11:33:24.099 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+11:33:25.879 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+11:33:27.527 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+11:33:27.542 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+11:33:27.620 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+11:33:27.652 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+11:33:27.667 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+11:33:27.698 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 9.997 seconds (JVM running for 12.954)
+11:33:48.773 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11:33:48.826 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+11:33:48.830 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+11:33:49.861 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+11:33:49.875 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+11:33:54.134 [http-nio-80-exec-5] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Error][验证码错误]
+11:33:57.556 [http-nio-80-exec-8] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+11:36:26.947 [Thread-26] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
+11:36:28.200 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 5800 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:36:28.201 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:36:40.136 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 8364 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:36:40.142 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:36:43.699 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+11:36:43.700 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+11:36:44.238 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+11:36:44.624 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+11:36:45.785 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+11:36:45.806 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+11:36:45.807 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+11:36:45.813 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+11:36:46.079 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+11:36:46.636 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+11:36:46.765 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+11:36:46.767 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+11:36:46.825 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+11:36:47.045 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+11:36:48.790 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+11:36:50.754 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+11:36:50.776 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+11:36:50.835 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+11:36:50.866 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+11:36:50.882 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+11:36:50.912 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 11.574 seconds (JVM running for 13.853)
+11:36:52.095 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11:36:52.149 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+11:36:52.153 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+11:36:53.163 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+11:36:53.177 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+11:36:56.947 [http-nio-80-exec-4] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+11:45:24.752 [Thread-29] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
+11:45:26.105 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 8364 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:45:26.106 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:45:31.973 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 8364 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:45:31.973 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:45:38.014 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 8364 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:45:38.015 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:46:53.186 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+11:47:53.159 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 8364 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:47:53.159 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:47:58.407 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 8364 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:47:58.408 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:49:20.889 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 7980 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+11:49:20.893 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+11:49:23.133 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+11:49:23.134 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+11:49:23.646 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+11:49:24.151 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+11:49:25.369 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+11:49:25.382 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+11:49:25.383 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+11:49:25.388 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+11:49:25.537 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+11:49:26.129 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+11:49:26.217 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+11:49:26.219 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+11:49:26.274 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+11:49:26.485 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+11:49:28.350 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+11:49:30.008 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+11:49:30.029 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+11:49:30.098 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+11:49:30.130 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+11:49:30.145 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+11:49:30.178 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 10.246 seconds (JVM running for 12.91)
+11:49:35.074 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11:49:35.416 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+11:49:35.430 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+11:49:36.499 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+11:49:36.532 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+11:49:41.432 [http-nio-80-exec-2] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+11:59:36.603 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+11:59:36.606 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+12:01:03.464 [http-nio-80-exec-9] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Logout][退出成功]
+12:01:37.683 [http-nio-80-exec-4] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+12:04:25.264 [Thread-28] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
+12:04:26.273 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 7980 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+12:04:26.274 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+12:04:29.839 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 7980 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+12:04:29.839 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+12:09:36.488 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+14:04:30.631 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 8372 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:04:30.651 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:04:33.537 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+14:04:33.538 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+14:04:34.813 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+14:04:35.432 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+14:04:37.598 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:04:37.646 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:04:37.646 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+14:04:37.676 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+14:04:37.884 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:04:38.745 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14:04:39.027 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+14:04:39.030 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+14:04:39.207 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+14:04:39.503 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14:04:41.584 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+14:04:44.337 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+14:04:45.284 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+14:04:45.856 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+14:04:45.947 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:04:45.976 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:04:46.047 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 16.305 seconds (JVM running for 20.669)
+14:05:27.920 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:05:28.397 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+14:05:28.423 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+14:05:29.399 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+14:05:29.705 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. [1] sessions were stopped.
+14:05:41.627 [http-nio-80-exec-8] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+14:10:57.524 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 1500 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:10:57.530 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:11:00.366 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+14:11:00.367 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+14:11:00.747 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+14:11:01.339 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+14:11:02.630 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:11:02.643 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:11:02.644 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+14:11:02.660 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+14:11:02.830 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:11:03.385 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14:11:03.471 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+14:11:03.473 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+14:11:03.539 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+14:11:03.746 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14:11:05.594 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+14:11:07.259 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+14:11:07.283 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+14:11:07.343 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+14:11:07.372 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:11:07.391 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:11:07.437 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 10.715 seconds (JVM running for 13.167)
+14:14:29.519 [http-nio-80-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:14:29.848 [http-nio-80-exec-2] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+14:14:29.852 [http-nio-80-exec-2] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+14:14:30.851 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+14:14:30.869 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+14:14:34.265 [http-nio-80-exec-4] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+14:15:05.168 [Thread-29] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
+14:15:06.552 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 1500 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:15:06.552 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:15:36.313 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 10100 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:15:36.319 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:15:38.948 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+14:15:38.949 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+14:15:39.381 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+14:15:39.965 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+14:15:41.348 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:15:41.362 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:15:41.363 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+14:15:41.370 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+14:15:41.525 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:15:42.126 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14:15:42.235 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+14:15:42.237 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+14:15:42.299 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+14:15:42.531 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14:15:44.648 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+14:15:46.407 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+14:15:46.432 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+14:15:46.502 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+14:15:46.533 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:15:46.551 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:15:46.586 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 10.907 seconds (JVM running for 14.37)
+14:15:51.191 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:15:51.571 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+14:15:51.574 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+14:15:52.620 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+14:15:52.640 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+14:15:56.322 [http-nio-80-exec-9] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+14:16:34.673 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4020 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:16:34.678 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:16:37.484 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+14:16:37.485 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+14:16:37.954 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+14:16:38.576 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+14:16:39.911 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:16:39.929 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:16:39.930 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+14:16:39.944 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+14:16:40.138 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:16:40.721 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14:16:40.811 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+14:16:40.813 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+14:16:40.870 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+14:16:41.080 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14:16:43.193 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+14:16:45.015 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+14:16:45.037 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+14:16:45.101 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+14:16:45.130 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:16:45.152 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:16:45.192 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 11.122 seconds (JVM running for 14.682)
+14:17:12.682 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:17:13.056 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+14:17:13.060 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+14:17:14.096 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+14:17:14.124 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+14:17:17.428 [http-nio-80-exec-3] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+14:20:34.891 [Thread-28] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
+14:20:35.725 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4020 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:20:35.725 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:20:51.556 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4020 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:20:51.557 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:21:03.381 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4020 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:21:03.381 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:21:15.903 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4020 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:21:15.903 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:21:24.942 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4020 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:21:24.942 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:21:40.947 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4020 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:21:40.947 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:22:05.198 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4020 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:22:05.198 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:22:40.443 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4020 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:22:40.444 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:24:03.151 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4020 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:24:03.151 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:24:19.151 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4020 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:24:19.151 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:24:32.864 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4020 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:24:32.864 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:24:54.615 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 9944 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:24:54.621 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:24:57.078 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+14:24:57.079 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+14:24:57.607 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+14:24:58.012 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+14:24:59.249 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:24:59.263 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:24:59.263 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+14:24:59.270 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+14:24:59.418 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:24:59.990 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14:25:00.080 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+14:25:00.082 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+14:25:00.143 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+14:25:00.372 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14:25:02.345 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+14:25:04.366 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+14:25:04.400 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+14:25:04.469 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+14:25:04.500 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:25:04.519 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:25:04.556 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 10.693 seconds (JVM running for 13.279)
+14:25:06.148 [http-nio-80-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:25:06.489 [http-nio-80-exec-2] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+14:25:06.495 [http-nio-80-exec-2] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+14:25:07.604 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+14:25:07.623 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+14:25:11.187 [http-nio-80-exec-7] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+14:31:43.815 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 9828 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:31:43.837 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:31:46.487 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+14:31:46.488 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+14:31:47.050 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+14:31:47.514 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+14:31:48.758 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:31:48.771 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:31:48.772 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+14:31:48.778 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+14:31:48.940 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:31:49.495 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14:31:49.582 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+14:31:49.584 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+14:31:49.643 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+14:31:49.850 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14:31:51.900 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+14:31:53.588 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+14:31:53.612 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+14:31:53.679 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+14:31:53.711 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:31:53.732 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:31:53.769 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 10.586 seconds (JVM running for 13.826)
+14:32:23.422 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:32:23.495 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+14:32:23.498 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+14:32:24.524 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+14:32:24.554 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+14:32:29.386 [http-nio-80-exec-6] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+14:33:52.029 [Thread-28] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
+14:33:52.728 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 9828 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:33:52.728 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:34:08.459 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 9828 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:34:08.459 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:39:00.439 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 9828 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:39:00.440 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:39:08.588 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 9828 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:39:08.589 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:39:12.712 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:39:12.713 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:39:12.714 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+14:39:12.812 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:39:13.668 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-2} inited
+14:39:13.797 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14:39:13.894 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14:39:14.653 [restartedMain] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-2} closed
+14:39:14.655 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Stopping service [Tomcat]
+14:39:18.698 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 9828 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:39:18.699 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:42:24.532 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+14:47:10.446 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4132 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:47:10.451 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:47:12.842 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+14:47:12.843 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+14:47:13.416 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+14:47:13.833 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+14:47:15.015 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:47:15.030 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:47:15.030 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+14:47:15.036 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+14:47:15.201 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:47:15.757 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14:47:15.847 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+14:47:15.850 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+14:47:15.903 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+14:47:16.098 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14:47:17.919 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+14:47:19.560 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+14:47:19.581 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+14:47:19.639 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+14:47:19.668 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:47:19.684 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:47:19.713 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 9.796 seconds (JVM running for 12.451)
+14:47:37.862 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:47:37.915 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+14:47:37.918 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+14:47:39.037 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+14:47:39.056 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+14:47:42.407 [http-nio-80-exec-5] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+14:48:51.258 [Thread-27] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
+14:48:52.464 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4132 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:48:52.464 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:49:06.954 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4132 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:49:06.954 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:49:19.489 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 5468 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:49:19.495 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:49:22.083 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+14:49:22.084 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+14:49:22.670 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+14:49:23.130 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+14:49:24.335 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:49:24.349 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:49:24.349 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+14:49:24.355 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+14:49:24.508 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:49:25.075 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14:49:25.169 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+14:49:25.171 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+14:49:25.227 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+14:49:25.428 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14:49:27.298 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+14:49:29.068 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+14:49:29.092 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+14:49:29.196 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+14:49:29.236 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:49:29.255 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:49:29.301 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 10.527 seconds (JVM running for 13.079)
+14:49:34.248 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:49:34.319 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+14:49:34.322 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+14:49:35.604 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+14:49:35.637 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+14:49:39.195 [http-nio-80-exec-7] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+14:51:39.721 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 8400 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:51:39.729 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:51:42.960 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+14:51:42.962 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+14:51:43.658 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+14:51:44.174 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+14:51:45.449 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:51:45.468 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:51:45.468 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+14:51:45.474 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+14:51:45.633 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:51:46.197 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14:51:46.285 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+14:51:46.287 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+14:51:46.343 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+14:51:46.583 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14:51:48.999 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+14:51:50.945 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+14:51:50.980 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+14:51:51.054 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+14:51:51.091 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:51:51.141 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:51:51.175 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 12.314 seconds (JVM running for 14.828)
+14:52:05.091 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:52:05.163 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+14:52:05.167 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+14:52:06.217 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+14:52:06.247 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+14:52:09.661 [http-nio-80-exec-8] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+14:54:11.633 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 8276 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:54:11.639 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:54:14.940 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+14:54:14.940 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+14:54:15.450 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+14:54:16.148 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+14:54:17.525 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:54:17.541 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:54:17.541 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+14:54:17.563 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+14:54:17.726 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:54:18.330 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14:54:18.432 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+14:54:18.434 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+14:54:18.493 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+14:54:18.747 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14:54:20.748 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+14:54:22.468 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+14:54:22.518 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+14:54:22.623 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+14:54:22.650 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:54:22.681 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:54:22.746 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 12.046 seconds (JVM running for 15.751)
+14:54:54.508 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:54:54.566 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+14:54:54.569 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+14:54:55.597 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+14:54:55.620 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+14:54:59.400 [http-nio-80-exec-9] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+14:56:50.187 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 8896 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+14:56:50.193 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:56:53.990 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+14:56:53.991 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+14:56:54.597 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+14:56:55.179 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+14:56:56.444 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:56:56.458 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:56:56.458 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+14:56:56.464 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+14:56:56.630 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:56:57.282 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14:56:57.371 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+14:56:57.373 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+14:56:57.435 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+14:56:57.648 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14:56:59.657 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+14:57:01.383 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+14:57:01.408 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+14:57:01.468 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+14:57:01.502 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:57:01.523 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:57:01.558 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 12.752 seconds (JVM running for 14.904)
+14:57:05.024 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:57:05.391 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+14:57:05.395 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+14:57:06.407 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+14:57:06.529 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+14:57:11.841 [http-nio-80-exec-9] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+15:01:46.489 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 7636 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+15:01:46.543 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+15:01:49.062 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+15:01:49.063 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+15:01:49.633 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+15:01:50.086 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+15:01:51.367 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+15:01:51.383 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+15:01:51.383 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+15:01:51.389 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+15:01:51.611 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+15:01:52.178 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+15:01:52.263 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+15:01:52.265 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+15:01:52.324 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+15:01:52.550 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+15:01:54.571 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+15:01:56.663 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+15:01:56.687 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+15:01:56.766 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+15:01:56.812 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+15:01:56.834 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+15:01:56.891 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 11.1 seconds (JVM running for 14.969)
+15:01:58.396 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+15:01:58.746 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+15:01:58.750 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+15:01:59.851 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+15:01:59.866 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+15:03:18.382 [http-nio-80-exec-1] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+15:06:13.643 [Thread-30] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
+15:06:14.204 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 7636 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+15:06:14.205 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+15:06:29.136 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4632 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+15:06:29.141 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+15:06:31.516 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+15:06:31.517 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+15:06:31.933 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+15:06:32.476 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+15:06:33.717 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+15:06:33.730 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+15:06:33.730 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+15:06:33.736 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+15:06:33.888 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+15:06:34.452 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+15:06:34.556 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+15:06:34.558 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+15:06:34.615 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+15:06:34.826 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+15:06:36.680 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+15:06:38.345 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+15:06:38.368 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+15:06:38.431 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+15:06:38.463 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+15:06:38.481 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+15:06:38.515 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 9.984 seconds (JVM running for 13.618)
+15:07:25.920 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+15:07:25.971 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+15:07:25.975 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+15:07:26.990 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+15:07:27.006 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+15:07:32.706 [http-nio-80-exec-6] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+15:09:35.336 [Thread-27] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
+15:09:38.354 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4632 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+15:09:38.354 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+15:10:19.254 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 9908 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+15:10:19.258 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+15:10:21.949 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+15:10:21.950 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+15:10:22.593 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+15:10:23.209 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+15:10:25.977 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+15:10:25.993 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+15:10:25.993 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+15:10:26.009 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+15:10:26.223 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+15:10:26.967 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+15:10:27.066 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+15:10:27.068 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+15:10:27.150 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+15:10:27.347 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+15:10:29.471 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+15:10:31.112 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+15:10:31.137 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+15:10:31.196 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+15:10:31.228 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+15:10:31.256 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+15:10:31.321 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 13.245 seconds (JVM running for 16.361)
+15:16:06.533 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+15:16:06.846 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+15:16:06.936 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+15:16:07.849 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+15:16:08.069 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+15:26:07.884 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+15:26:07.891 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+15:36:07.919 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+15:36:07.923 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+15:42:01.263 [http-nio-80-exec-6] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+15:46:07.956 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+15:46:07.966 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+15:49:04.586 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 6692 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+15:49:04.598 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+15:49:06.851 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+15:49:06.852 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+15:49:07.416 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+15:49:07.823 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+15:49:09.062 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+15:49:09.075 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+15:49:09.075 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+15:49:09.081 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+15:49:09.229 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+15:49:09.776 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+15:49:09.891 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+15:49:09.893 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+15:49:09.948 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+15:49:10.147 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+15:49:11.978 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+15:49:13.616 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+15:49:13.639 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+15:49:13.696 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+15:49:13.725 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+15:49:13.740 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+15:49:13.779 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 9.966 seconds (JVM running for 12.522)
+15:50:01.525 [http-nio-80-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+15:50:01.976 [http-nio-80-exec-2] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+15:50:01.980 [http-nio-80-exec-2] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+15:50:03.048 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+15:50:03.096 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+15:50:07.493 [http-nio-80-exec-10] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+16:07:05.546 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4088 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+16:07:05.556 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+16:07:08.269 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+16:07:08.270 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+16:07:08.758 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+16:07:09.409 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+16:07:10.663 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+16:07:10.677 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+16:07:10.678 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+16:07:10.685 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+16:07:10.861 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+16:07:11.437 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16:07:11.528 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+16:07:11.530 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+16:07:11.591 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:07:11.848 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:07:13.914 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+16:07:15.710 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+16:07:15.735 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+16:07:15.795 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+16:07:15.823 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+16:07:15.842 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+16:07:15.874 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 11.388 seconds (JVM running for 14.446)
+16:07:58.869 [Thread-30] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
+16:07:59.777 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4088 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+16:07:59.778 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+16:08:23.407 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4088 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+16:08:23.407 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+16:08:27.825 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 4088 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+16:08:27.826 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+16:11:18.988 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 10004 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+16:11:18.993 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+16:11:21.739 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+16:11:21.740 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+16:11:22.194 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+16:11:22.931 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+16:11:24.314 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+16:11:24.327 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+16:11:24.328 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+16:11:24.337 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+16:11:24.489 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+16:11:25.062 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16:11:25.164 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+16:11:25.166 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+16:11:25.227 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:11:25.451 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:11:27.749 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+16:11:29.839 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+16:11:29.863 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+16:11:29.970 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+16:11:30.043 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+16:11:30.057 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+16:11:30.114 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 11.885 seconds (JVM running for 14.568)
+16:12:33.029 [http-nio-80-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:12:33.108 [http-nio-80-exec-2] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+16:12:33.111 [http-nio-80-exec-2] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+16:12:34.178 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+16:12:34.194 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+16:12:37.658 [http-nio-80-exec-5] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+16:14:48.548 [Thread-30] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
+16:14:49.801 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 10004 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+16:14:49.802 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+16:15:05.349 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 10820 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+16:15:05.355 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+16:15:08.511 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+16:15:08.511 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+16:15:09.023 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+16:15:09.732 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+16:15:11.224 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+16:15:11.248 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+16:15:11.248 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+16:15:11.269 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+16:15:11.482 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+16:15:12.271 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16:15:12.411 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+16:15:12.416 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+16:15:12.544 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:15:13.033 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:15:15.536 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+16:15:17.692 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+16:15:17.715 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+16:15:17.773 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+16:15:17.804 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+16:15:17.855 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+16:15:17.901 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 13.644 seconds (JVM running for 17.263)
+16:15:18.860 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:15:18.923 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+16:15:18.953 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+16:15:19.929 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+16:15:19.941 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+16:15:23.902 [http-nio-80-exec-4] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+16:21:51.418 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 10160 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+16:21:51.423 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+16:21:53.921 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+16:21:53.922 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+16:21:54.392 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+16:21:54.951 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+16:21:56.222 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+16:21:56.240 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+16:21:56.241 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+16:21:56.247 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+16:21:56.435 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+16:21:57.079 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16:21:57.166 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+16:21:57.168 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+16:21:57.224 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:21:57.452 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:21:59.344 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+16:22:01.146 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+16:22:01.174 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+16:22:01.236 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+16:22:01.267 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+16:22:01.287 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+16:22:01.318 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 10.557 seconds (JVM running for 13.97)
+16:22:30.638 [http-nio-80-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:22:30.688 [http-nio-80-exec-2] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+16:22:30.692 [http-nio-80-exec-2] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+16:22:31.691 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+16:22:31.706 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+16:22:37.038 [http-nio-80-exec-5] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+16:24:13.304 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 8860 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+16:24:13.310 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+16:24:15.918 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+16:24:15.919 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+16:24:16.337 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+16:24:16.908 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+16:24:18.192 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+16:24:18.205 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+16:24:18.205 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+16:24:18.214 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+16:24:18.366 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+16:24:18.931 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16:24:19.022 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+16:24:19.025 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+16:24:19.079 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:24:19.289 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:24:21.223 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+16:24:23.046 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+16:24:23.068 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+16:24:23.138 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+16:24:23.168 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+16:24:23.184 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+16:24:23.245 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 10.649 seconds (JVM running for 13.644)
+16:26:02.561 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:26:02.913 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+16:26:02.918 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+16:26:03.933 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+16:26:03.960 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+16:26:07.971 [http-nio-80-exec-8] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+16:28:25.166 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 10400 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+16:28:25.171 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+16:28:28.178 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+16:28:28.179 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+16:28:28.952 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+16:28:29.627 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+16:28:31.206 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+16:28:31.222 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+16:28:31.222 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+16:28:31.235 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+16:28:31.462 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+16:28:32.067 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16:28:32.176 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+16:28:32.179 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+16:28:32.238 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:28:32.449 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:28:34.370 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+16:28:36.085 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+16:28:36.113 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+16:28:36.177 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+16:28:36.207 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+16:28:36.227 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+16:28:36.265 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 11.878 seconds (JVM running for 16.161)
+16:29:45.164 [http-nio-80-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:29:45.528 [http-nio-80-exec-2] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+16:29:45.533 [http-nio-80-exec-2] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+16:29:46.541 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+16:29:46.577 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+16:29:49.953 [http-nio-80-exec-5] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+16:33:45.368 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 3452 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+16:33:45.373 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+16:33:48.105 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+16:33:48.106 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+16:33:48.559 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+16:33:49.172 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+16:33:50.461 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+16:33:50.475 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+16:33:50.475 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+16:33:50.481 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+16:33:50.636 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+16:33:51.219 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16:33:51.312 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+16:33:51.315 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+16:33:51.417 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:33:51.637 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:33:53.560 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+16:33:55.220 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+16:33:55.247 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+16:33:55.309 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+16:33:55.380 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+16:33:55.398 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+16:33:55.433 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 10.833 seconds (JVM running for 14.118)
+16:36:05.060 [http-nio-80-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:36:05.110 [http-nio-80-exec-2] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+16:36:05.116 [http-nio-80-exec-2] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+16:36:06.323 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+16:36:06.348 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+16:36:09.475 [http-nio-80-exec-6] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+16:37:53.294 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 8184 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+16:37:53.299 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+16:37:55.777 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+16:37:55.778 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+16:37:56.323 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+16:37:56.726 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+16:37:57.998 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+16:37:58.012 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+16:37:58.012 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+16:37:58.019 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+16:37:58.174 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+16:37:58.798 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16:37:58.889 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+16:37:58.891 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+16:37:58.956 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:37:59.158 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:38:01.160 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+16:38:02.857 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+16:38:02.880 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+16:38:02.942 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+16:38:02.970 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+16:38:02.987 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+16:38:03.018 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 10.587 seconds (JVM running for 13.898)
+16:38:15.781 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:38:15.832 [http-nio-80-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+16:38:15.836 [http-nio-80-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+16:38:16.835 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+16:38:16.852 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+16:38:20.981 [http-nio-80-exec-5] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+16:43:26.733 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on SKY-20170913ZDM with PID 8072 (D:\workspace\inventory\springBoot-mybaties\target\classes started by Administrator in D:\workspace\inventory\springBoot-mybaties)
+16:43:26.740 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+16:43:29.180 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+16:43:29.181 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+16:43:29.793 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+16:43:30.274 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+16:43:31.585 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+16:43:31.597 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+16:43:31.598 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+16:43:31.603 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\nojs\;E:\SVN\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\surface\apache-maven-3.5.3\bin\;D:\Program Files\erl9.3\bin\;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin;E:\Git\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;.]
+16:43:31.762 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+16:43:32.347 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16:43:32.439 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+16:43:32.442 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+16:43:32.500 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:43:32.733 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:43:34.994 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+16:43:36.842 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+16:43:36.882 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+16:43:37.007 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+16:43:37.060 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+16:43:37.086 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+16:43:37.139 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 11.134 seconds (JVM running for 13.685)
+16:43:37.418 [http-nio-80-exec-3] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:43:37.853 [http-nio-80-exec-3] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+16:43:37.917 [http-nio-80-exec-3] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+16:43:38.890 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+16:43:38.909 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.

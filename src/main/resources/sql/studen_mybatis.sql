@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50722
 File Encoding         : 65001
 
-Date: 2018-07-24 17:27:20
+Date: 2018-07-31 17:22:37
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -77,7 +77,7 @@ INSERT INTO sys_dept VALUES ('109', '102', '市场二部', '2', '蒋小姐', '15
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_dict_data`;
 CREATE TABLE `sys_dict_data` (
-  `dict_code` int(11) NOT NULL AUTO_INCREMENT COMMENT '字典编码',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '字典编码',
   `dict_sort` int(4) DEFAULT '0' COMMENT '字典排序',
   `dict_label` varchar(100) DEFAULT '' COMMENT '字典标签',
   `dict_value` varchar(100) DEFAULT '' COMMENT '字典键值',
@@ -90,7 +90,7 @@ CREATE TABLE `sys_dict_data` (
   `update_by` varchar(64) DEFAULT '' COMMENT '更新者',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) DEFAULT '' COMMENT '备注',
-  PRIMARY KEY (`dict_code`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COMMENT='字典数据表';
 
 -- ----------------------------
@@ -129,7 +129,7 @@ INSERT INTO sys_dict_data VALUES ('27', '2', '失败', '1', 'sys_common_status',
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_dict_type`;
 CREATE TABLE `sys_dict_type` (
-  `dict_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '字典主键',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '字典主键',
   `dict_name` varchar(100) DEFAULT '' COMMENT '字典名称',
   `dict_type` varchar(100) DEFAULT '' COMMENT '字典类型',
   `status` char(1) DEFAULT '0' COMMENT '状态（0正常 1停用）',
@@ -138,7 +138,7 @@ CREATE TABLE `sys_dict_type` (
   `update_by` varchar(64) DEFAULT '' COMMENT '更新者',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) DEFAULT '' COMMENT '备注',
-  PRIMARY KEY (`dict_id`),
+  PRIMARY KEY (`id`),
   UNIQUE KEY `dict_type` (`dict_type`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='字典类型表';
 
@@ -217,7 +217,7 @@ CREATE TABLE `sys_logininfor` (
   `msg` varchar(255) DEFAULT '' COMMENT '提示消息',
   `login_time` datetime DEFAULT NULL COMMENT '访问时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='系统访问记录';
+) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=utf8 COMMENT='系统访问记录';
 
 -- ----------------------------
 -- Records of sys_logininfor
@@ -242,6 +242,110 @@ INSERT INTO sys_logininfor VALUES ('17', 'admin', '127.0.0.1', 'XX 内网IP', 'C
 INSERT INTO sys_logininfor VALUES ('18', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-24 17:19:23');
 INSERT INTO sys_logininfor VALUES ('19', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-24 17:22:24');
 INSERT INTO sys_logininfor VALUES ('20', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-24 17:25:17');
+INSERT INTO sys_logininfor VALUES ('21', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 10:41:25');
+INSERT INTO sys_logininfor VALUES ('22', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 11:26:56');
+INSERT INTO sys_logininfor VALUES ('23', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 11:36:27');
+INSERT INTO sys_logininfor VALUES ('24', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '1', '验证码错误', '2018-07-27 11:43:45');
+INSERT INTO sys_logininfor VALUES ('25', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 11:43:52');
+INSERT INTO sys_logininfor VALUES ('26', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 11:52:06');
+INSERT INTO sys_logininfor VALUES ('27', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 11:58:13');
+INSERT INTO sys_logininfor VALUES ('28', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 12:13:42');
+INSERT INTO sys_logininfor VALUES ('29', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 13:55:21');
+INSERT INTO sys_logininfor VALUES ('30', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 14:19:28');
+INSERT INTO sys_logininfor VALUES ('31', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 14:21:36');
+INSERT INTO sys_logininfor VALUES ('32', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '验证码错误', '2018-07-27 14:26:41');
+INSERT INTO sys_logininfor VALUES ('33', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 14:26:46');
+INSERT INTO sys_logininfor VALUES ('34', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 14:29:39');
+INSERT INTO sys_logininfor VALUES ('35', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 14:50:41');
+INSERT INTO sys_logininfor VALUES ('36', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 14:56:09');
+INSERT INTO sys_logininfor VALUES ('37', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 15:06:46');
+INSERT INTO sys_logininfor VALUES ('38', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 15:29:13');
+INSERT INTO sys_logininfor VALUES ('39', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 16:04:10');
+INSERT INTO sys_logininfor VALUES ('40', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 16:20:32');
+INSERT INTO sys_logininfor VALUES ('41', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 16:28:24');
+INSERT INTO sys_logininfor VALUES ('42', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 16:29:44');
+INSERT INTO sys_logininfor VALUES ('43', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 16:35:00');
+INSERT INTO sys_logininfor VALUES ('44', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 16:38:35');
+INSERT INTO sys_logininfor VALUES ('45', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '验证码错误', '2018-07-27 16:51:44');
+INSERT INTO sys_logininfor VALUES ('46', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '验证码错误', '2018-07-27 16:51:50');
+INSERT INTO sys_logininfor VALUES ('47', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 16:52:08');
+INSERT INTO sys_logininfor VALUES ('48', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 16:57:04');
+INSERT INTO sys_logininfor VALUES ('49', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 17:00:27');
+INSERT INTO sys_logininfor VALUES ('50', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '退出成功', '2018-07-27 17:00:58');
+INSERT INTO sys_logininfor VALUES ('51', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '退出成功', '2018-07-27 17:00:58');
+INSERT INTO sys_logininfor VALUES ('52', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '退出成功', '2018-07-27 17:00:59');
+INSERT INTO sys_logininfor VALUES ('53', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 17:01:04');
+INSERT INTO sys_logininfor VALUES ('54', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-27 17:02:36');
+INSERT INTO sys_logininfor VALUES ('55', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '验证码错误', '2018-07-30 10:40:54');
+INSERT INTO sys_logininfor VALUES ('56', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 10:41:00');
+INSERT INTO sys_logininfor VALUES ('57', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '1', '验证码错误', '2018-07-30 11:18:24');
+INSERT INTO sys_logininfor VALUES ('58', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 11:19:07');
+INSERT INTO sys_logininfor VALUES ('59', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 11:30:38');
+INSERT INTO sys_logininfor VALUES ('60', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '验证码错误', '2018-07-30 11:33:54');
+INSERT INTO sys_logininfor VALUES ('61', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 11:33:59');
+INSERT INTO sys_logininfor VALUES ('62', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 11:36:57');
+INSERT INTO sys_logininfor VALUES ('63', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 11:49:41');
+INSERT INTO sys_logininfor VALUES ('64', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '退出成功', '2018-07-30 12:01:03');
+INSERT INTO sys_logininfor VALUES ('65', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 12:01:38');
+INSERT INTO sys_logininfor VALUES ('66', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 14:05:41');
+INSERT INTO sys_logininfor VALUES ('67', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 14:14:36');
+INSERT INTO sys_logininfor VALUES ('68', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 14:15:56');
+INSERT INTO sys_logininfor VALUES ('69', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 14:17:17');
+INSERT INTO sys_logininfor VALUES ('70', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 14:25:11');
+INSERT INTO sys_logininfor VALUES ('71', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 14:32:29');
+INSERT INTO sys_logininfor VALUES ('72', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 14:47:42');
+INSERT INTO sys_logininfor VALUES ('73', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 14:49:41');
+INSERT INTO sys_logininfor VALUES ('74', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 14:52:10');
+INSERT INTO sys_logininfor VALUES ('75', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 14:55:01');
+INSERT INTO sys_logininfor VALUES ('76', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 14:57:12');
+INSERT INTO sys_logininfor VALUES ('77', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 15:03:19');
+INSERT INTO sys_logininfor VALUES ('78', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 15:07:33');
+INSERT INTO sys_logininfor VALUES ('79', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 15:42:01');
+INSERT INTO sys_logininfor VALUES ('80', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 15:50:07');
+INSERT INTO sys_logininfor VALUES ('81', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 16:12:37');
+INSERT INTO sys_logininfor VALUES ('82', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 16:15:24');
+INSERT INTO sys_logininfor VALUES ('83', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 16:22:37');
+INSERT INTO sys_logininfor VALUES ('84', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 16:26:10');
+INSERT INTO sys_logininfor VALUES ('85', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 16:29:50');
+INSERT INTO sys_logininfor VALUES ('86', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 16:36:09');
+INSERT INTO sys_logininfor VALUES ('87', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-30 16:38:21');
+INSERT INTO sys_logininfor VALUES ('88', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 11:10:36');
+INSERT INTO sys_logininfor VALUES ('89', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '用户不存在/密码错误', '2018-07-31 11:22:08');
+INSERT INTO sys_logininfor VALUES ('90', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '1', '用户不存在/密码错误', '2018-07-31 11:22:17');
+INSERT INTO sys_logininfor VALUES ('91', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '用户不存在/密码错误', '2018-07-31 11:22:24');
+INSERT INTO sys_logininfor VALUES ('92', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '用户不存在/密码错误', '2018-07-31 11:22:39');
+INSERT INTO sys_logininfor VALUES ('93', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '验证码错误', '2018-07-31 11:22:45');
+INSERT INTO sys_logininfor VALUES ('94', 'jiangxiaojie', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '验证码错误', '2018-07-31 11:23:11');
+INSERT INTO sys_logininfor VALUES ('95', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '用户不存在/密码错误', '2018-07-31 11:24:19');
+INSERT INTO sys_logininfor VALUES ('96', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '验证码错误', '2018-07-31 11:24:55');
+INSERT INTO sys_logininfor VALUES ('97', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '用户不存在/密码错误', '2018-07-31 11:24:58');
+INSERT INTO sys_logininfor VALUES ('98', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '1', '用户不存在/密码错误', '2018-07-31 11:26:01');
+INSERT INTO sys_logininfor VALUES ('99', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '用户不存在/密码错误', '2018-07-31 11:27:21');
+INSERT INTO sys_logininfor VALUES ('100', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '用户不存在/密码错误', '2018-07-31 11:27:27');
+INSERT INTO sys_logininfor VALUES ('101', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '验证码错误', '2018-07-31 11:28:56');
+INSERT INTO sys_logininfor VALUES ('102', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 11:28:59');
+INSERT INTO sys_logininfor VALUES ('103', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '用户不存在/密码错误', '2018-07-31 11:31:45');
+INSERT INTO sys_logininfor VALUES ('104', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 11:32:21');
+INSERT INTO sys_logininfor VALUES ('105', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 11:36:06');
+INSERT INTO sys_logininfor VALUES ('106', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '退出成功', '2018-07-31 11:36:39');
+INSERT INTO sys_logininfor VALUES ('107', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 14:02:54');
+INSERT INTO sys_logininfor VALUES ('108', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 14:56:00');
+INSERT INTO sys_logininfor VALUES ('109', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 14:59:27');
+INSERT INTO sys_logininfor VALUES ('110', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 15:03:17');
+INSERT INTO sys_logininfor VALUES ('111', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '验证码错误', '2018-07-31 15:10:44');
+INSERT INTO sys_logininfor VALUES ('112', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 15:10:48');
+INSERT INTO sys_logininfor VALUES ('113', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 15:12:46');
+INSERT INTO sys_logininfor VALUES ('114', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 15:24:48');
+INSERT INTO sys_logininfor VALUES ('115', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 15:26:36');
+INSERT INTO sys_logininfor VALUES ('116', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 15:29:28');
+INSERT INTO sys_logininfor VALUES ('117', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 15:43:20');
+INSERT INTO sys_logininfor VALUES ('118', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 15:55:19');
+INSERT INTO sys_logininfor VALUES ('119', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 16:32:34');
+INSERT INTO sys_logininfor VALUES ('120', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 16:34:39');
+INSERT INTO sys_logininfor VALUES ('121', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 16:36:38');
+INSERT INTO sys_logininfor VALUES ('122', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 16:40:41');
+INSERT INTO sys_logininfor VALUES ('123', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 16:54:37');
+INSERT INTO sys_logininfor VALUES ('124', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 17:08:01');
 
 -- ----------------------------
 -- Table structure for `sys_menu`
@@ -271,6 +375,7 @@ CREATE TABLE `sys_menu` (
 INSERT INTO sys_menu VALUES ('1', '系统管理', '0', '1', '#', 'M', '0', '', 'fa fa-gear', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '系统管理目录');
 INSERT INTO sys_menu VALUES ('2', '系统监控', '0', '2', '#', 'M', '0', '', 'fa fa-video-camera', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '系统监控目录');
 INSERT INTO sys_menu VALUES ('3', '系统工具', '0', '3', '#', 'M', '0', '', 'fa fa-bars', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '系统工具目录');
+INSERT INTO sys_menu VALUES ('4', '账单管理', '0', '4', '#', 'M', '0', '', 'fa fa-edit', 'admin', '2018-07-27 11:34:59', 'lxl', '2018-07-27 11:35:07', '功能管理');
 INSERT INTO sys_menu VALUES ('100', '用户管理', '1', '1', '/system/user', 'C', '0', 'system:user:view', '#', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '用户管理菜单');
 INSERT INTO sys_menu VALUES ('101', '角色管理', '1', '2', '/system/role', 'C', '0', 'system:role:view', '#', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '角色管理菜单');
 INSERT INTO sys_menu VALUES ('102', '菜单管理', '1', '3', '/system/menu', 'C', '0', 'system:menu:view', '#', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '菜单管理菜单');
@@ -351,30 +456,31 @@ INSERT INTO sys_menu VALUES ('1056', '生成代码', '113', '2', '#', 'F', '0', 
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_notice`;
 CREATE TABLE `sys_notice` (
-  `notice_id` int(4) NOT NULL AUTO_INCREMENT COMMENT '公告ID',
+  `id` int(4) NOT NULL AUTO_INCREMENT COMMENT '公告ID',
   `notice_title` varchar(50) NOT NULL COMMENT '公告标题',
   `notice_type` char(2) NOT NULL COMMENT '公告类型（1通知 2公告）',
-  `notice_content` varchar(500) NOT NULL COMMENT '公告内容',
+  `notice_content` varchar(5000) NOT NULL COMMENT '公告内容',
   `status` char(1) DEFAULT '0' COMMENT '公告状态（0正常 1关闭）',
   `create_by` varchar(64) DEFAULT '' COMMENT '创建者',
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   `update_by` varchar(64) DEFAULT '' COMMENT '更新者',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(255) DEFAULT '' COMMENT '备注',
-  PRIMARY KEY (`notice_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='通知公告表';
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='通知公告表';
 
 -- ----------------------------
 -- Records of sys_notice
 -- ----------------------------
 INSERT INTO sys_notice VALUES ('1', '温馨提醒：2018-07-01 若依新版本发布啦', '2', '新版本内容', '0', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '管理员');
+INSERT INTO sys_notice VALUES ('2', '不朽3', '1', '<div><div>&nbsp;void&nbsp;openMax(){};<br>void&nbsp;closeMax(){};<br>void&nbsp;openDota2(){};<br>void&nbsp;check_immortal_III(){};<br><br>int&nbsp;main()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;waitingdays=0;<br>&nbsp;&nbsp;&nbsp;&nbsp;while()<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;openMax();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(check_immortal_III()==1)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waitingdays++;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;closeMax();<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;openDota2();<br>}&nbsp;</div></div>', '0', 'admin', '2018-07-31 15:40:13', '', null, '');
 
 -- ----------------------------
 -- Table structure for `sys_oper_log`
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_oper_log`;
 CREATE TABLE `sys_oper_log` (
-  `oper_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '日志主键',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '日志主键',
   `title` varchar(50) DEFAULT '' COMMENT '模块标题',
   `action` varchar(100) DEFAULT '' COMMENT '功能请求',
   `method` varchar(100) DEFAULT '' COMMENT '方法名称',
@@ -388,19 +494,95 @@ CREATE TABLE `sys_oper_log` (
   `status` char(1) DEFAULT '0' COMMENT '操作状态（0正常 1异常）',
   `error_msg` varchar(2000) DEFAULT '' COMMENT '错误消息',
   `oper_time` datetime DEFAULT NULL COMMENT '操作时间',
-  PRIMARY KEY (`oper_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='操作日志记录';
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8 COMMENT='操作日志记录';
 
 -- ----------------------------
 -- Records of sys_oper_log
 -- ----------------------------
+INSERT INTO sys_oper_log VALUES ('1', '用户管理', '6', 'com.student.controller.UserController.export()', '1', 'admin', '研发一部', '/system/user/export', '127.0.0.1', 'XX 内网IP', '{\"deptId\":[\"100\"],\"parentId\":[\"\"],\"loginName\":[\"\"],\"phonenumber\":[\"\"],\"status\":[\"\"]}', '0', null, '2018-07-30 14:19:32');
+INSERT INTO sys_oper_log VALUES ('2', '用户管理', '6', 'com.student.controller.UserController.export()', '1', 'admin', '研发一部', '/system/user/export', '127.0.0.1', 'XX 内网IP', '{\"deptId\":[\"\"],\"parentId\":[\"\"],\"loginName\":[\"\"],\"phonenumber\":[\"\"],\"status\":[\"\"]}', '0', null, '2018-07-30 14:25:23');
+INSERT INTO sys_oper_log VALUES ('3', '用户管理', '6', 'com.student.controller.UserController.export()', '1', 'admin', '研发一部', '/system/user/export', '127.0.0.1', 'XX 内网IP', '{\"deptId\":[\"\"],\"parentId\":[\"\"],\"loginName\":[\"\"],\"phonenumber\":[\"\"],\"status\":[\"\"]}', '0', null, '2018-07-30 14:26:06');
+INSERT INTO sys_oper_log VALUES ('4', '用户管理', '6', 'com.student.controller.UserController.export()', '1', 'admin', '研发一部', '/system/user/export', '127.0.0.1', 'XX 内网IP', '{\"deptId\":[\"\"],\"parentId\":[\"\"],\"loginName\":[\"\"],\"phonenumber\":[\"\"],\"status\":[\"\"]}', '0', null, '2018-07-30 14:29:42');
+INSERT INTO sys_oper_log VALUES ('5', '用户管理', '6', 'com.student.controller.UserController.export()', '1', 'admin', '研发一部', '/system/user/export', '127.0.0.1', 'XX 内网IP', '{\"deptId\":[\"\"],\"parentId\":[\"\"],\"loginName\":[\"\"],\"phonenumber\":[\"\"],\"status\":[\"\"]}', '0', null, '2018-07-30 14:29:44');
+INSERT INTO sys_oper_log VALUES ('6', '用户管理', '6', 'com.student.controller.UserController.export()', '1', 'admin', '研发一部', '/system/user/export', '127.0.0.1', 'XX 内网IP', '{\"deptId\":[\"\"],\"parentId\":[\"\"],\"loginName\":[\"\"],\"phonenumber\":[\"\"],\"status\":[\"\"]}', '0', null, '2018-07-30 14:30:38');
+INSERT INTO sys_oper_log VALUES ('7', '用户管理', '6', 'com.student.controller.UserController.export()', '1', 'admin', '研发一部', '/system/user/export', '127.0.0.1', 'XX 内网IP', '{\"deptId\":[\"\"],\"parentId\":[\"\"],\"loginName\":[\"\"],\"phonenumber\":[\"\"],\"status\":[\"\"]}', '0', null, '2018-07-30 14:32:42');
+INSERT INTO sys_oper_log VALUES ('8', '用户管理', '1', 'com.student.controller.UserController.add()', '1', 'admin', '研发一部', '/system/user/add', '127.0.0.1', 'XX 内网IP', '{}', '1', 'nested exception is org.apache.ibatis.reflection.ReflectionException: Could not set property \'postId\' of \'class com.student.entity.Post\' with value \'1\' Cause: org.apache.ibatis.reflection.ReflectionException: There is no setter for property named \'postId\' in \'class com.student.entity.Post\'', '2018-07-30 14:47:50');
+INSERT INTO sys_oper_log VALUES ('9', '用户管理', '1', 'com.student.controller.UserController.add()', '1', 'admin', '研发一部', '/system/user/add', '127.0.0.1', null, '{}', '1', '\r\n### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column \'id\' in \'field list\'\r\n### The error may exist in file [D:\\workspace\\inventory\\springBoot-mybaties\\target\\classes\\mapper\\system\\PostMapper.xml]\r\n### The error may involve defaultParameterMap\r\n### The error occurred while setting parameters\r\n### SQL: select id, post_code, post_name, post_sort, status, create_by, create_time, remark from sys_post\r\n### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column \'id\' in \'field list\'\n; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column \'id\' in \'field list\'', '2018-07-30 14:49:48');
+INSERT INTO sys_oper_log VALUES ('10', '用户管理', '1', 'com.student.controller.UserController.add()', '1', 'admin', '研发一部', '/system/user/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-30 14:50:23');
+INSERT INTO sys_oper_log VALUES ('11', '用户管理', '1', 'com.student.controller.UserController.add()', '1', 'admin', '研发一部', '/system/user/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-30 14:50:33');
+INSERT INTO sys_oper_log VALUES ('12', '用户管理', '1', 'com.student.controller.UserController.add()', '1', 'admin', '研发一部', '/system/user/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-30 14:52:16');
+INSERT INTO sys_oper_log VALUES ('13', '用户管理', '1', 'com.student.controller.UserController.add()', '1', 'admin', '研发一部', '/system/user/add', '127.0.0.1', null, '{}', '0', null, '2018-07-30 14:55:12');
+INSERT INTO sys_oper_log VALUES ('14', '用户管理', '1', 'com.student.controller.UserController.add()', '1', 'admin', '研发一部', '/system/user/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-30 14:57:17');
+INSERT INTO sys_oper_log VALUES ('15', '用户管理', '1', 'com.student.controller.UserController.add()', '1', 'admin', '研发一部', '/system/user/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-30 15:04:28');
+INSERT INTO sys_oper_log VALUES ('17', '用户管理', '1', 'com.student.controller.UserController.add()', '1', 'admin', '研发一部', '/system/user/add', '127.0.0.1', null, '{}', '0', null, '2018-07-30 15:07:41');
+INSERT INTO sys_oper_log VALUES ('19', '用户管理', '1', 'com.student.controller.UserController.add()', '1', 'admin', '研发一部', '/system/user/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-30 15:42:06');
+INSERT INTO sys_oper_log VALUES ('20', '用户管理', '3', 'com.student.controller.UserController.save()', '1', 'admin', '研发一部', '/system/user/save', '127.0.0.1', 'XX 内网IP', '{\"deptId\":[\"106\"],\"loginName\":[\"dargon\"],\"userName\":[\"dargon\"],\"password\":[\"123456\"],\"email\":[\"296569845@qq.com\"],\"phoneNumber\":[\"18324191811\"],\"sex\":[\"0\"],\"status\":[\"0\"],\"roleIds\":[\"1\"],\"postIds\":[\"1\"]}', '0', null, '2018-07-30 15:42:29');
+INSERT INTO sys_oper_log VALUES ('21', '用户管理', '4', 'com.student.controller.UserController.remove()', '1', 'admin', '研发一部', '/system/user/remove', '127.0.0.1', 'XX 内网IP', '{\"ids\":[\"4\"]}', '0', null, '2018-07-30 15:50:21');
+INSERT INTO sys_oper_log VALUES ('22', '用户管理', '1', 'com.student.controller.UserController.add()', '1', 'admin', '研发一部', '/system/user/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-30 15:50:24');
+INSERT INTO sys_oper_log VALUES ('23', '用户管理', '3', 'com.student.controller.UserController.save()', '1', 'admin', '研发一部', '/system/user/save', '127.0.0.1', 'XX 内网IP', '{\"deptId\":[\"106\"],\"loginName\":[\"jiangxiaojie\"],\"userName\":[\"jiangxiaojie\"],\"password\":[\"123456\"],\"email\":[\"296569841@qq.com\"],\"phoneNumber\":[\"13478539991\"],\"sex\":[\"0\"],\"status\":[\"0\"],\"roleIds\":[\"1\"],\"postIds\":[\"1\"]}', '0', null, '2018-07-30 15:50:51');
+INSERT INTO sys_oper_log VALUES ('24', '用户管理', '1', 'com.student.controller.UserController.add()', '1', 'admin', '研发一部', '/system/user/add', '127.0.0.1', null, '{}', '0', null, '2018-07-30 15:50:56');
+INSERT INTO sys_oper_log VALUES ('25', '用户管理', '3', 'com.student.controller.UserController.save()', '1', 'admin', '研发一部', '/system/user/save', '127.0.0.1', 'XX 内网IP', '{\"deptId\":[\"105\"],\"loginName\":[\"dargon1\"],\"userName\":[\"admin\"],\"password\":[\"123456\"],\"email\":[\"764776245@qq.com\"],\"phoneNumber\":[\"18324191814\"],\"sex\":[\"0\"],\"status\":[\"0\"],\"roleIds\":[\"2\"],\"postIds\":[\"4\"]}', '0', null, '2018-07-30 15:51:26');
+INSERT INTO sys_oper_log VALUES ('26', '用户管理', '4', 'com.student.controller.UserController.remove()', '1', 'admin', '研发一部', '/system/user/remove', '127.0.0.1', 'XX 内网IP', '{\"ids\":[\"6\"]}', '0', null, '2018-07-30 15:51:32');
+INSERT INTO sys_oper_log VALUES ('27', '用户管理', '2', 'com.student.controller.UserController.edit()', '1', 'admin', '研发一部', '/system/user/edit/5', '127.0.0.1', 'XX 内网IP', '{}', '1', '', '2018-07-30 15:51:38');
+INSERT INTO sys_oper_log VALUES ('28', '用户管理', '2', 'com.student.controller.UserController.edit()', '1', 'admin', '研发一部', '/system/user/edit/5', '127.0.0.1', 'XX 内网IP', '{}', '1', '', '2018-07-30 15:56:45');
+INSERT INTO sys_oper_log VALUES ('29', '用户管理', '2', 'com.student.controller.UserController.edit()', '1', 'admin', '研发一部', '/system/user/edit/5', '127.0.0.1', 'XX 内网IP', '{}', '1', '\r\n### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column \'up.id\' in \'on clause\'\r\n### The error may exist in file [D:\\workspace\\inventory\\springBoot-mybaties\\target\\classes\\mapper\\system\\PostMapper.xml]\r\n### The error may involve com.student.dao.mapper.PostMapper.selectPostsByUserId-Inline\r\n### The error occurred while setting parameters\r\n### SQL: SELECT p.id, p.post_name, p.post_code   FROM sys_user u     LEFT JOIN sys_user_post up ON u.id = up.user_id     LEFT JOIN sys_post p ON up.id = p.id   WHERE up.user_id = ?\r\n### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column \'up.id\' in \'on clause\'\n; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column \'up.id\' in \'on clause\'', '2018-07-30 16:12:57');
+INSERT INTO sys_oper_log VALUES ('30', '用户管理', '2', 'com.student.controller.UserController.edit()', '1', 'admin', '研发一部', '/system/user/edit/5', '127.0.0.1', 'XX 内网IP', '{}', '1', '', '2018-07-30 16:15:35');
+INSERT INTO sys_oper_log VALUES ('31', '用户管理', '2', 'com.student.controller.UserController.edit()', '1', 'admin', '研发一部', '/system/user/edit/5', '127.0.0.1', 'XX 内网IP', '{}', '1', '', '2018-07-30 16:21:37');
+INSERT INTO sys_oper_log VALUES ('32', '用户管理', '2', 'com.student.controller.UserController.edit()', '1', 'admin', '研发一部', '/system/user/edit/5', '127.0.0.1', 'XX 内网IP', '{}', '1', '', '2018-07-30 16:22:46');
+INSERT INTO sys_oper_log VALUES ('33', '用户管理', '2', 'com.student.controller.UserController.edit()', '1', 'admin', '研发一部', '/system/user/edit/5', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-30 16:26:19');
+INSERT INTO sys_oper_log VALUES ('34', '用户管理', '2', 'com.student.controller.UserController.edit()', '1', 'admin', '研发一部', '/system/user/edit/5', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-30 16:30:00');
+INSERT INTO sys_oper_log VALUES ('35', '用户管理', '2', 'com.student.controller.UserController.edit()', '1', 'admin', '研发一部', '/system/user/edit/5', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-30 16:31:44');
+INSERT INTO sys_oper_log VALUES ('36', '用户管理', '2', 'com.student.controller.UserController.edit()', '1', 'admin', '研发一部', '/system/user/edit/5', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-30 16:36:14');
+INSERT INTO sys_oper_log VALUES ('37', '用户管理', '2', 'com.student.controller.UserController.edit()', '1', 'admin', '研发一部', '/system/user/edit/5', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-30 16:38:29');
+INSERT INTO sys_oper_log VALUES ('38', '用户管理', '3', 'com.student.controller.UserController.save()', '1', 'admin', '研发一部', '/system/user/save', '127.0.0.1', null, '{\"id\":[\"5\"],\"deptId\":[\"106\"],\"userName\":[\"jiangxiaojie\"],\"email\":[\"296569841@qq.com\"],\"phoneNumber\":[\"13478539991\"],\"sex\":[\"0\"],\"status\":[\"0\"],\"roleIds\":[\"1\"],\"postIds\":[\"1,2\"]}', '0', null, '2018-07-30 16:38:41');
+INSERT INTO sys_oper_log VALUES ('39', '重置密码', '2', 'com.student.controller.UserController.resetPwd()', '1', 'admin', '研发一部', '/system/user/resetPwd/5', '127.0.0.1', null, '{}', '0', null, '2018-07-30 16:38:51');
+INSERT INTO sys_oper_log VALUES ('40', '用户管理', '2', 'com.student.controller.UserController.edit()', '1', 'admin', '研发一部', '/system/user/edit/5', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 11:10:52');
+INSERT INTO sys_oper_log VALUES ('41', '重置密码', '2', 'com.student.controller.UserController.resetPwd()', '1', 'admin', '研发一部', '/system/user/resetPwd/5', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 11:10:56');
+INSERT INTO sys_oper_log VALUES ('42', '重置密码', '3', 'com.student.controller.UserController.resetPwd()', '1', 'admin', '研发一部', '/system/user/resetPwd', '127.0.0.1', 'XX 内网IP', '{\"userId\":[\"5\"],\"loginName\":[\"jiangxiaojie\"],\"password\":[\"12345\"]}', '0', null, '2018-07-31 11:11:03');
+INSERT INTO sys_oper_log VALUES ('43', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 11:15:41');
+INSERT INTO sys_oper_log VALUES ('44', '角色管理', '1', 'com.student.controller.RoleController.add()', '1', 'admin', '研发一部', '/system/role/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 11:15:46');
+INSERT INTO sys_oper_log VALUES ('45', '重置密码', '2', 'com.student.controller.UserController.resetPwd()', '1', 'admin', '研发一部', '/system/user/resetPwd/5', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 11:29:09');
+INSERT INTO sys_oper_log VALUES ('46', '重置密码', '3', 'com.student.controller.UserController.resetPwd()', '1', 'admin', '研发一部', '/system/user/resetPwd', '127.0.0.1', 'XX 内网IP', '{\"userId\":[\"5\"],\"loginName\":[\"jiangxiaojie\"],\"password\":[\"123456\"]}', '0', null, '2018-07-31 11:29:55');
+INSERT INTO sys_oper_log VALUES ('47', '重置密码', '2', 'com.student.controller.UserController.resetPwd()', '1', 'admin', '研发一部', '/system/user/resetPwd/5', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 11:32:34');
+INSERT INTO sys_oper_log VALUES ('48', '重置密码', '2', 'com.student.controller.UserController.resetPwd()', '1', 'admin', '研发一部', '/system/user/resetPwd/5', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 11:36:16');
+INSERT INTO sys_oper_log VALUES ('49', '重置密码', '3', 'com.student.controller.UserController.resetPwd()', '1', 'admin', '研发一部', '/system/user/resetPwd', '127.0.0.1', 'XX 内网IP', '{\"id\":[\"5\"],\"loginName\":[\"jiangxiaojie\"],\"password\":[\"123456\"]}', '0', null, '2018-07-31 11:36:37');
+INSERT INTO sys_oper_log VALUES ('50', '菜单管理', '1', 'com.student.controller.MenuController.add()', '1', 'admin', '研发一部', '/system/menu/add/0', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 14:19:21');
+INSERT INTO sys_oper_log VALUES ('51', '菜单管理', '2', 'com.student.controller.MenuController.edit()', '1', 'admin', '研发一部', '/system/menu/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 14:19:26');
+INSERT INTO sys_oper_log VALUES ('52', '菜单管理', '1', 'com.student.controller.MenuController.add()', '1', 'admin', '研发一部', '/system/menu/add/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 14:19:30');
+INSERT INTO sys_oper_log VALUES ('53', '部门管理', '1', 'com.student.controller.DeptController.add()', '1', 'admin', '研发一部', '/system/dept/add/100', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 14:19:40');
+INSERT INTO sys_oper_log VALUES ('54', '菜单管理', '2', 'com.student.controller.MenuController.edit()', '1', 'admin', '研发一部', '/system/menu/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 14:56:13');
+INSERT INTO sys_oper_log VALUES ('55', '菜单管理', '1', 'com.student.controller.MenuController.add()', '1', 'admin', '研发一部', '/system/menu/add/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 14:56:17');
+INSERT INTO sys_oper_log VALUES ('56', '部门管理', '2', 'com.student.controller.DeptController.edit()', '1', 'admin', '研发一部', '/system/dept/edit/101', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 14:56:22');
+INSERT INTO sys_oper_log VALUES ('57', '部门管理', '2', 'com.student.controller.DeptController.edit()', '1', 'admin', '研发一部', '/system/dept/edit/101', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 14:59:37');
+INSERT INTO sys_oper_log VALUES ('58', '菜单管理', '2', 'com.student.controller.MenuController.edit()', '1', 'admin', '研发一部', '/system/menu/edit/1', '127.0.0.1', null, '{}', '0', null, '2018-07-31 15:03:26');
+INSERT INTO sys_oper_log VALUES ('59', '菜单管理', '1', 'com.student.controller.MenuController.add()', '1', 'admin', '研发一部', '/system/menu/add/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 15:03:30');
+INSERT INTO sys_oper_log VALUES ('60', '菜单管理', '1', 'com.student.controller.MenuController.add()', '1', 'admin', '研发一部', '/system/menu/add/0', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 15:03:35');
+INSERT INTO sys_oper_log VALUES ('61', '菜单管理', '2', 'com.student.controller.MenuController.edit()', '1', 'admin', '研发一部', '/system/menu/edit/112', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 15:03:40');
+INSERT INTO sys_oper_log VALUES ('62', '岗位管理', '2', 'com.student.controller.PostController.edit()', '1', 'admin', '研发一部', '/system/post/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 15:10:59');
+INSERT INTO sys_oper_log VALUES ('63', '岗位管理', '2', 'com.student.controller.PostController.edit()', '1', 'admin', '研发一部', '/system/post/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 15:12:58');
+INSERT INTO sys_oper_log VALUES ('64', '岗位管理', '1', 'com.student.controller.PostController.add()', '1', 'admin', '研发一部', '/system/post/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 15:13:03');
+INSERT INTO sys_oper_log VALUES ('65', '参数管理', '2', 'com.student.controller.ConfigController.edit()', '1', 'admin', '研发一部', '/system/config/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 15:25:17');
+INSERT INTO sys_oper_log VALUES ('66', '参数管理', '1', 'com.student.controller.ConfigController.add()', '1', 'admin', '研发一部', '/system/config/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 15:25:20');
+INSERT INTO sys_oper_log VALUES ('67', '通知公告', '1', 'com.student.controller.NoticeController.add()', '1', 'admin', '研发一部', '/system/notice/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 15:26:46');
+INSERT INTO sys_oper_log VALUES ('68', '通知公告', '3', 'com.student.controller.NoticeController.save()', '1', 'admin', '研发一部', '/system/notice/save', '127.0.0.1', 'XX 内网IP', '{\"noticeTitle\":[\"123\"],\"noticeType\":[\"1\"],\"noticeContent\":[\"<p>123</p>\"],\"status\":[\"0\"]}', '1', 'Invalid bound statement (not found): com.student.dao.mapper.NoticeMapper.insertNotice', '2018-07-31 15:26:56');
+INSERT INTO sys_oper_log VALUES ('69', '参数管理', '2', 'com.student.controller.ConfigController.edit()', '1', 'admin', '研发一部', '/system/config/edit/2', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 15:33:15');
+INSERT INTO sys_oper_log VALUES ('70', '参数管理', '1', 'com.student.controller.ConfigController.add()', '1', 'admin', '研发一部', '/system/config/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 15:33:18');
+INSERT INTO sys_oper_log VALUES ('71', '通知公告', '1', 'com.student.controller.NoticeController.add()', '1', 'admin', '研发一部', '/system/notice/add', '127.0.0.1', null, '{}', '0', null, '2018-07-31 15:33:27');
+INSERT INTO sys_oper_log VALUES ('72', '通知公告', '3', 'com.student.controller.NoticeController.save()', '1', 'admin', '研发一部', '/system/notice/save', '127.0.0.1', null, '{\"noticeTitle\":[\"不朽3\"],\"noticeType\":[\"1\"],\"noticeContent\":[\"<div>&nbsp;void&nbsp;openMax(){};<br>void&nbsp;closeMax(){};<br>void&nbsp;openDota2(){};<br>void&nbsp;check_immortal_III(){};<br><br>int&nbsp;main()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;waiti', '1', '\r\n### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column \'notice_content\' at row 1\r\n### The error may involve com.student.dao.mapper.NoticeMapper.insertNotice-Inline\r\n### The error occurred while setting parameters\r\n### SQL: insert into sys_notice (     notice_title,       notice_type,       notice_content,       status,             create_by,      create_time    )values(     ?,       ?,       ?,       ?,             ?,      sysdate()   )\r\n### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column \'notice_content\' at row 1\n; ]; Data truncation: Data too long for column \'notice_content\' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column \'notice_content\' at row 1', '2018-07-31 15:33:50');
+INSERT INTO sys_oper_log VALUES ('73', '通知公告', '1', 'com.student.controller.NoticeController.add()', '1', 'admin', '研发一部', '/system/notice/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 15:36:28');
+INSERT INTO sys_oper_log VALUES ('74', '通知公告', '3', 'com.student.controller.NoticeController.save()', '1', 'admin', '研发一部', '/system/notice/save', '127.0.0.1', 'XX 内网IP', '{\"noticeTitle\":[\"不朽3\"],\"noticeType\":[\"1\"],\"noticeContent\":[\"<div>&nbsp;void&nbsp;openMax(){};<br>void&nbsp;closeMax(){};<br>void&nbsp;openDota2(){};<br>void&nbsp;check_immortal_III(){};<br><br>int&nbsp;main()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;waiti', '1', '\r\n### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column \'notice_content\' at row 1\r\n### The error may involve com.student.dao.mapper.NoticeMapper.insertNotice-Inline\r\n### The error occurred while setting parameters\r\n### SQL: insert into sys_notice (     notice_title,       notice_type,       notice_content,       status,             create_by,      create_time    )values(     ?,       ?,       ?,       ?,             ?,      sysdate()   )\r\n### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column \'notice_content\' at row 1\n; ]; Data truncation: Data too long for column \'notice_content\' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column \'notice_content\' at row 1', '2018-07-31 15:36:56');
+INSERT INTO sys_oper_log VALUES ('75', '通知公告', '1', 'com.student.controller.NoticeController.add()', '1', 'admin', '研发一部', '/system/notice/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 15:39:39');
+INSERT INTO sys_oper_log VALUES ('76', '通知公告', '3', 'com.student.controller.NoticeController.save()', '1', 'admin', '研发一部', '/system/notice/save', '127.0.0.1', 'XX 内网IP', '{\"noticeTitle\":[\"不朽3\"],\"noticeType\":[\"1\"],\"noticeContent\":[\"<div><div>&nbsp;void&nbsp;openMax(){};<br>void&nbsp;closeMax(){};<br>void&nbsp;openDota2(){};<br>void&nbsp;check_immortal_III(){};<br><br>int&nbsp;main()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;', '0', null, '2018-07-31 15:40:14');
+INSERT INTO sys_oper_log VALUES ('77', '字典类型', '1', 'com.student.controller.DictTypeController.add()', '1', 'admin', '研发一部', '/system/dict/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 16:34:54');
+INSERT INTO sys_oper_log VALUES ('78', '字典类型', '2', 'com.student.controller.DictTypeController.edit()', '1', 'admin', '研发一部', '/system/dict/edit/6', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 16:40:51');
 
 -- ----------------------------
 -- Table structure for `sys_post`
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_post`;
 CREATE TABLE `sys_post` (
-  `post_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '岗位ID',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '岗位ID',
   `post_code` varchar(64) NOT NULL COMMENT '岗位编码',
   `post_name` varchar(50) NOT NULL COMMENT '岗位名称',
   `post_sort` int(4) NOT NULL COMMENT '显示顺序',
@@ -410,7 +592,7 @@ CREATE TABLE `sys_post` (
   `update_by` varchar(64) DEFAULT '' COMMENT '更新者',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) DEFAULT '' COMMENT '备注',
-  PRIMARY KEY (`post_id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='岗位信息表';
 
 -- ----------------------------
@@ -461,6 +643,7 @@ CREATE TABLE `sys_role_menu` (
 INSERT INTO sys_role_menu VALUES ('1', '1');
 INSERT INTO sys_role_menu VALUES ('1', '2');
 INSERT INTO sys_role_menu VALUES ('1', '3');
+INSERT INTO sys_role_menu VALUES ('1', '4');
 INSERT INTO sys_role_menu VALUES ('1', '100');
 INSERT INTO sys_role_menu VALUES ('1', '101');
 INSERT INTO sys_role_menu VALUES ('1', '102');
@@ -562,20 +745,21 @@ CREATE TABLE `sys_user` (
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) DEFAULT '' COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='用户信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='用户信息表';
 
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO sys_user VALUES ('1', '106', 'admin', '蒋小姐', '00', 'jxj@163.com', '15888888888', '1', '', '29c67a30398638269fe600f73a054934', '111111', '0', '0', '127.0.0.1', '2018-07-24 17:25:18', 'admin', '2018-03-16 11:33:00', 'jxj', '2018-07-24 17:25:17', 'jxj');
-INSERT INTO sys_user VALUES ('2', '108', 'ry', '若依', '00', 'ry@qq.com', '15666666666', '1', '', '8e6d98b90472783cc73c17047ddccf36', '222222', '0', '0', '127.0.0.1', '2018-03-16 11:33:00', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '测试员');
+INSERT INTO sys_user VALUES ('1', '106', 'admin', '蒋小姐', '00', 'jxj@163.com', '15888888888', '1', '', '29c67a30398638269fe600f73a054934', '111111', '0', '0', '127.0.0.1', '2018-07-31 17:08:01', 'admin', '2018-03-16 11:33:00', 'jxj', '2018-07-31 17:08:01', 'jxj');
+INSERT INTO sys_user VALUES ('4', '106', 'jiangxiaojie', 'dargon', '00', '296569845@qq.com', '18324191811', '0', '', 'a0f4e09c52e8b79c1068f91ac62c2b04', '95e77a', '0', '2', '', null, 'admin', '2018-07-30 15:42:29', '', '2018-07-31 11:29:55', '');
+INSERT INTO sys_user VALUES ('5', '106', 'jiangxiaojie', 'jiangxiaojie', '00', '296569841@qq.com', '13478539991', '0', '', 'f3712626d1ef5a5131b11412e280d72f', '495a6d', '0', '0', '', null, 'admin', '2018-07-30 15:50:50', 'admin', '2018-07-31 11:36:32', '');
 
 -- ----------------------------
 -- Table structure for `sys_user_online`
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_user_online`;
 CREATE TABLE `sys_user_online` (
-  `sessionId` varchar(50) NOT NULL DEFAULT '' COMMENT '用户会话id',
+  `sessionId` varchar(50) DEFAULT '' COMMENT '用户会话id',
   `login_name` varchar(50) DEFAULT '' COMMENT '登录账号',
   `dept_name` varchar(50) DEFAULT '' COMMENT '部门名称',
   `ipaddr` varchar(50) DEFAULT '' COMMENT '登录IP地址',
@@ -586,13 +770,13 @@ CREATE TABLE `sys_user_online` (
   `start_timestsamp` datetime DEFAULT NULL COMMENT 'session创建时间',
   `last_access_time` datetime DEFAULT NULL COMMENT 'session最后访问时间',
   `expire_time` int(5) DEFAULT '0' COMMENT '超时时间，单位为分钟',
-  PRIMARY KEY (`sessionId`)
+  `id` tinyint(4) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='在线用户记录';
 
 -- ----------------------------
 -- Records of sys_user_online
 -- ----------------------------
-INSERT INTO sys_user_online VALUES ('ad29da97-b025-47d8-9613-b445aef23ca9', 'admin', '研发一部', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', 'on_line', '2018-07-24 17:25:13', '2018-07-24 17:25:18', '1800000');
 
 -- ----------------------------
 -- Table structure for `sys_user_post`
@@ -609,6 +793,10 @@ CREATE TABLE `sys_user_post` (
 -- ----------------------------
 INSERT INTO sys_user_post VALUES ('1', '1');
 INSERT INTO sys_user_post VALUES ('2', '2');
+INSERT INTO sys_user_post VALUES ('4', '1');
+INSERT INTO sys_user_post VALUES ('5', '1');
+INSERT INTO sys_user_post VALUES ('5', '2');
+INSERT INTO sys_user_post VALUES ('6', '4');
 
 -- ----------------------------
 -- Table structure for `sys_user_role`
@@ -625,3 +813,6 @@ CREATE TABLE `sys_user_role` (
 -- ----------------------------
 INSERT INTO sys_user_role VALUES ('1', '1');
 INSERT INTO sys_user_role VALUES ('2', '2');
+INSERT INTO sys_user_role VALUES ('4', '1');
+INSERT INTO sys_user_role VALUES ('5', '1');
+INSERT INTO sys_user_role VALUES ('6', '2');

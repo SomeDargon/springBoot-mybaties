@@ -6,7 +6,7 @@
 <body class="white-bg">
 	<div class="wrapper wrapper-content animated fadeInRight ibox-content">
 		<form class="form-horizontal m" id="form-menu-edit" th:object="${menu}">
-			<input name="menuId"   type="hidden" th:field="*{menuId}"   />
+			<input name="id"   type="hidden" th:field="*{id}"   />
 			<input id="treeId" name="parentId" type="hidden" th:field="*{parentId}" />
 			<div class="form-group">
 				<label class="col-sm-3 control-label ">上级菜单：</label>
@@ -93,8 +93,8 @@
                         type: "post",
                         dataType: "json",
                         data: {
-                        	"menuId": function() {
-                                return $("input[name='menuId']").val();
+                        	"id": function() {
+                                return $("input[name='id']").val();
                             },
                 			"menuName": function() {
                                 return $("input[name='menuName']").val();
@@ -160,9 +160,9 @@
 
         /*菜单管理-修改-选择菜单树*/
         function selectMenuTree() {
-        	var menuId = $("#treeId").val();
-        	if(menuId > 0) {
-        		var url = prefix + "/selectMenuTree/" + menuId;
+        	var id = $("#treeId").val();
+        	if(id > 0) {
+        		var url = prefix + "/selectMenuTree/" + id;
         		$.modal.open("选择菜单", url, '380', '380');
         	}
         	else {
