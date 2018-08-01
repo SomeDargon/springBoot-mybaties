@@ -1,7 +1,7 @@
 package com.student.service.impl;
 
 
-import com.student.dao.mapper.OperLogMapper;
+import com.student.dao.mapper.monitor.OperLogMapper;
 import com.student.entity.OperLog;
 import com.student.service.OperLogService;
 import com.student.support.Convert;
