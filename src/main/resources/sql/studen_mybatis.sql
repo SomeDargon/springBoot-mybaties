@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50722
 File Encoding         : 65001
 
-Date: 2018-07-31 17:22:37
+Date: 2018-08-01 17:21:39
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -178,7 +178,7 @@ CREATE TABLE `sys_job` (
 -- ----------------------------
 -- Records of sys_job
 -- ----------------------------
-INSERT INTO sys_job VALUES ('1', 'ryTask', '系统默认（无参）', 'ryNoParams', '', '0/10 * * * * ?', '1', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '');
+INSERT INTO sys_job VALUES ('1', 'ryTask', '系统默认（无参）', 'ryNoParams', '', '0/10 * * * * ?', '1', 'admin', '2018-03-16 11:33:00', 'admin', '2018-08-01 15:52:37', '');
 INSERT INTO sys_job VALUES ('2', 'ryTask', '系统默认（有参）', 'ryParams', 'ry', '0/20 * * * * ?', '1', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '');
 
 -- ----------------------------
@@ -196,11 +196,22 @@ CREATE TABLE `sys_job_log` (
   `exception_info` text COMMENT '异常信息',
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`job_log_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='定时任务调度日志表';
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='定时任务调度日志表';
 
 -- ----------------------------
 -- Records of sys_job_log
 -- ----------------------------
+INSERT INTO sys_job_log VALUES ('1', 'ryTask', '系统默认（无参）', 'ryNoParams', '', 'ryTask 总共耗时：1毫秒', '1', 'org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named \'ryTask\' available', '2018-08-01 15:35:32');
+INSERT INTO sys_job_log VALUES ('2', 'ryTask', '系统默认（无参）', 'ryNoParams', '', 'ryTask 总共耗时：0毫秒', '1', 'org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named \'ryTask\' available', '2018-08-01 15:35:55');
+INSERT INTO sys_job_log VALUES ('3', 'ryTask', '系统默认（无参）', 'ryNoParams', '', 'ryTask 总共耗时：1毫秒', '1', 'org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named \'ryTask\' available', '2018-08-01 15:36:00');
+INSERT INTO sys_job_log VALUES ('4', 'ryTask', '系统默认（无参）', 'ryNoParams', '', 'ryTask 总共耗时：1毫秒', '1', 'org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named \'ryTask\' available', '2018-08-01 15:36:10');
+INSERT INTO sys_job_log VALUES ('5', 'ryTask', '系统默认（无参）', 'ryNoParams', '', 'ryTask 总共耗时：1毫秒', '1', 'org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named \'ryTask\' available', '2018-08-01 15:36:20');
+INSERT INTO sys_job_log VALUES ('6', 'ryTask', '系统默认（无参）', 'ryNoParams', '', 'ryTask 总共耗时：4毫秒', '1', 'org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named \'ryTask\' available', '2018-08-01 15:36:30');
+INSERT INTO sys_job_log VALUES ('7', 'ryTask', '系统默认（无参）', 'ryNoParams', '', 'ryTask 总共耗时：0毫秒', '1', 'org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named \'ryTask\' available', '2018-08-01 15:36:40');
+INSERT INTO sys_job_log VALUES ('8', 'ryTask', '系统默认（无参）', 'ryNoParams', '', 'ryTask 总共耗时：4毫秒', '0', null, '2018-08-01 15:52:10');
+INSERT INTO sys_job_log VALUES ('9', 'ryTask', '系统默认（无参）', 'ryNoParams', '', 'ryTask 总共耗时：6毫秒', '0', null, '2018-08-01 15:52:20');
+INSERT INTO sys_job_log VALUES ('10', 'ryTask', '系统默认（无参）', 'ryNoParams', '', 'ryTask 总共耗时：5毫秒', '0', null, '2018-08-01 15:52:22');
+INSERT INTO sys_job_log VALUES ('11', 'ryTask', '系统默认（无参）', 'ryNoParams', '', 'ryTask 总共耗时：3毫秒', '0', null, '2018-08-01 15:52:30');
 
 -- ----------------------------
 -- Table structure for `sys_logininfor`
@@ -217,7 +228,7 @@ CREATE TABLE `sys_logininfor` (
   `msg` varchar(255) DEFAULT '' COMMENT '提示消息',
   `login_time` datetime DEFAULT NULL COMMENT '访问时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=utf8 COMMENT='系统访问记录';
+) ENGINE=InnoDB AUTO_INCREMENT=136 DEFAULT CHARSET=utf8 COMMENT='系统访问记录';
 
 -- ----------------------------
 -- Records of sys_logininfor
@@ -346,6 +357,16 @@ INSERT INTO sys_logininfor VALUES ('121', 'admin', '127.0.0.1', 'XX 内网IP', '
 INSERT INTO sys_logininfor VALUES ('122', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 16:40:41');
 INSERT INTO sys_logininfor VALUES ('123', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 16:54:37');
 INSERT INTO sys_logininfor VALUES ('124', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-07-31 17:08:01');
+INSERT INTO sys_logininfor VALUES ('125', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-08-01 09:51:54');
+INSERT INTO sys_logininfor VALUES ('127', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-08-01 14:08:42');
+INSERT INTO sys_logininfor VALUES ('128', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '1', '验证码错误', '2018-08-01 14:20:21');
+INSERT INTO sys_logininfor VALUES ('129', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-08-01 14:20:24');
+INSERT INTO sys_logininfor VALUES ('130', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-08-01 15:35:18');
+INSERT INTO sys_logininfor VALUES ('131', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-08-01 15:51:56');
+INSERT INTO sys_logininfor VALUES ('132', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-08-01 15:54:39');
+INSERT INTO sys_logininfor VALUES ('133', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-08-01 16:03:20');
+INSERT INTO sys_logininfor VALUES ('134', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-08-01 16:50:38');
+INSERT INTO sys_logininfor VALUES ('135', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-08-01 16:57:46');
 
 -- ----------------------------
 -- Table structure for `sys_menu`
@@ -495,7 +516,7 @@ CREATE TABLE `sys_oper_log` (
   `error_msg` varchar(2000) DEFAULT '' COMMENT '错误消息',
   `oper_time` datetime DEFAULT NULL COMMENT '操作时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8 COMMENT='操作日志记录';
+) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8 COMMENT='操作日志记录';
 
 -- ----------------------------
 -- Records of sys_oper_log
@@ -576,6 +597,21 @@ INSERT INTO sys_oper_log VALUES ('75', '通知公告', '1', 'com.student.control
 INSERT INTO sys_oper_log VALUES ('76', '通知公告', '3', 'com.student.controller.NoticeController.save()', '1', 'admin', '研发一部', '/system/notice/save', '127.0.0.1', 'XX 内网IP', '{\"noticeTitle\":[\"不朽3\"],\"noticeType\":[\"1\"],\"noticeContent\":[\"<div><div>&nbsp;void&nbsp;openMax(){};<br>void&nbsp;closeMax(){};<br>void&nbsp;openDota2(){};<br>void&nbsp;check_immortal_III(){};<br><br>int&nbsp;main()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;', '0', null, '2018-07-31 15:40:14');
 INSERT INTO sys_oper_log VALUES ('77', '字典类型', '1', 'com.student.controller.DictTypeController.add()', '1', 'admin', '研发一部', '/system/dict/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 16:34:54');
 INSERT INTO sys_oper_log VALUES ('78', '字典类型', '2', 'com.student.controller.DictTypeController.edit()', '1', 'admin', '研发一部', '/system/dict/edit/6', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-07-31 16:40:51');
+INSERT INTO sys_oper_log VALUES ('79', '登陆日志', '4', 'com.student.controller.monitor.LogininforController.remove()', '1', 'admin', '研发一部', '/monitor/logininfor/remove', '127.0.0.1', 'XX 内网IP', '{\"ids\":[\"126\"]}', '0', null, '2018-08-01 14:08:58');
+INSERT INTO sys_oper_log VALUES ('80', '在线用户', '8', 'com.student.controller.monitor.UserOnlineController.batchForceLogout()', '1', 'admin', '研发一部', '/monitor/online/batchForceLogout', '127.0.0.1', 'XX 内网IP', '{\"ids[]\":[\"05f7e147-440b-4ca0-b28a-786f459addfd\",\"05f7e147-440b-4ca0-b28a-786f459addfd\",\"05f7e147-440b-4ca0-b28a-786f459addfd\",\"05f7e147-440b-4ca0-b28a-786f459addfd\",\"05f7e147-440b-4ca0-b28a-786f459addfd\",\"05f7e147-440b-4ca0-b28a-786f459addfd\"]}', '1', 'nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 9', '2018-08-01 14:09:24');
+INSERT INTO sys_oper_log VALUES ('81', '在线用户', '8', 'com.student.controller.monitor.UserOnlineController.forceLogout()', '1', 'admin', '研发一部', '/monitor/online/forceLogout', '127.0.0.1', 'XX 内网IP', '{\"sessionId\":[\"970ffb8e-a436-4ece-a335-8e80cf1191f4\"]}', '0', null, '2018-08-01 14:21:37');
+INSERT INTO sys_oper_log VALUES ('82', '在线用户', '8', 'com.student.controller.monitor.UserOnlineController.batchForceLogout()', '1', 'admin', '研发一部', '/monitor/online/batchForceLogout', '127.0.0.1', 'XX 内网IP', '{\"ids[]\":[\"970ffb8e-a436-4ece-a335-8e80cf1191f4\"]}', '0', null, '2018-08-01 14:21:50');
+INSERT INTO sys_oper_log VALUES ('83', '定时任务', '2', 'com.student.controller.monitor.JobController.run()', '1', 'admin', '研发一部', '/monitor/job/run', '127.0.0.1', 'XX 内网IP', '{\"jobId\":[\"1\"]}', '0', null, '2018-08-01 15:35:32');
+INSERT INTO sys_oper_log VALUES ('84', '定时任务', '2', 'com.student.controller.monitor.JobController.changeStatus()', '1', 'admin', '研发一部', '/monitor/job/changeStatus', '127.0.0.1', 'XX 内网IP', '{\"jobId\":[\"1\"],\"status\":[\"0\"]}', '0', null, '2018-08-01 15:35:55');
+INSERT INTO sys_oper_log VALUES ('85', '定时任务', '2', 'com.student.controller.monitor.JobController.changeStatus()', '1', 'admin', '研发一部', '/monitor/job/changeStatus', '127.0.0.1', 'XX 内网IP', '{\"jobId\":[\"1\"],\"status\":[\"1\"]}', '0', null, '2018-08-01 15:36:44');
+INSERT INTO sys_oper_log VALUES ('86', '定时任务', '2', 'com.student.controller.monitor.JobController.changeStatus()', '1', 'admin', '研发一部', '/monitor/job/changeStatus', '127.0.0.1', 'XX 内网IP', '{\"jobId\":[\"1\"],\"status\":[\"0\"]}', '0', null, '2018-08-01 15:52:10');
+INSERT INTO sys_oper_log VALUES ('87', '定时任务', '2', 'com.student.controller.monitor.JobController.run()', '1', 'admin', '研发一部', '/monitor/job/run', '127.0.0.1', null, '{\"jobId\":[\"1\"]}', '0', null, '2018-08-01 15:52:24');
+INSERT INTO sys_oper_log VALUES ('88', '定时任务', '2', 'com.student.controller.monitor.JobController.changeStatus()', '1', 'admin', '研发一部', '/monitor/job/changeStatus', '127.0.0.1', 'XX 内网IP', '{\"jobId\":[\"1\"],\"status\":[\"1\"]}', '0', null, '2018-08-01 15:52:37');
+INSERT INTO sys_oper_log VALUES ('89', '代码生成', '10', 'com.student.controller.tool.GenController.genCode()', '1', 'admin', '研发一部', '/tool/gen/genCode/sys_user_online', '127.0.0.1', 'XX 内网IP', '{}', '1', '', '2018-08-01 16:50:59');
+INSERT INTO sys_oper_log VALUES ('90', '代码生成', '10', 'com.student.controller.tool.GenController.genCode()', '1', 'admin', '研发一部', '/tool/gen/genCode/sys_user_online', '127.0.0.1', 'XX 内网IP', '{}', '1', '', '2018-08-01 16:51:41');
+INSERT INTO sys_oper_log VALUES ('91', '代码生成', '10', 'com.student.controller.tool.GenController.genCode()', '1', 'admin', '研发一部', '/tool/gen/genCode/sys_user_online', '127.0.0.1', 'XX 内网IP', '{}', '1', '', '2018-08-01 16:53:08');
+INSERT INTO sys_oper_log VALUES ('92', '代码生成', '10', 'com.student.controller.tool.GenController.genCode()', '1', 'admin', '研发一部', '/tool/gen/genCode/sys_user_online', '127.0.0.1', 'XX 内网IP', '{}', '1', '', '2018-08-01 16:53:40');
+INSERT INTO sys_oper_log VALUES ('93', '代码生成', '10', 'com.student.controller.tool.GenController.genCode()', '1', 'admin', '研发一部', '/tool/gen/genCode/sys_user_online', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-08-01 16:58:03');
 
 -- ----------------------------
 -- Table structure for `sys_post`
@@ -745,12 +781,12 @@ CREATE TABLE `sys_user` (
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) DEFAULT '' COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='用户信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='用户信息表';
 
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO sys_user VALUES ('1', '106', 'admin', '蒋小姐', '00', 'jxj@163.com', '15888888888', '1', '', '29c67a30398638269fe600f73a054934', '111111', '0', '0', '127.0.0.1', '2018-07-31 17:08:01', 'admin', '2018-03-16 11:33:00', 'jxj', '2018-07-31 17:08:01', 'jxj');
+INSERT INTO sys_user VALUES ('1', '106', 'admin', '蒋小姐', '00', 'jxj@163.com', '15888888888', '1', '', '29c67a30398638269fe600f73a054934', '111111', '0', '0', '127.0.0.1', '2018-08-01 16:57:46', 'admin', '2018-03-16 11:33:00', 'jxj', '2018-08-01 16:57:46', 'jxj');
 INSERT INTO sys_user VALUES ('4', '106', 'jiangxiaojie', 'dargon', '00', '296569845@qq.com', '18324191811', '0', '', 'a0f4e09c52e8b79c1068f91ac62c2b04', '95e77a', '0', '2', '', null, 'admin', '2018-07-30 15:42:29', '', '2018-07-31 11:29:55', '');
 INSERT INTO sys_user VALUES ('5', '106', 'jiangxiaojie', 'jiangxiaojie', '00', '296569841@qq.com', '13478539991', '0', '', 'f3712626d1ef5a5131b11412e280d72f', '495a6d', '0', '0', '', null, 'admin', '2018-07-30 15:50:50', 'admin', '2018-07-31 11:36:32', '');
 
@@ -759,7 +795,7 @@ INSERT INTO sys_user VALUES ('5', '106', 'jiangxiaojie', 'jiangxiaojie', '00', '
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_user_online`;
 CREATE TABLE `sys_user_online` (
-  `sessionId` varchar(50) DEFAULT '' COMMENT '用户会话id',
+  `session_id` varchar(50) NOT NULL DEFAULT '' COMMENT '用户会话id',
   `login_name` varchar(50) DEFAULT '' COMMENT '登录账号',
   `dept_name` varchar(50) DEFAULT '' COMMENT '部门名称',
   `ipaddr` varchar(50) DEFAULT '' COMMENT '登录IP地址',
@@ -770,13 +806,13 @@ CREATE TABLE `sys_user_online` (
   `start_timestsamp` datetime DEFAULT NULL COMMENT 'session创建时间',
   `last_access_time` datetime DEFAULT NULL COMMENT 'session最后访问时间',
   `expire_time` int(5) DEFAULT '0' COMMENT '超时时间，单位为分钟',
-  `id` tinyint(4) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`session_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='在线用户记录';
 
 -- ----------------------------
 -- Records of sys_user_online
 -- ----------------------------
+INSERT INTO sys_user_online VALUES ('970ffb8e-a436-4ece-a335-8e80cf1191f4', 'admin', '研发一部', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', 'on_line', '2018-08-01 16:57:41', '2018-08-01 16:59:41', '1800000');
 
 -- ----------------------------
 -- Table structure for `sys_user_post`
