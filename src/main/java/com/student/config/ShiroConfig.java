@@ -33,7 +33,6 @@ import java.util.Map;
 /**
  * 权限配置加载
  *
- * @author ruoyi
  */
 @Configuration
 public class ShiroConfig {

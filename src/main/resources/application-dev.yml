@@ -3,7 +3,7 @@ student:
   name: student
   version: 2.1.0
   copyrightYear: 2018
-  profile: D:/profile/
+  profile: /profile/
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/studen_mybatis?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8

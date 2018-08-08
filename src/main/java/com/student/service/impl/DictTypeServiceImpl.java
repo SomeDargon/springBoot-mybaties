@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * 字典 业务层处理
  *
- * @author ruoyi
+ *
  */
 @Service("dictTypeService")
 public class DictTypeServiceImpl implements DictTypeService {

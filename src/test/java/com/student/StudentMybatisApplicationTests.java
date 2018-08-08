@@ -17,6 +17,7 @@ public class StudentMybatisApplicationTests {
     @Test
     public void contextLoads() {
 //        userMapper.findByState(1);
+//        Integer.valueOf()
     }
 
 }

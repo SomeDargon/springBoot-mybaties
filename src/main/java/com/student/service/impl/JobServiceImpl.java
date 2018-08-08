@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * 定时任务调度信息 服务层
  *
- * @author ruoyi
+ *
  */
 @Service("jobService")
 public class JobServiceImpl implements JobService {

@@ -3,7 +3,7 @@ package com.student.constant;
 /**
  * Shiro通用常量
  *
- * @author ruoyi
+ *
  */
 public interface ShiroConstants {
     /**

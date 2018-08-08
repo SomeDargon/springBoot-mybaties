@@ -11,7 +11,7 @@ import java.util.Date;
 /**
  * 系统访问日志情况信息 sys_logininfor
  *
- * @author ruoyi
+ *
  */
 @Getter
 @Setter
