@@ -38,7 +38,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 	
  	<delete id="deleteOnlineById" parameterType="String">
- 		delete from sys_user_online where sessionId = #{sessionId}
+ 		delete from sys_user_online where session_id = #{sessionId}
  	</delete>
  	
  	<select id="selectUserOnlineList" parameterType="UserOnline" resultMap="UserOnlineResult">
