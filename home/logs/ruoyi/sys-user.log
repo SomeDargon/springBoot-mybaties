@@ -1,2 +1,4 @@
 10:28:31.526 [http-nio-8080-exec-10] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
 10:31:11.671 [http-nio-8080-exec-2] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+15:24:54.676 [http-nio-8000-exec-3] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Error][验证码错误]
+15:25:07.524 [http-nio-8000-exec-1] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]

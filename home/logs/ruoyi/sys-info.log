@@ -1,60 +1,26 @@
-10:03:18.912 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [buildDefaultMergedContextConfiguration,308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.student.StudentMybatisApplicationTests], using SpringBootContextLoader
-10:03:18.940 [main] INFO  o.s.t.c.s.AbstractContextLoader - [generateDefaultLocations,264] - Could not detect default resource locations for test class [com.student.StudentMybatisApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-10:03:18.944 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - [detectDefaultConfigurationClasses,83] - Could not detect default configuration classes for test class [com.student.StudentMybatisApplicationTests]: StudentMybatisApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-10:03:19.325 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [getOrFindConfigurationClasses,244] - Found @SpringBootConfiguration com.student.Application for test class com.student.StudentMybatisApplicationTests
-10:03:19.692 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [getDefaultTestExecutionListenerClassNames,248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-10:03:19.744 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [getTestExecutionListeners,177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@434a63ab, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6e0f5f7f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2805d709, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3ee37e5a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2ea41516, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3a44431a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3c7f66c4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@194bcebf, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@17497425, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@f0da945, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4803b726, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@ffaa6af]
-10:03:20.667 [main] INFO  c.s.StudentMybatisApplicationTests - [logStarting,50] - Starting StudentMybatisApplicationTests on macdeMBP with PID 14246 (started by mac in /Users/mac/Projects/springBoot-mybaties)
-10:03:20.672 [main] INFO  c.s.StudentMybatisApplicationTests - [logStartupProfileInfo,663] - The following profiles are active: dev
-10:03:25.373 [main] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
-10:03:25.377 [main] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
-10:03:26.366 [main] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
-10:18:15.870 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [buildDefaultMergedContextConfiguration,308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.student.StudentMybatisApplicationTests], using SpringBootContextLoader
-10:18:15.887 [main] INFO  o.s.t.c.s.AbstractContextLoader - [generateDefaultLocations,264] - Could not detect default resource locations for test class [com.student.StudentMybatisApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-10:18:15.890 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - [detectDefaultConfigurationClasses,83] - Could not detect default configuration classes for test class [com.student.StudentMybatisApplicationTests]: StudentMybatisApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-10:18:16.354 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [getOrFindConfigurationClasses,244] - Found @SpringBootConfiguration com.student.Application for test class com.student.StudentMybatisApplicationTests
-10:18:16.727 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [getDefaultTestExecutionListenerClassNames,248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-10:18:16.774 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [getTestExecutionListeners,177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@54bff557, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@593aaf41, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5a56cdac, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7c711375, org.springframework.test.context.support.DirtiesContextTestExecutionListener@57cf54e1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5b03b9fe, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@37d4349f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@434a63ab, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6e0f5f7f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2805d709, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ee37e5a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2ea41516]
-10:18:17.951 [main] INFO  c.s.StudentMybatisApplicationTests - [logStarting,50] - Starting StudentMybatisApplicationTests on macdeMBP with PID 14309 (started by mac in /Users/mac/Projects/springBoot-mybaties)
-10:18:17.956 [main] INFO  c.s.StudentMybatisApplicationTests - [logStartupProfileInfo,663] - The following profiles are active: dev
-10:18:23.485 [main] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
-10:18:23.487 [main] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
-10:18:24.684 [main] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
-10:24:00.007 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [buildDefaultMergedContextConfiguration,308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.student.StudentMybatisApplicationTests], using SpringBootContextLoader
-10:24:00.027 [main] INFO  o.s.t.c.s.AbstractContextLoader - [generateDefaultLocations,264] - Could not detect default resource locations for test class [com.student.StudentMybatisApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-10:24:00.030 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - [detectDefaultConfigurationClasses,83] - Could not detect default configuration classes for test class [com.student.StudentMybatisApplicationTests]: StudentMybatisApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-10:24:00.421 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [getOrFindConfigurationClasses,244] - Found @SpringBootConfiguration com.student.Application for test class com.student.StudentMybatisApplicationTests
-10:24:00.734 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [getDefaultTestExecutionListenerClassNames,248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-10:24:00.775 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [getTestExecutionListeners,177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5a56cdac, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7c711375, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@57cf54e1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5b03b9fe, org.springframework.test.context.support.DirtiesContextTestExecutionListener@37d4349f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@434a63ab, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6e0f5f7f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2805d709, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3ee37e5a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2ea41516, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3a44431a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3c7f66c4]
-10:24:01.712 [main] INFO  c.s.StudentMybatisApplicationTests - [logStarting,50] - Starting StudentMybatisApplicationTests on macdeMBP with PID 14347 (started by mac in /Users/mac/Projects/springBoot-mybaties)
-10:24:01.717 [main] INFO  c.s.StudentMybatisApplicationTests - [logStartupProfileInfo,663] - The following profiles are active: dev
-10:24:06.024 [main] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
-10:24:06.026 [main] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
-10:24:06.774 [main] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
-10:25:15.138 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [buildDefaultMergedContextConfiguration,308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.student.StudentMybatisApplicationTests], using SpringBootContextLoader
-10:25:15.155 [main] INFO  o.s.t.c.s.AbstractContextLoader - [generateDefaultLocations,264] - Could not detect default resource locations for test class [com.student.StudentMybatisApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-10:25:15.157 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - [detectDefaultConfigurationClasses,83] - Could not detect default configuration classes for test class [com.student.StudentMybatisApplicationTests]: StudentMybatisApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-10:25:15.526 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [getOrFindConfigurationClasses,244] - Found @SpringBootConfiguration com.student.Application for test class com.student.StudentMybatisApplicationTests
-10:25:15.926 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [getDefaultTestExecutionListenerClassNames,248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-10:25:15.970 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [getTestExecutionListeners,177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5a56cdac, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7c711375, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@57cf54e1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5b03b9fe, org.springframework.test.context.support.DirtiesContextTestExecutionListener@37d4349f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@434a63ab, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6e0f5f7f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2805d709, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3ee37e5a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2ea41516, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3a44431a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3c7f66c4]
-10:25:17.087 [main] INFO  c.s.StudentMybatisApplicationTests - [logStarting,50] - Starting StudentMybatisApplicationTests on macdeMBP with PID 14365 (started by mac in /Users/mac/Projects/springBoot-mybaties)
-10:25:17.094 [main] INFO  c.s.StudentMybatisApplicationTests - [logStartupProfileInfo,663] - The following profiles are active: dev
-10:25:21.856 [main] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
-10:25:21.858 [main] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
-10:25:22.716 [main] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
-10:25:23.820 [main] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
-10:25:25.994 [main] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+14:10:16.620 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on CD-PF17HP7W with PID 12160 (C:\Users\Lenovo\IdeaProjects\springBoot-mybaties\target\classes started by guo.xiang in C:\Users\Lenovo\IdeaProjects\springBoot-mybaties)
+14:10:16.632 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+14:10:19.046 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+14:10:19.047 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+14:10:19.663 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+14:10:20.244 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+14:10:21.477 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-8000"]
+14:10:21.492 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:10:21.492 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+14:10:21.497 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Python27\;C:\Python27\Scripts;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 & MySQL Utilities 1.5\;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 & MySQL Utilities 1.5\Doctrine extensions for PHP\;C:\Program Files\TortoiseSVN\bin;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;C:\Users\Lenovo\AppData\Roaming\npm;;.]
+14:10:21.649 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:10:22.206 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-10:25:26.286 [main] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
-10:25:26.291 [main] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
-10:25:26.418 [main] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-10:25:26.799 [main] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-10:25:28.937 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1208] - Using default implementation for ThreadExecutor
-10:25:29.008 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-10:25:29.009 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.0 created.
-10:25:29.011 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
-10:25:29.013 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+14:10:22.314 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+14:10:22.316 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+14:10:22.371 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+14:10:22.780 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14:10:23.403 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1208] - Using default implementation for ThreadExecutor
+14:10:23.415 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+14:10:23.416 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.0 created.
+14:10:23.417 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+14:10:23.417 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -62,170 +28,21 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-10:25:29.014 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1362] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-10:25:29.015 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1366] - Quartz scheduler version: 2.3.0
-10:25:29.016 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2287] - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@58e02359
-10:25:33.237 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-10:25:37.222 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
-10:25:37.292 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
-10:25:37.400 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
-10:25:37.447 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-10:25:37.482 [main] INFO  c.s.StudentMybatisApplicationTests - [logStarted,59] - Started StudentMybatisApplicationTests in 21.416 seconds (JVM running for 24.029)
-10:25:37.977 [Thread-5] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-10:25:37.988 [Thread-5] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-10:25:37.989 [Thread-5] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-10:25:37.990 [Thread-5] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-10:25:38.007 [Thread-5] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
-10:26:19.671 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on macdeMBP with PID 14401 (/Users/mac/Projects/springBoot-mybaties/target/classes started by mac in /Users/mac/Projects/springBoot-mybaties)
-10:26:19.684 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
-10:26:23.849 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
-10:26:23.851 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
-10:26:24.650 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
-10:26:25.600 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
-10:26:27.672 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
-10:26:27.689 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
-10:26:27.690 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
-10:26:27.700 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/mac/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-10:26:27.855 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
-10:26:28.841 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-10:26:28.977 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
-10:26:28.980 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
-10:26:29.063 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-10:26:29.360 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-10:26:30.871 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1208] - Using default implementation for ThreadExecutor
-10:26:30.888 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-10:26:30.889 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.0 created.
-10:26:30.890 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
-10:26:30.892 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-10:26:30.892 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1362] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-10:26:30.893 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1366] - Quartz scheduler version: 2.3.0
-10:26:30.893 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2287] - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@5b0c44b
-10:26:34.227 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-10:26:37.078 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
-10:26:37.116 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
-10:26:37.218 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
-10:26:37.252 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-10:26:37.274 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
-10:26:37.350 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Pausing ProtocolHandler ["http-nio-80"]
-10:26:37.351 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Stopping service [Tomcat]
-10:26:37.372 [restartedMain] INFO  o.a.c.u.LifecycleBase - [log,180] - The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
-10:26:37.372 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Stopping ProtocolHandler ["http-nio-80"]
-10:26:37.373 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Destroying ProtocolHandler ["http-nio-80"]
-10:26:37.402 [restartedMain] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-10:26:37.410 [restartedMain] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-10:26:37.411 [restartedMain] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-10:26:37.412 [restartedMain] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-10:26:37.425 [restartedMain] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
-10:27:27.165 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on macdeMBP with PID 14405 (/Users/mac/Projects/springBoot-mybaties/target/classes started by mac in /Users/mac/Projects/springBoot-mybaties)
-10:27:27.219 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
-10:27:32.797 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
-10:27:32.799 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
-10:27:33.519 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
-10:27:34.272 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
-10:27:36.056 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-8080"]
-10:27:36.074 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
-10:27:36.075 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
-10:27:36.082 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/mac/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-10:27:36.319 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
-10:27:37.101 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-10:27:37.202 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
-10:27:37.204 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
-10:27:37.274 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-10:27:37.517 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-10:27:38.854 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1208] - Using default implementation for ThreadExecutor
-10:27:38.873 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-10:27:38.873 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.0 created.
-10:27:38.875 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
-10:27:38.876 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-10:27:38.876 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1362] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-10:27:38.877 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1366] - Quartz scheduler version: 2.3.0
-10:27:38.877 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2287] - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@4ee280d1
-10:27:41.472 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-10:27:43.987 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
-10:27:44.012 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
-10:27:44.074 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
-10:27:44.098 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-10:27:44.113 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-8080"]
-10:27:44.150 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
-10:27:44.187 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 18.102 seconds (JVM running for 20.255)
-10:28:10.140 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
-10:28:10.227 [http-nio-8080-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
-10:28:11.232 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
-10:28:11.323 [pool-1-thread-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
-10:28:11.477 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. [1] sessions were stopped.
-10:28:31.526 [http-nio-8080-exec-10] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
-10:30:12.308 [Thread-48] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-10:30:12.350 [Thread-48] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-10:30:12.360 [Thread-48] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-10:30:12.362 [Thread-48] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-10:30:12.492 [Thread-48] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
-10:30:29.926 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on macdeMBP with PID 14422 (/Users/mac/Projects/springBoot-mybaties/target/classes started by mac in /Users/mac/Projects/springBoot-mybaties)
-10:30:29.939 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
-10:30:33.873 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
-10:30:33.875 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
-10:30:34.523 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
-10:30:35.317 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
-10:30:37.088 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-8080"]
-10:30:37.103 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
-10:30:37.104 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
-10:30:37.109 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/mac/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-10:30:37.245 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
-10:30:38.110 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-10:30:38.268 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
-10:30:38.273 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
-10:30:38.370 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-10:30:38.724 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-10:30:40.382 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1208] - Using default implementation for ThreadExecutor
-10:30:40.405 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-10:30:40.405 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.0 created.
-10:30:40.407 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
-10:30:40.409 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-10:30:40.409 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1362] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-10:30:40.410 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1366] - Quartz scheduler version: 2.3.0
-10:30:40.410 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2287] - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@224bf856
-10:30:43.181 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-10:30:46.015 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
-10:30:46.048 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
-10:30:46.142 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
-10:30:46.178 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-10:30:46.200 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-8080"]
-10:30:46.250 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
-10:30:46.295 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 17.732 seconds (JVM running for 21.236)
-10:30:55.921 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
-10:30:56.001 [http-nio-8080-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
-10:30:56.005 [http-nio-8080-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
-10:30:57.005 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
-10:30:57.161 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. [2] sessions were stopped.
-10:31:11.671 [http-nio-8080-exec-2] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
-10:34:05.412 [Thread-46] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-10:34:05.417 [Thread-46] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-10:34:05.417 [Thread-46] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-10:34:05.418 [Thread-46] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-10:34:05.426 [Thread-46] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
+14:10:23.418 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1362] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+14:10:23.418 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1366] - Quartz scheduler version: 2.3.0
+14:10:23.418 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2287] - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@464c01c3
+14:10:24.907 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+14:10:26.704 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+14:10:26.727 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+14:10:26.781 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+14:10:26.798 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+14:10:26.808 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-8000"]
+14:10:26.818 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:10:26.841 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 10.636 seconds (JVM running for 12.407)
+14:11:53.479 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:11:53.522 [http-nio-8000-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+14:11:53.562 [http-nio-8000-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+14:11:54.525 [pool-2-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+14:11:54.539 [pool-2-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+14:21:54.530 [pool-2-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+14:21:54.537 [pool-2-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
