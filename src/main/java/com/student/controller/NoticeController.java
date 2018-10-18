@@ -16,12 +16,10 @@ import java.util.List;
 
 /**
  * 公告 信息操作处理
-
  */
 @Controller
 @RequestMapping("/system/notice")
-public class NoticeController extends BaseController
-{
+public class NoticeController extends BaseController {
     private String prefix = "system/notice";
 
     @Autowired
@@ -29,8 +27,7 @@ public class NoticeController extends BaseController
 
     @RequiresPermissions("system:notice:view")
     @GetMapping()
-    public String notice()
-    {
+    public String notice() {
         return prefix + "/notice";
     }
 
@@ -40,8 +37,7 @@ public class NoticeController extends BaseController
     @RequiresPermissions("system:notice:list")
     @PostMapping("/list")
     @ResponseBody
-    public TableDataInfo list(Notice notice)
-    {
+    public TableDataInfo list(Notice notice) {
         startPage();
         List<Notice> list = noticeService.selectNoticeList(notice);
         return getDataTable(list);
@@ -53,8 +49,7 @@ public class NoticeController extends BaseController
     @RequiresPermissions("system:notice:add")
     @Log(title = "通知公告", action = BusinessType.INSERT)
     @GetMapping("/add")
-    public String add()
-    {
+    public String add() {
         return prefix + "/add";
     }
 
@@ -64,8 +59,7 @@ public class NoticeController extends BaseController
     @RequiresPermissions("system:notice:edit")
     @Log(title = "通知公告", action = BusinessType.UPDATE)
     @GetMapping("/edit/{noticeId}")
-    public String edit(@PathVariable("noticeId") Integer noticeId, Model model)
-    {
+    public String edit(@PathVariable("noticeId") Integer noticeId, Model model) {
         Notice notice = noticeService.selectNoticeById(noticeId);
         model.addAttribute("notice", notice);
         return prefix + "/edit";
@@ -78,10 +72,8 @@ public class NoticeController extends BaseController
     @Log(title = "通知公告", action = BusinessType.SAVE)
     @PostMapping("/save")
     @ResponseBody
-    public AjaxResult save(Notice notice)
-    {
-        if (noticeService.saveNotice(notice) > 0)
-        {
+    public AjaxResult save(Notice notice) {
+        if (noticeService.saveNotice(notice) > 0) {
             return success();
         }
         return error();
@@ -94,11 +86,9 @@ public class NoticeController extends BaseController
     @Log(title = "通知公告", action = BusinessType.DELETE)
     @PostMapping("/remove")
     @ResponseBody
-    public AjaxResult remove(String ids)
-    {
+    public AjaxResult remove(String ids) {
         int rows = noticeService.deleteNoticeByIds(ids);
-        if (rows > 0)
-        {
+        if (rows > 0) {
             return success();
         }
         return error();

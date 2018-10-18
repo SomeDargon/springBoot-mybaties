@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Setter
 public class RoleMenu {
     /** 角色ID */
-    private Long id;
+    private Long roleId;
     /** 菜单ID */
     private Long menuId;
 }
