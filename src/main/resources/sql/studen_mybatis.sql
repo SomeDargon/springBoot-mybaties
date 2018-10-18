@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50722
 File Encoding         : 65001
 
-Date: 2018-08-01 17:21:39
+Date: 2018-10-18 17:07:01
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -140,7 +140,7 @@ CREATE TABLE `sys_dict_type` (
   `remark` varchar(500) DEFAULT '' COMMENT '备注',
   PRIMARY KEY (`id`),
   UNIQUE KEY `dict_type` (`dict_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='字典类型表';
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='字典类型表';
 
 -- ----------------------------
 -- Records of sys_dict_type
@@ -154,6 +154,7 @@ INSERT INTO sys_dict_type VALUES ('6', '通知类型', 'sys_notice_type', '0', '
 INSERT INTO sys_dict_type VALUES ('7', '通知状态', 'sys_notice_status', '0', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '通知状态列表');
 INSERT INTO sys_dict_type VALUES ('8', '操作类型', 'sys_oper_type', '0', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '操作类型列表');
 INSERT INTO sys_dict_type VALUES ('9', '系统状态', 'sys_common_status', '0', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '登录状态列表');
+INSERT INTO sys_dict_type VALUES ('10', '文章类型', 'article_type', '0', 'admin', '2018-10-18 16:43:04', '', null, '文章所需类型');
 
 -- ----------------------------
 -- Table structure for `sys_job`
@@ -228,7 +229,7 @@ CREATE TABLE `sys_logininfor` (
   `msg` varchar(255) DEFAULT '' COMMENT '提示消息',
   `login_time` datetime DEFAULT NULL COMMENT '访问时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=136 DEFAULT CHARSET=utf8 COMMENT='系统访问记录';
+) ENGINE=InnoDB AUTO_INCREMENT=153 DEFAULT CHARSET=utf8 COMMENT='系统访问记录';
 
 -- ----------------------------
 -- Records of sys_logininfor
@@ -367,6 +368,23 @@ INSERT INTO sys_logininfor VALUES ('132', 'admin', '127.0.0.1', 'XX 内网IP', '
 INSERT INTO sys_logininfor VALUES ('133', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-08-01 16:03:20');
 INSERT INTO sys_logininfor VALUES ('134', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-08-01 16:50:38');
 INSERT INTO sys_logininfor VALUES ('135', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-08-01 16:57:46');
+INSERT INTO sys_logininfor VALUES ('136', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-08-06 11:05:48');
+INSERT INTO sys_logininfor VALUES ('137', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-08-07 10:18:01');
+INSERT INTO sys_logininfor VALUES ('138', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-08-15 09:46:41');
+INSERT INTO sys_logininfor VALUES ('139', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-09-21 11:47:50');
+INSERT INTO sys_logininfor VALUES ('140', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-17 15:54:15');
+INSERT INTO sys_logininfor VALUES ('141', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-17 16:18:41');
+INSERT INTO sys_logininfor VALUES ('142', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-17 16:36:53');
+INSERT INTO sys_logininfor VALUES ('143', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-18 10:00:18');
+INSERT INTO sys_logininfor VALUES ('144', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-18 10:43:55');
+INSERT INTO sys_logininfor VALUES ('145', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-18 11:19:49');
+INSERT INTO sys_logininfor VALUES ('146', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-18 11:35:10');
+INSERT INTO sys_logininfor VALUES ('147', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '退出成功', '2018-10-18 11:39:53');
+INSERT INTO sys_logininfor VALUES ('148', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-18 11:39:55');
+INSERT INTO sys_logininfor VALUES ('149', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-18 11:42:23');
+INSERT INTO sys_logininfor VALUES ('150', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-18 14:45:55');
+INSERT INTO sys_logininfor VALUES ('151', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-18 16:27:25');
+INSERT INTO sys_logininfor VALUES ('152', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-18 16:41:11');
 
 -- ----------------------------
 -- Table structure for `sys_menu`
@@ -388,7 +406,7 @@ CREATE TABLE `sys_menu` (
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) DEFAULT '' COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1057 DEFAULT CHARSET=utf8 COMMENT='菜单权限表';
+) ENGINE=InnoDB AUTO_INCREMENT=1058 DEFAULT CHARSET=utf8 COMMENT='菜单权限表';
 
 -- ----------------------------
 -- Records of sys_menu
@@ -471,6 +489,7 @@ INSERT INTO sys_menu VALUES ('1053', '任务保存', '110', '5', '#', 'F', '0', 
 INSERT INTO sys_menu VALUES ('1054', '状态修改', '110', '6', '#', 'F', '0', 'monitor:job:changeStatus', '#', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '');
 INSERT INTO sys_menu VALUES ('1055', '生成查询', '113', '1', '#', 'F', '0', 'tool:gen:list', '#', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '');
 INSERT INTO sys_menu VALUES ('1056', '生成代码', '113', '2', '#', 'F', '0', 'tool:gen:code', '#', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '');
+INSERT INTO sys_menu VALUES ('1057', '功能管理', '0', '1', '', 'M', '0', '', 'fa fa-github-alt', 'admin', '2018-10-18 10:06:50', 'admin', '2018-10-18 10:46:09', '');
 
 -- ----------------------------
 -- Table structure for `sys_notice`
@@ -516,7 +535,7 @@ CREATE TABLE `sys_oper_log` (
   `error_msg` varchar(2000) DEFAULT '' COMMENT '错误消息',
   `oper_time` datetime DEFAULT NULL COMMENT '操作时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8 COMMENT='操作日志记录';
+) ENGINE=InnoDB AUTO_INCREMENT=139 DEFAULT CHARSET=utf8 COMMENT='操作日志记录';
 
 -- ----------------------------
 -- Records of sys_oper_log
@@ -612,6 +631,49 @@ INSERT INTO sys_oper_log VALUES ('90', '代码生成', '10', 'com.student.contro
 INSERT INTO sys_oper_log VALUES ('91', '代码生成', '10', 'com.student.controller.tool.GenController.genCode()', '1', 'admin', '研发一部', '/tool/gen/genCode/sys_user_online', '127.0.0.1', 'XX 内网IP', '{}', '1', '', '2018-08-01 16:53:08');
 INSERT INTO sys_oper_log VALUES ('92', '代码生成', '10', 'com.student.controller.tool.GenController.genCode()', '1', 'admin', '研发一部', '/tool/gen/genCode/sys_user_online', '127.0.0.1', 'XX 内网IP', '{}', '1', '', '2018-08-01 16:53:40');
 INSERT INTO sys_oper_log VALUES ('93', '代码生成', '10', 'com.student.controller.tool.GenController.genCode()', '1', 'admin', '研发一部', '/tool/gen/genCode/sys_user_online', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-08-01 16:58:03');
+INSERT INTO sys_oper_log VALUES ('94', '用户管理', '6', 'com.student.controller.UserController.export()', '1', 'admin', '研发一部', '/system/user/export', '127.0.0.1', 'XX 内网IP', '{\"deptId\":[\"\"],\"parentId\":[\"\"],\"loginName\":[\"\"],\"phonenumber\":[\"\"],\"status\":[\"\"]}', '0', null, '2018-08-07 10:21:30');
+INSERT INTO sys_oper_log VALUES ('95', '岗位管理', '1', 'com.student.controller.PostController.add()', '1', 'admin', '研发一部', '/system/post/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-17 15:54:39');
+INSERT INTO sys_oper_log VALUES ('96', '菜单管理', '1', 'com.student.controller.MenuController.add()', '1', 'admin', '研发一部', '/system/menu/add/0', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 10:00:27');
+INSERT INTO sys_oper_log VALUES ('97', '菜单管理', '1', 'com.student.controller.MenuController.add()', '1', 'admin', '研发一部', '/system/menu/add/0', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 10:01:03');
+INSERT INTO sys_oper_log VALUES ('98', '菜单管理', '1', 'com.student.controller.MenuController.add()', '1', 'admin', '研发一部', '/system/menu/add/0', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 10:06:42');
+INSERT INTO sys_oper_log VALUES ('99', '菜单管理', '3', 'com.student.controller.MenuController.save()', '1', 'admin', '研发一部', '/system/menu/save', '127.0.0.1', 'XX 内网IP', '{\"parentId\":[\"0\"],\"menuType\":[\"M\"],\"menuName\":[\"123\"],\"url\":[\"\"],\"perms\":[\"\"],\"orderNum\":[\"1\"],\"icon\":[\"fa fa-address-book\"],\"visible\":[\"0\"]}', '0', null, '2018-10-18 10:06:50');
+INSERT INTO sys_oper_log VALUES ('100', '角色管理', '1', 'com.student.controller.RoleController.add()', '1', 'admin', '研发一部', '/system/role/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 10:07:03');
+INSERT INTO sys_oper_log VALUES ('103', '角色管理', '1', 'com.student.controller.RoleController.add()', '1', 'admin', '研发一部', '/system/role/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 10:44:02');
+INSERT INTO sys_oper_log VALUES ('104', '角色管理', '3', 'com.student.controller.RoleController.save()', '1', 'admin', '研发一部', '/system/role/save', '127.0.0.1', null, '{\"roleName\":[\"开心管理员\"],\"roleKey\":[\"1\"],\"roleSort\":[\"1\"],\"status\":[\"0\"],\"remark\":[\"123\"],\"menuIds\":[\"\"]}', '0', null, '2018-10-18 10:44:22');
+INSERT INTO sys_oper_log VALUES ('105', '菜单管理', '2', 'com.student.controller.MenuController.edit()', '1', 'admin', '研发一部', '/system/menu/edit/1057', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 10:44:34');
+INSERT INTO sys_oper_log VALUES ('106', '菜单管理', '2', 'com.student.controller.MenuController.edit()', '1', 'admin', '研发一部', '/system/menu/edit/1', '127.0.0.1', null, '{}', '0', null, '2018-10-18 10:44:53');
+INSERT INTO sys_oper_log VALUES ('107', '菜单管理', '2', 'com.student.controller.MenuController.edit()', '1', 'admin', '研发一部', '/system/menu/edit/1057', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 10:45:02');
+INSERT INTO sys_oper_log VALUES ('108', '菜单管理', '2', 'com.student.controller.MenuController.edit()', '1', 'admin', '研发一部', '/system/menu/edit/1057', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 10:45:59');
+INSERT INTO sys_oper_log VALUES ('109', '菜单管理', '3', 'com.student.controller.MenuController.save()', '1', 'admin', '研发一部', '/system/menu/save', '127.0.0.1', 'XX 内网IP', '{\"id\":[\"1057\"],\"parentId\":[\"0\"],\"menuType\":[\"M\"],\"menuName\":[\"123\"],\"url\":[\"\"],\"perms\":[\"\"],\"orderNum\":[\"1\"],\"icon\":[\"fa fa-address-book\"],\"visible\":[\"0\"]}', '0', null, '2018-10-18 10:46:09');
+INSERT INTO sys_oper_log VALUES ('110', '菜单管理', '1', 'com.student.controller.MenuController.add()', '1', 'admin', '研发一部', '/system/menu/add/1057', '127.0.0.1', null, '{}', '0', null, '2018-10-18 10:46:19');
+INSERT INTO sys_oper_log VALUES ('111', '菜单管理', '2', 'com.student.controller.MenuController.edit()', '1', 'admin', '研发一部', '/system/menu/edit/1057', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 10:46:19');
+INSERT INTO sys_oper_log VALUES ('112', '用户管理', '2', 'com.student.controller.UserController.edit()', '1', 'admin', '研发一部', '/system/user/edit/1', '127.0.0.1', null, '{}', '0', null, '2018-10-18 10:46:40');
+INSERT INTO sys_oper_log VALUES ('113', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', null, '{}', '0', null, '2018-10-18 10:46:50');
+INSERT INTO sys_oper_log VALUES ('114', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/2', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 10:58:56');
+INSERT INTO sys_oper_log VALUES ('115', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/2', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 10:59:09');
+INSERT INTO sys_oper_log VALUES ('116', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 11:06:52');
+INSERT INTO sys_oper_log VALUES ('117', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', null, '{}', '0', null, '2018-10-18 11:07:03');
+INSERT INTO sys_oper_log VALUES ('118', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', null, '{}', '0', null, '2018-10-18 11:11:30');
+INSERT INTO sys_oper_log VALUES ('119', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', null, '{}', '0', null, '2018-10-18 11:11:31');
+INSERT INTO sys_oper_log VALUES ('120', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', null, '{}', '0', null, '2018-10-18 11:11:46');
+INSERT INTO sys_oper_log VALUES ('121', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', null, '{}', '0', null, '2018-10-18 11:13:33');
+INSERT INTO sys_oper_log VALUES ('122', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', null, '{}', '0', null, '2018-10-18 11:15:53');
+INSERT INTO sys_oper_log VALUES ('123', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 11:19:55');
+INSERT INTO sys_oper_log VALUES ('124', '角色管理', '3', 'com.student.controller.RoleController.save()', '1', 'admin', '研发一部', '/system/role/save', '127.0.0.1', 'XX 内网IP', '{\"id\":[\"1\"],\"roleName\":[\"管理员\"],\"roleKey\":[\"admin\"],\"roleSort\":[\"1\"],\"status\":[\"0\"],\"remark\":[\"管理员\"],\"menuIds\":[\"1,1057\"]}', '0', null, '2018-10-18 11:20:03');
+INSERT INTO sys_oper_log VALUES ('125', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', null, '{}', '0', null, '2018-10-18 11:35:19');
+INSERT INTO sys_oper_log VALUES ('126', '角色管理', '3', 'com.student.controller.RoleController.save()', '1', 'admin', '研发一部', '/system/role/save', '127.0.0.1', 'XX 内网IP', '{\"id\":[\"1\"],\"roleName\":[\"管理员\"],\"roleKey\":[\"admin\"],\"roleSort\":[\"1\"],\"status\":[\"0\"],\"remark\":[\"管理员\"],\"menuIds\":[\"1,2,109,1046,1047,1048,110,1049,1050,1051,1052,1053,1054,111,3,112,113,1055,1056,114,4,1057\"]}', '0', null, '2018-10-18 11:35:28');
+INSERT INTO sys_oper_log VALUES ('127', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 11:42:59');
+INSERT INTO sys_oper_log VALUES ('128', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 11:43:26');
+INSERT INTO sys_oper_log VALUES ('129', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 11:47:25');
+INSERT INTO sys_oper_log VALUES ('130', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 11:47:45');
+INSERT INTO sys_oper_log VALUES ('131', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 11:48:29');
+INSERT INTO sys_oper_log VALUES ('132', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 14:46:12');
+INSERT INTO sys_oper_log VALUES ('133', '角色管理', '3', 'com.student.controller.RoleController.save()', '1', 'admin', '研发一部', '/system/role/save', '127.0.0.1', null, '{\"id\":[\"1\"],\"roleName\":[\"管理员\"],\"roleKey\":[\"admin\"],\"roleSort\":[\"1\"],\"status\":[\"0\"],\"remark\":[\"管理员\"],\"menuIds\":[\"1,1001,1002,1003,1004,1005,101,1006,1007,1008,1009,1010,102,1011,1012,1013,1014,1015,103,1016,1017,1018,1019,1020,104,1021,1022,1023,1024,1025,', '0', null, '2018-10-18 14:46:43');
+INSERT INTO sys_oper_log VALUES ('134', '通知公告', '2', 'com.student.controller.NoticeController.edit()', '1', 'admin', '研发一部', '/system/notice/edit/1', '127.0.0.1', null, '{}', '0', null, '2018-10-18 15:00:14');
+INSERT INTO sys_oper_log VALUES ('135', '字典类型', '1', 'com.student.controller.DictTypeController.add()', '1', 'admin', '研发一部', '/system/dict/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-18 16:42:31');
+INSERT INTO sys_oper_log VALUES ('136', '字典类型', '3', 'com.student.controller.DictTypeController.save()', '1', 'admin', '研发一部', '/system/dict/save', '127.0.0.1', 'XX 内网IP', '{\"dictName\":[\"文章类型\"],\"dictType\":[\"article_type\"],\"status\":[\"0\"],\"remark\":[\"文章所需类型\"]}', '0', null, '2018-10-18 16:43:04');
+INSERT INTO sys_oper_log VALUES ('137', '字典类型', '2', 'com.student.controller.DictTypeController.edit()', '1', 'admin', '研发一部', '/system/dict/edit/10', '127.0.0.1', null, '{}', '0', null, '2018-10-18 16:43:12');
+INSERT INTO sys_oper_log VALUES ('138', '字典数据', '1', 'com.student.controller.DictDataController.add()', '1', 'admin', '研发一部', '/system/dict/data/add/article_type', '127.0.0.1', null, '{}', '0', null, '2018-10-18 16:43:20');
 
 -- ----------------------------
 -- Table structure for `sys_post`
@@ -655,13 +717,14 @@ CREATE TABLE `sys_role` (
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) DEFAULT '' COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='角色信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='角色信息表';
 
 -- ----------------------------
 -- Records of sys_role
 -- ----------------------------
-INSERT INTO sys_role VALUES ('1', '管理员', 'admin', '1', '0', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '管理员');
+INSERT INTO sys_role VALUES ('1', '管理员', 'admin', '1', '0', 'admin', '2018-03-16 11:33:00', 'admin', '2018-10-18 14:46:43', '管理员');
 INSERT INTO sys_role VALUES ('2', '普通角色', 'common', '2', '0', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '普通角色');
+INSERT INTO sys_role VALUES ('5', '开心管理员', '1', '1', '0', 'admin', '2018-10-18 10:44:22', '', null, '123');
 
 -- ----------------------------
 -- Table structure for `sys_role_menu`
@@ -680,7 +743,6 @@ INSERT INTO sys_role_menu VALUES ('1', '1');
 INSERT INTO sys_role_menu VALUES ('1', '2');
 INSERT INTO sys_role_menu VALUES ('1', '3');
 INSERT INTO sys_role_menu VALUES ('1', '4');
-INSERT INTO sys_role_menu VALUES ('1', '100');
 INSERT INTO sys_role_menu VALUES ('1', '101');
 INSERT INTO sys_role_menu VALUES ('1', '102');
 INSERT INTO sys_role_menu VALUES ('1', '103');
@@ -697,7 +759,6 @@ INSERT INTO sys_role_menu VALUES ('1', '113');
 INSERT INTO sys_role_menu VALUES ('1', '114');
 INSERT INTO sys_role_menu VALUES ('1', '500');
 INSERT INTO sys_role_menu VALUES ('1', '501');
-INSERT INTO sys_role_menu VALUES ('1', '1000');
 INSERT INTO sys_role_menu VALUES ('1', '1001');
 INSERT INTO sys_role_menu VALUES ('1', '1002');
 INSERT INTO sys_role_menu VALUES ('1', '1003');
@@ -754,6 +815,7 @@ INSERT INTO sys_role_menu VALUES ('1', '1053');
 INSERT INTO sys_role_menu VALUES ('1', '1054');
 INSERT INTO sys_role_menu VALUES ('1', '1055');
 INSERT INTO sys_role_menu VALUES ('1', '1056');
+INSERT INTO sys_role_menu VALUES ('1', '1057');
 
 -- ----------------------------
 -- Table structure for `sys_user`
@@ -786,7 +848,7 @@ CREATE TABLE `sys_user` (
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO sys_user VALUES ('1', '106', 'admin', '蒋小姐', '00', 'jxj@163.com', '15888888888', '1', '', '29c67a30398638269fe600f73a054934', '111111', '0', '0', '127.0.0.1', '2018-08-01 16:57:46', 'admin', '2018-03-16 11:33:00', 'jxj', '2018-08-01 16:57:46', 'jxj');
+INSERT INTO sys_user VALUES ('1', '106', 'admin', '蒋小姐', '00', 'jxj@163.com', '15888888888', '1', '', '29c67a30398638269fe600f73a054934', '111111', '0', '0', '127.0.0.1', '2018-10-18 16:41:11', 'admin', '2018-03-16 11:33:00', 'jxj', '2018-10-18 16:41:11', 'jxj');
 INSERT INTO sys_user VALUES ('4', '106', 'jiangxiaojie', 'dargon', '00', '296569845@qq.com', '18324191811', '0', '', 'a0f4e09c52e8b79c1068f91ac62c2b04', '95e77a', '0', '2', '', null, 'admin', '2018-07-30 15:42:29', '', '2018-07-31 11:29:55', '');
 INSERT INTO sys_user VALUES ('5', '106', 'jiangxiaojie', 'jiangxiaojie', '00', '296569841@qq.com', '13478539991', '0', '', 'f3712626d1ef5a5131b11412e280d72f', '495a6d', '0', '0', '', null, 'admin', '2018-07-30 15:50:50', 'admin', '2018-07-31 11:36:32', '');
 
@@ -812,7 +874,7 @@ CREATE TABLE `sys_user_online` (
 -- ----------------------------
 -- Records of sys_user_online
 -- ----------------------------
-INSERT INTO sys_user_online VALUES ('970ffb8e-a436-4ece-a335-8e80cf1191f4', 'admin', '研发一部', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', 'on_line', '2018-08-01 16:57:41', '2018-08-01 16:59:41', '1800000');
+INSERT INTO sys_user_online VALUES ('cfa0862c-b730-4519-91aa-5a834bfddf55', 'admin', '研发一部', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', 'on_line', '2018-10-18 16:41:05', '2018-10-18 16:43:19', '1800000');
 
 -- ----------------------------
 -- Table structure for `sys_user_post`
