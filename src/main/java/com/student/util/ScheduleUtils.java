@@ -2,11 +2,11 @@ package com.student.util;
 
 
 import com.student.constant.ScheduleConstants;
-import com.student.entity.Job;
+
 import org.quartz.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import com.student.entity.Job;
 /**
  * 定时任务工具类
  */
@@ -42,7 +42,7 @@ public class ScheduleUtils {
     }
 
     /**
-     * 创建定时任务
+     * 创建定时任务`
      */
     public static void createScheduleJob(Scheduler scheduler, Job job) {
         try {

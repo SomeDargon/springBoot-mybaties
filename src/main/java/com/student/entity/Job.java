@@ -3,13 +3,16 @@ package com.student.entity;
 
 import com.student.annotation.Excel;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
 /**
  * 定时任务调度信息 sys_job
  */
-@Data
+@Getter
+@Setter
 public class Job extends BaseEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -54,7 +57,5 @@ public class Job extends BaseEntity implements Serializable {
      */
     @Excel(name = "任务状态", column = "G")
     private String status;
-
-
 
 }
