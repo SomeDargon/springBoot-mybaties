@@ -22,19 +22,20 @@ public class Article extends BaseEntity {
     private String content;
 
     /** 点赞 */
-    private Integer like;
+    private Integer likeNum;
 
     /** 浏览数 */
-    private Integer browse_num;
+    private Integer browseNum;
 
     /** 评论id */
-    private Long comment_id;
+    private Long commentId;
 
     /** 分类id */
-    private Long type_id;
+    private Long typeId;
 
     /** 大图 */
-    private String picture_url;
+    private String pictureUrl;
 
-
+    /** 文章状态 */
+    private Integer status;
 }

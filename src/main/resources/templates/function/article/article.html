@@ -31,10 +31,10 @@
 			</div>
 			
 	        <div class="btn-group hidden-xs" id="toolbar" role="group">
-		        <a class="btn btn-outline btn-success btn-rounded" onclick="$.operate.addFull()" shiro:hasPermission="system:notice:add">
+		        <a class="btn btn-outline btn-success btn-rounded" onclick="$.operate.addFull()" shiro:hasPermission="function:article:add">
 		            <i class="fa fa-plus"></i> 新增
 		        </a>
-		        <a class="btn btn-outline btn-danger btn-rounded" onclick="$.operate.batRemove()" shiro:hasPermission="system:notice:remove">
+		        <a class="btn btn-outline btn-danger btn-rounded" onclick="$.operate.batRemove()" shiro:hasPermission="function:article:remove">
 		            <i class="fa fa-trash-o"></i> 删除
 		        </a>
 	        </div>
@@ -48,7 +48,7 @@
     <script th:inline="javascript">
         var editFlag = [[${@permissionService.hasPermi('system:notice:edit')}]];
         var removeFlag = [[${@permissionService.hasPermi('system:notice:remove')}]];
-        var prefix = ctx + "system/notice"
+        var prefix = ctx + "function/article"
 
         $(function() {
             var options = {
@@ -56,7 +56,7 @@
                 createUrl: prefix + "/add",
                 updateUrl: prefix + "/edit/{id}",
                 removeUrl: prefix + "/remove",
-                modalName: "公告",
+                modalName: "文章",
                 search: false,
                 columns: [{
 		            checkbox: true
@@ -66,19 +66,19 @@
 					title : '序号' 
 				},
 				{
-					field : 'noticeTitle', 
-					title : '公告标题' 
+					field : 'title',
+					title : '文章标题'
 				},
 				{
-		            field: 'noticeType',
-		            title: '公告类型',
+		            field: 'typeId',
+		            title: '文章类型',
 		            align: 'center',
 		            formatter: function(value, row, index) {
-		                if (value == '1') {
+		                /*if (value == '1') {
 		                	return '<span class="label label-warning">通知</span>';
 		                } else if (value == '2') {
 		                    return '<span class="badge badge-success">公告</span>';
-		                }
+		                }*/
 		            }
 		        },
 				{
@@ -98,7 +98,7 @@
 					title : '创建者' 
 				},
 				{
-		            field: 'createDateTimeStr',
+		            field: 'createTime',
 		            title: '创建时间'
 		        },
 		        {

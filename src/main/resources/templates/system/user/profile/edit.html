@@ -5,7 +5,7 @@
 <body class="white-bg">
 	<div class="wrapper wrapper-content animated fadeInRight ibox-content">
 		<form class="form-horizontal m" id="form-user-edit" th:object="${user}">
-			<input name="userId"  type="hidden"  th:field="*{userId}" />
+			<input name="id"  type="hidden"  th:field="*{id}" />
 			<div class="form-group">
 				<label class="col-sm-3 control-label ">登录名称：</label>
 				<div class="col-sm-8">
@@ -33,7 +33,7 @@
 			<div class="form-group">
 				<label class="col-sm-3 control-label">手机：</label>
 				<div class="col-sm-8">
-					<input class="form-control" type="text" name="phonenumber" id="phonenumber" th:field="*{phonenumber}">
+					<input class="form-control" type="text" name="phoneNumber" id="phoneNumber" th:field="*{phoneNumber}">
 				</div>
 			</div>
 			<div class="form-group">
@@ -73,20 +73,20 @@
 		                type: "post",
 		                dataType: "json",
 		                data: {
-		                	"userId": function() {
-		                        return $("input[name='userId']").val();
+		                	"id": function() {
+		                        return $("input[name='id']").val();
 		                    },
 		        			"email": function() {
 		                        return $("input[name='email']").val();
 		                    }
 		                },
-		                dataFilter: function (data, type) {
+		                dataFilter: function (data) {
 		                    if (data == "0") return true;
 		                    else return false;
 		                }
 		            }
 				},
-				phonenumber:{
+				phoneNumber:{
 					required:true,
 					isPhone:true,
 		            remote: {
@@ -94,14 +94,14 @@
 		                type: "post",
 		                dataType: "json",
 		                data: {
-		                	"userId": function() {
-		                        return $("input[name='userId']").val();
+		                	"id": function() {
+		                        return $("input[name='id']").val();
 		                    },
-		        			"phonenumber": function() {
-		                        return $("input[name='phonenumber']").val();
+		        			"phoneNumber": function() {
+		                        return $("input[name='phoneNumber']").val();
 		                    }
 		                },
-		                dataFilter: function (data, type) {
+		                dataFilter: function (dataype) {
 		                    if (data == "0") return true;
 		                    else return false;
 		                }
@@ -112,7 +112,7 @@
 				"email": {
 		            remote: "Email已经存在"
 		        },
-				"phonenumber":{
+				"phoneNumber":{
 		        	remote: "手机号码已经存在"
 				}
 		    },
