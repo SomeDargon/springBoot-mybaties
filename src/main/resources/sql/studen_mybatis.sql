@@ -10,10 +10,36 @@ Target Server Type    : MYSQL
 Target Server Version : 50722
 File Encoding         : 65001
 
-Date: 2018-10-18 17:07:01
+Date: 2018-10-19 17:29:15
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+-- ----------------------------
+-- Table structure for `sys_article`
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_article`;
+CREATE TABLE `sys_article` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(32) DEFAULT NULL COMMENT '文章名称',
+  `content` varchar(512) DEFAULT NULL COMMENT '文章内容',
+  `like_num` int(11) DEFAULT NULL COMMENT '点赞数',
+  `browse_num` int(11) DEFAULT NULL COMMENT '浏览数',
+  `comment_id` int(11) DEFAULT NULL COMMENT '评论id',
+  `type_id` int(11) DEFAULT NULL COMMENT '分类id',
+  `picture_url` varchar(128) DEFAULT NULL COMMENT '大图地址',
+  `search_value` varchar(32) DEFAULT NULL COMMENT '搜索值',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `create_by` varchar(32) DEFAULT NULL COMMENT '创建者',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+  `updateBy` varchar(32) DEFAULT NULL COMMENT '修改人',
+  `remark` varchar(128) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='文章';
+
+-- ----------------------------
+-- Records of sys_article
+-- ----------------------------
+
 -- ----------------------------
 -- Table structure for `sys_config`
 -- ----------------------------
@@ -91,7 +117,7 @@ CREATE TABLE `sys_dict_data` (
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) DEFAULT '' COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COMMENT='字典数据表';
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COMMENT='字典数据表';
 
 -- ----------------------------
 -- Records of sys_dict_data
@@ -123,6 +149,13 @@ INSERT INTO sys_dict_data VALUES ('24', '9', '禁止访问', '9', 'sys_oper_type
 INSERT INTO sys_dict_data VALUES ('25', '10', '生成代码', '10', 'sys_oper_type', '', 'N', '0', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '新增操作');
 INSERT INTO sys_dict_data VALUES ('26', '1', '成功', '0', 'sys_common_status', '', 'N', '0', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '正常状态');
 INSERT INTO sys_dict_data VALUES ('27', '2', '失败', '1', 'sys_common_status', '', 'N', '0', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '停用状态');
+INSERT INTO sys_dict_data VALUES ('28', '1', '技术文章', '0', 'article_type', '', 'Y', '0', 'admin', '2018-10-19 15:08:24', '', null, '文章所需类型');
+INSERT INTO sys_dict_data VALUES ('29', '0', '草稿', '0', 'function_article_status', '', 'Y', '0', 'admin', '2018-10-19 15:15:52', '', null, '文章状态所需');
+INSERT INTO sys_dict_data VALUES ('30', '1', '发布', '1', 'function_article_status', '', 'Y', '0', 'admin', '2018-10-19 15:16:38', '', null, '文章状态所需');
+INSERT INTO sys_dict_data VALUES ('31', '2', '删除', '2', 'function_article_status', '', 'Y', '0', 'admin', '2018-10-19 15:16:54', '', null, '文章状态所需');
+INSERT INTO sys_dict_data VALUES ('32', '1', '文学类', '1', 'article_type', '', 'Y', '0', 'admin', '2018-10-19 15:17:28', '', null, '文章所需类型');
+INSERT INTO sys_dict_data VALUES ('33', '0', '文学类', '0', 'function_article_type', '', 'Y', '0', 'admin', '2018-10-19 15:19:17', '', null, '文章状态所需');
+INSERT INTO sys_dict_data VALUES ('34', '1', '技术类', '1', 'function_article_type', '', 'Y', '0', 'admin', '2018-10-19 15:19:48', '', null, '文章所需类型');
 
 -- ----------------------------
 -- Table structure for `sys_dict_type`
@@ -140,7 +173,7 @@ CREATE TABLE `sys_dict_type` (
   `remark` varchar(500) DEFAULT '' COMMENT '备注',
   PRIMARY KEY (`id`),
   UNIQUE KEY `dict_type` (`dict_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='字典类型表';
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='字典类型表';
 
 -- ----------------------------
 -- Records of sys_dict_type
@@ -154,7 +187,8 @@ INSERT INTO sys_dict_type VALUES ('6', '通知类型', 'sys_notice_type', '0', '
 INSERT INTO sys_dict_type VALUES ('7', '通知状态', 'sys_notice_status', '0', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '通知状态列表');
 INSERT INTO sys_dict_type VALUES ('8', '操作类型', 'sys_oper_type', '0', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '操作类型列表');
 INSERT INTO sys_dict_type VALUES ('9', '系统状态', 'sys_common_status', '0', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '登录状态列表');
-INSERT INTO sys_dict_type VALUES ('10', '文章类型', 'article_type', '0', 'admin', '2018-10-18 16:43:04', '', null, '文章所需类型');
+INSERT INTO sys_dict_type VALUES ('10', '文章类型', 'function_article_type', '0', 'admin', '2018-10-18 16:43:04', 'admin', '2018-10-19 15:08:39', '文章所需类型');
+INSERT INTO sys_dict_type VALUES ('11', '文章状态', 'function_article_status', '0', 'admin', '2018-10-19 15:12:30', '', null, '文章所需类型');
 
 -- ----------------------------
 -- Table structure for `sys_job`
@@ -229,7 +263,7 @@ CREATE TABLE `sys_logininfor` (
   `msg` varchar(255) DEFAULT '' COMMENT '提示消息',
   `login_time` datetime DEFAULT NULL COMMENT '访问时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=153 DEFAULT CHARSET=utf8 COMMENT='系统访问记录';
+) ENGINE=InnoDB AUTO_INCREMENT=164 DEFAULT CHARSET=utf8 COMMENT='系统访问记录';
 
 -- ----------------------------
 -- Records of sys_logininfor
@@ -385,6 +419,17 @@ INSERT INTO sys_logininfor VALUES ('149', 'admin', '127.0.0.1', null, 'Chrome', 
 INSERT INTO sys_logininfor VALUES ('150', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-18 14:45:55');
 INSERT INTO sys_logininfor VALUES ('151', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-18 16:27:25');
 INSERT INTO sys_logininfor VALUES ('152', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-18 16:41:11');
+INSERT INTO sys_logininfor VALUES ('153', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-18 17:14:53');
+INSERT INTO sys_logininfor VALUES ('154', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-19 11:12:08');
+INSERT INTO sys_logininfor VALUES ('155', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-19 11:24:34');
+INSERT INTO sys_logininfor VALUES ('156', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-19 11:27:55');
+INSERT INTO sys_logininfor VALUES ('157', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-19 11:31:39');
+INSERT INTO sys_logininfor VALUES ('158', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-19 14:42:58');
+INSERT INTO sys_logininfor VALUES ('159', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-19 14:45:44');
+INSERT INTO sys_logininfor VALUES ('160', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-19 15:04:39');
+INSERT INTO sys_logininfor VALUES ('161', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-19 15:34:35');
+INSERT INTO sys_logininfor VALUES ('162', 'admin', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-19 17:18:19');
+INSERT INTO sys_logininfor VALUES ('163', 'admin', '127.0.0.1', null, 'Chrome', 'Windows 7', '0', '登录成功', '2018-10-19 17:20:29');
 
 -- ----------------------------
 -- Table structure for `sys_menu`
@@ -406,7 +451,7 @@ CREATE TABLE `sys_menu` (
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) DEFAULT '' COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1058 DEFAULT CHARSET=utf8 COMMENT='菜单权限表';
+) ENGINE=InnoDB AUTO_INCREMENT=1063 DEFAULT CHARSET=utf8 COMMENT='菜单权限表';
 
 -- ----------------------------
 -- Records of sys_menu
@@ -489,7 +534,12 @@ INSERT INTO sys_menu VALUES ('1053', '任务保存', '110', '5', '#', 'F', '0', 
 INSERT INTO sys_menu VALUES ('1054', '状态修改', '110', '6', '#', 'F', '0', 'monitor:job:changeStatus', '#', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '');
 INSERT INTO sys_menu VALUES ('1055', '生成查询', '113', '1', '#', 'F', '0', 'tool:gen:list', '#', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '');
 INSERT INTO sys_menu VALUES ('1056', '生成代码', '113', '2', '#', 'F', '0', 'tool:gen:code', '#', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '');
-INSERT INTO sys_menu VALUES ('1057', '功能管理', '0', '1', '', 'M', '0', '', 'fa fa-github-alt', 'admin', '2018-10-18 10:06:50', 'admin', '2018-10-18 10:46:09', '');
+INSERT INTO sys_menu VALUES ('1057', '功能管理', '0', '1', '#', 'M', '0', '', 'fa fa-github-alt', 'admin', '2018-10-18 10:06:50', 'admin', '2018-10-18 10:46:09', '');
+INSERT INTO sys_menu VALUES ('1058', '文章管理', '1057', '1', '/function/article', 'C', '0', 'function:article:view', '#', 'admin', '2018-10-19 11:13:27', 'admin', '2018-10-19 11:14:41', '');
+INSERT INTO sys_menu VALUES ('1059', '文章查询', '1058', '1', '', 'F', '0', 'function:article:list', '', 'admin', '2018-10-19 11:25:45', '', null, '');
+INSERT INTO sys_menu VALUES ('1060', '文章新增', '1058', '2', '', 'F', '0', 'function:article:add', '', 'admin', '2018-10-19 15:36:38', '', null, '');
+INSERT INTO sys_menu VALUES ('1061', '文章删除', '1058', '3', '', 'F', '0', 'function:article:remove', '', 'admin', '2018-10-19 15:38:08', 'admin', '2018-10-19 15:45:51', '');
+INSERT INTO sys_menu VALUES ('1062', '文章修改', '1058', '4', '', 'F', '0', 'function:article:edit', '', 'admin', '2018-10-19 15:38:40', 'admin', '2018-10-19 15:38:53', '');
 
 -- ----------------------------
 -- Table structure for `sys_notice`
@@ -535,7 +585,7 @@ CREATE TABLE `sys_oper_log` (
   `error_msg` varchar(2000) DEFAULT '' COMMENT '错误消息',
   `oper_time` datetime DEFAULT NULL COMMENT '操作时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=139 DEFAULT CHARSET=utf8 COMMENT='操作日志记录';
+) ENGINE=InnoDB AUTO_INCREMENT=234 DEFAULT CHARSET=utf8 COMMENT='操作日志记录';
 
 -- ----------------------------
 -- Records of sys_oper_log
@@ -674,6 +724,101 @@ INSERT INTO sys_oper_log VALUES ('135', '字典类型', '1', 'com.student.contro
 INSERT INTO sys_oper_log VALUES ('136', '字典类型', '3', 'com.student.controller.DictTypeController.save()', '1', 'admin', '研发一部', '/system/dict/save', '127.0.0.1', 'XX 内网IP', '{\"dictName\":[\"文章类型\"],\"dictType\":[\"article_type\"],\"status\":[\"0\"],\"remark\":[\"文章所需类型\"]}', '0', null, '2018-10-18 16:43:04');
 INSERT INTO sys_oper_log VALUES ('137', '字典类型', '2', 'com.student.controller.DictTypeController.edit()', '1', 'admin', '研发一部', '/system/dict/edit/10', '127.0.0.1', null, '{}', '0', null, '2018-10-18 16:43:12');
 INSERT INTO sys_oper_log VALUES ('138', '字典数据', '1', 'com.student.controller.DictDataController.add()', '1', 'admin', '研发一部', '/system/dict/data/add/article_type', '127.0.0.1', null, '{}', '0', null, '2018-10-18 16:43:20');
+INSERT INTO sys_oper_log VALUES ('139', '菜单管理', '1', 'com.student.controller.MenuController.add()', '1', 'admin', '研发一部', '/system/menu/add/1057', '127.0.0.1', null, '{}', '0', null, '2018-10-19 11:12:27');
+INSERT INTO sys_oper_log VALUES ('140', '菜单管理', '1', 'com.student.controller.MenuController.add()', '1', 'admin', '研发一部', '/system/menu/add/1057', '127.0.0.1', null, '{}', '0', null, '2018-10-19 11:13:12');
+INSERT INTO sys_oper_log VALUES ('141', '菜单管理', '3', 'com.student.controller.MenuController.save()', '1', 'admin', '研发一部', '/system/menu/save', '127.0.0.1', null, '{\"parentId\":[\"1057\"],\"menuType\":[\"C\"],\"menuName\":[\"文章管理\"],\"url\":[\"/function/article\"],\"perms\":[\"\"],\"orderNum\":[\"1\"],\"icon\":[\"\"],\"visible\":[\"0\"]}', '0', null, '2018-10-19 11:13:27');
+INSERT INTO sys_oper_log VALUES ('142', '菜单管理', '2', 'com.student.controller.MenuController.edit()', '1', 'admin', '研发一部', '/system/menu/edit/1057', '127.0.0.1', null, '{}', '0', null, '2018-10-19 11:13:34');
+INSERT INTO sys_oper_log VALUES ('143', '菜单管理', '2', 'com.student.controller.MenuController.edit()', '1', 'admin', '研发一部', '/system/menu/edit/1058', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 11:14:26');
+INSERT INTO sys_oper_log VALUES ('144', '菜单管理', '3', 'com.student.controller.MenuController.save()', '1', 'admin', '研发一部', '/system/menu/save', '127.0.0.1', null, '{\"id\":[\"1058\"],\"parentId\":[\"1057\"],\"menuType\":[\"C\"],\"menuName\":[\"文章管理\"],\"url\":[\"/function/article\"],\"perms\":[\"function:article:view\"],\"orderNum\":[\"1\"],\"icon\":[\"\"],\"visible\":[\"0\"]}', '0', null, '2018-10-19 11:14:41');
+INSERT INTO sys_oper_log VALUES ('145', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 11:21:40');
+INSERT INTO sys_oper_log VALUES ('146', '角色管理', '3', 'com.student.controller.RoleController.save()', '1', 'admin', '研发一部', '/system/role/save', '127.0.0.1', 'XX 内网IP', '{\"id\":[\"1\"],\"roleName\":[\"管理员\"],\"roleKey\":[\"admin\"],\"roleSort\":[\"1\"],\"status\":[\"0\"],\"remark\":[\"管理员\"],\"menuIds\":[\"1,1001,1002,1003,1004,1005,101,1006,1007,1008,1009,1010,102,1011,1012,1013,1014,1015,103,1016,1017,1018,1019,1020,104,1021,1022,1023,1024,1025,', '0', null, '2018-10-19 11:21:47');
+INSERT INTO sys_oper_log VALUES ('147', '菜单管理', '1', 'com.student.controller.MenuController.add()', '1', 'admin', '研发一部', '/system/menu/add/1058', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 11:25:24');
+INSERT INTO sys_oper_log VALUES ('148', '菜单管理', '3', 'com.student.controller.MenuController.save()', '1', 'admin', '研发一部', '/system/menu/save', '127.0.0.1', 'XX 内网IP', '{\"parentId\":[\"1058\"],\"menuType\":[\"F\"],\"menuName\":[\"文章查询\"],\"url\":[\"\"],\"perms\":[\"function:article:list\"],\"orderNum\":[\"1\"],\"icon\":[\"\"],\"visible\":[\"0\"]}', '0', null, '2018-10-19 11:25:45');
+INSERT INTO sys_oper_log VALUES ('149', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 11:25:56');
+INSERT INTO sys_oper_log VALUES ('150', '角色管理', '3', 'com.student.controller.RoleController.save()', '1', 'admin', '研发一部', '/system/role/save', '127.0.0.1', 'XX 内网IP', '{\"id\":[\"1\"],\"roleName\":[\"管理员\"],\"roleKey\":[\"admin\"],\"roleSort\":[\"1\"],\"status\":[\"0\"],\"remark\":[\"管理员\"],\"menuIds\":[\"1,1001,1002,1003,1004,1005,101,1006,1007,1008,1009,1010,102,1011,1012,1013,1014,1015,103,1016,1017,1018,1019,1020,104,1021,1022,1023,1024,1025,', '0', null, '2018-10-19 11:26:05');
+INSERT INTO sys_oper_log VALUES ('151', '字典数据', '1', 'com.student.controller.DictDataController.add()', '1', 'admin', '研发一部', '/system/dict/data/add/article_type', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:05:29');
+INSERT INTO sys_oper_log VALUES ('152', '字典数据', '1', 'com.student.controller.DictDataController.add()', '1', 'admin', '研发一部', '/system/dict/data/add/article_type', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:05:42');
+INSERT INTO sys_oper_log VALUES ('153', '字典数据', '2', 'com.student.controller.DictDataController.edit()', '1', 'admin', '研发一部', '/system/dict/data/edit/1', '127.0.0.1', null, '{}', '0', null, '2018-10-19 15:08:09');
+INSERT INTO sys_oper_log VALUES ('154', '字典数据', '3', 'com.student.controller.DictDataController.save()', '1', 'admin', '研发一部', '/system/dict/data/save', '127.0.0.1', 'XX 内网IP', '{\"dictLabel\":[\"技术文章\"],\"dictValue\":[\"0\"],\"dictType\":[\"article_type\"],\"cssClass\":[\"\"],\"isDefault\":[\"Y\"],\"dictSort\":[\"1\"],\"status\":[\"0\"],\"remark\":[\"文章所需类型\"]}', '0', null, '2018-10-19 15:08:24');
+INSERT INTO sys_oper_log VALUES ('155', '字典类型', '2', 'com.student.controller.DictTypeController.edit()', '1', 'admin', '研发一部', '/system/dict/edit/10', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:08:32');
+INSERT INTO sys_oper_log VALUES ('156', '字典类型', '3', 'com.student.controller.DictTypeController.save()', '1', 'admin', '研发一部', '/system/dict/save', '127.0.0.1', 'XX 内网IP', '{\"id\":[\"10\"],\"dictName\":[\"文章类型\"],\"dictType\":[\"function_article_type\"],\"status\":[\"0\"],\"remark\":[\"文章所需类型\"]}', '0', null, '2018-10-19 15:08:39');
+INSERT INTO sys_oper_log VALUES ('157', '字典类型', '1', 'com.student.controller.DictTypeController.add()', '1', 'admin', '研发一部', '/system/dict/add', '127.0.0.1', null, '{}', '0', null, '2018-10-19 15:12:02');
+INSERT INTO sys_oper_log VALUES ('158', '字典类型', '3', 'com.student.controller.DictTypeController.save()', '1', 'admin', '研发一部', '/system/dict/save', '127.0.0.1', 'XX 内网IP', '{\"dictName\":[\"文章状态\"],\"dictType\":[\"function_article_status\"],\"status\":[\"0\"],\"remark\":[\"文章所需类型\"]}', '0', null, '2018-10-19 15:12:30');
+INSERT INTO sys_oper_log VALUES ('159', '字典类型', '2', 'com.student.controller.DictTypeController.edit()', '1', 'admin', '研发一部', '/system/dict/edit/11', '127.0.0.1', null, '{}', '0', null, '2018-10-19 15:12:52');
+INSERT INTO sys_oper_log VALUES ('160', '字典数据', '1', 'com.student.controller.DictDataController.add()', '1', 'admin', '研发一部', '/system/dict/data/add/function_article_status', '127.0.0.1', null, '{}', '0', null, '2018-10-19 15:15:12');
+INSERT INTO sys_oper_log VALUES ('161', '字典数据', '3', 'com.student.controller.DictDataController.save()', '1', 'admin', '研发一部', '/system/dict/data/save', '127.0.0.1', 'XX 内网IP', '{\"dictLabel\":[\"草稿\"],\"dictValue\":[\"0\"],\"dictType\":[\"function_article_status\"],\"cssClass\":[\"\"],\"isDefault\":[\"Y\"],\"dictSort\":[\"0\"],\"status\":[\"0\"],\"remark\":[\"文章状态所需\"]}', '0', null, '2018-10-19 15:15:52');
+INSERT INTO sys_oper_log VALUES ('162', '字典数据', '1', 'com.student.controller.DictDataController.add()', '1', 'admin', '研发一部', '/system/dict/data/add/function_article_status', '127.0.0.1', null, '{}', '0', null, '2018-10-19 15:16:01');
+INSERT INTO sys_oper_log VALUES ('163', '字典数据', '1', 'com.student.controller.DictDataController.add()', '1', 'admin', '研发一部', '/system/dict/data/add/function_article_status', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:16:20');
+INSERT INTO sys_oper_log VALUES ('164', '字典数据', '3', 'com.student.controller.DictDataController.save()', '1', 'admin', '研发一部', '/system/dict/data/save', '127.0.0.1', 'XX 内网IP', '{\"dictLabel\":[\"发布\"],\"dictValue\":[\"1\"],\"dictType\":[\"function_article_status\"],\"cssClass\":[\"\"],\"isDefault\":[\"Y\"],\"dictSort\":[\"1\"],\"status\":[\"0\"],\"remark\":[\"文章状态所需\"]}', '0', null, '2018-10-19 15:16:38');
+INSERT INTO sys_oper_log VALUES ('165', '字典数据', '1', 'com.student.controller.DictDataController.add()', '1', 'admin', '研发一部', '/system/dict/data/add/function_article_status', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:16:41');
+INSERT INTO sys_oper_log VALUES ('166', '字典数据', '3', 'com.student.controller.DictDataController.save()', '1', 'admin', '研发一部', '/system/dict/data/save', '127.0.0.1', 'XX 内网IP', '{\"dictLabel\":[\"删除\"],\"dictValue\":[\"2\"],\"dictType\":[\"function_article_status\"],\"cssClass\":[\"\"],\"isDefault\":[\"Y\"],\"dictSort\":[\"2\"],\"status\":[\"0\"],\"remark\":[\"文章状态所需\"]}', '0', null, '2018-10-19 15:16:54');
+INSERT INTO sys_oper_log VALUES ('167', '字典数据', '1', 'com.student.controller.DictDataController.add()', '1', 'admin', '研发一部', '/system/dict/data/add/article_type', '127.0.0.1', null, '{}', '0', null, '2018-10-19 15:17:06');
+INSERT INTO sys_oper_log VALUES ('168', '字典数据', '3', 'com.student.controller.DictDataController.save()', '1', 'admin', '研发一部', '/system/dict/data/save', '127.0.0.1', 'XX 内网IP', '{\"dictLabel\":[\"文学类\"],\"dictValue\":[\"1\"],\"dictType\":[\"article_type\"],\"cssClass\":[\"\"],\"isDefault\":[\"Y\"],\"dictSort\":[\"1\"],\"status\":[\"0\"],\"remark\":[\"文章所需类型\"]}', '0', null, '2018-10-19 15:17:28');
+INSERT INTO sys_oper_log VALUES ('169', '字典数据', '1', 'com.student.controller.DictDataController.add()', '1', 'admin', '研发一部', '/system/dict/data/add/function_article_type', '127.0.0.1', null, '{}', '0', null, '2018-10-19 15:18:57');
+INSERT INTO sys_oper_log VALUES ('170', '字典数据', '3', 'com.student.controller.DictDataController.save()', '1', 'admin', '研发一部', '/system/dict/data/save', '127.0.0.1', 'XX 内网IP', '{\"dictLabel\":[\"文学类\"],\"dictValue\":[\"0\"],\"dictType\":[\"function_article_type\"],\"cssClass\":[\"\"],\"isDefault\":[\"Y\"],\"dictSort\":[\"0\"],\"status\":[\"0\"],\"remark\":[\"文章状态所需\"]}', '0', null, '2018-10-19 15:19:17');
+INSERT INTO sys_oper_log VALUES ('171', '字典数据', '1', 'com.student.controller.DictDataController.add()', '1', 'admin', '研发一部', '/system/dict/data/add/function_article_type', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:19:24');
+INSERT INTO sys_oper_log VALUES ('172', '字典数据', '3', 'com.student.controller.DictDataController.save()', '1', 'admin', '研发一部', '/system/dict/data/save', '127.0.0.1', 'XX 内网IP', '{\"dictLabel\":[\"技术类\"],\"dictValue\":[\"1\"],\"dictType\":[\"function_article_type\"],\"cssClass\":[\"\"],\"isDefault\":[\"Y\"],\"dictSort\":[\"1\"],\"status\":[\"0\"],\"remark\":[\"文章所需类型\"]}', '0', null, '2018-10-19 15:19:48');
+INSERT INTO sys_oper_log VALUES ('173', '菜单管理', '1', 'com.student.controller.MenuController.add()', '1', 'admin', '研发一部', '/system/menu/add/1058', '127.0.0.1', null, '{}', '0', null, '2018-10-19 15:35:10');
+INSERT INTO sys_oper_log VALUES ('174', '菜单管理', '1', 'com.student.controller.MenuController.add()', '1', 'admin', '研发一部', '/system/menu/add/1058', '127.0.0.1', null, '{}', '0', null, '2018-10-19 15:36:20');
+INSERT INTO sys_oper_log VALUES ('175', '菜单管理', '3', 'com.student.controller.MenuController.save()', '1', 'admin', '研发一部', '/system/menu/save', '127.0.0.1', null, '{\"parentId\":[\"1058\"],\"menuType\":[\"F\"],\"menuName\":[\"文章新增\"],\"url\":[\"\"],\"perms\":[\"function:article:add\"],\"orderNum\":[\"2\"],\"icon\":[\"\"],\"visible\":[\"0\"]}', '0', null, '2018-10-19 15:36:40');
+INSERT INTO sys_oper_log VALUES ('176', '菜单管理', '2', 'com.student.controller.MenuController.edit()', '1', 'admin', '研发一部', '/system/menu/edit/1059', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:37:35');
+INSERT INTO sys_oper_log VALUES ('177', '菜单管理', '1', 'com.student.controller.MenuController.add()', '1', 'admin', '研发一部', '/system/menu/add/1058', '127.0.0.1', null, '{}', '0', null, '2018-10-19 15:37:45');
+INSERT INTO sys_oper_log VALUES ('178', '菜单管理', '3', 'com.student.controller.MenuController.save()', '1', 'admin', '研发一部', '/system/menu/save', '127.0.0.1', 'XX 内网IP', '{\"parentId\":[\"1058\"],\"menuType\":[\"F\"],\"menuName\":[\"文章删除\"],\"url\":[\"\"],\"perms\":[\"function:article:delete\"],\"orderNum\":[\"3\"],\"icon\":[\"\"],\"visible\":[\"0\"]}', '0', null, '2018-10-19 15:38:08');
+INSERT INTO sys_oper_log VALUES ('179', '菜单管理', '1', 'com.student.controller.MenuController.add()', '1', 'admin', '研发一部', '/system/menu/add/1058', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:38:23');
+INSERT INTO sys_oper_log VALUES ('180', '菜单管理', '3', 'com.student.controller.MenuController.save()', '1', 'admin', '研发一部', '/system/menu/save', '127.0.0.1', 'XX 内网IP', '{\"parentId\":[\"1058\"],\"menuType\":[\"F\"],\"menuName\":[\"文章修改\"],\"url\":[\"\"],\"perms\":[\"function:article:edit\"],\"orderNum\":[\"3\"],\"icon\":[\"\"],\"visible\":[\"0\"]}', '0', null, '2018-10-19 15:38:40');
+INSERT INTO sys_oper_log VALUES ('181', '菜单管理', '2', 'com.student.controller.MenuController.edit()', '1', 'admin', '研发一部', '/system/menu/edit/1062', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:38:50');
+INSERT INTO sys_oper_log VALUES ('182', '菜单管理', '3', 'com.student.controller.MenuController.save()', '1', 'admin', '研发一部', '/system/menu/save', '127.0.0.1', 'XX 内网IP', '{\"id\":[\"1062\"],\"parentId\":[\"1058\"],\"menuType\":[\"F\"],\"menuName\":[\"文章修改\"],\"url\":[\"\"],\"perms\":[\"function:article:edit\"],\"orderNum\":[\"4\"],\"icon\":[\"\"],\"visible\":[\"0\"]}', '0', null, '2018-10-19 15:38:53');
+INSERT INTO sys_oper_log VALUES ('183', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', null, '{}', '0', null, '2018-10-19 15:40:15');
+INSERT INTO sys_oper_log VALUES ('184', '角色管理', '2', 'com.student.controller.RoleController.edit()', '1', 'admin', '研发一部', '/system/role/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:41:31');
+INSERT INTO sys_oper_log VALUES ('185', '角色管理', '3', 'com.student.controller.RoleController.save()', '1', 'admin', '研发一部', '/system/role/save', '127.0.0.1', 'XX 内网IP', '{\"id\":[\"1\"],\"roleName\":[\"管理员\"],\"roleKey\":[\"admin\"],\"roleSort\":[\"1\"],\"status\":[\"0\"],\"remark\":[\"管理员\"],\"menuIds\":[\"1,1001,1002,1003,1004,1005,101,1006,1007,1008,1009,1010,102,1011,1012,1013,1014,1015,103,1016,1017,1018,1019,1020,104,1021,1022,1023,1024,1025,', '0', null, '2018-10-19 15:41:46');
+INSERT INTO sys_oper_log VALUES ('186', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:42:20');
+INSERT INTO sys_oper_log VALUES ('187', '角色管理', '1', 'com.student.controller.RoleController.add()', '1', 'admin', '研发一部', '/system/role/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:42:54');
+INSERT INTO sys_oper_log VALUES ('188', '部门管理', '1', 'com.student.controller.DeptController.add()', '1', 'admin', '研发一部', '/system/dept/add/100', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:42:59');
+INSERT INTO sys_oper_log VALUES ('189', '角色管理', '1', 'com.student.controller.RoleController.add()', '1', 'admin', '研发一部', '/system/role/add', '127.0.0.1', null, '{}', '0', null, '2018-10-19 15:43:35');
+INSERT INTO sys_oper_log VALUES ('190', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:43:40');
+INSERT INTO sys_oper_log VALUES ('191', '菜单管理', '2', 'com.student.controller.MenuController.edit()', '1', 'admin', '研发一部', '/system/menu/edit/1061', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:45:45');
+INSERT INTO sys_oper_log VALUES ('192', '菜单管理', '3', 'com.student.controller.MenuController.save()', '1', 'admin', '研发一部', '/system/menu/save', '127.0.0.1', 'XX 内网IP', '{\"id\":[\"1061\"],\"parentId\":[\"1058\"],\"menuType\":[\"F\"],\"menuName\":[\"文章删除\"],\"url\":[\"\"],\"perms\":[\"function:article:remove\"],\"orderNum\":[\"3\"],\"icon\":[\"\"],\"visible\":[\"0\"]}', '0', null, '2018-10-19 15:45:51');
+INSERT INTO sys_oper_log VALUES ('193', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:47:55');
+INSERT INTO sys_oper_log VALUES ('194', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:48:39');
+INSERT INTO sys_oper_log VALUES ('195', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 15:48:51');
+INSERT INTO sys_oper_log VALUES ('196', '个人信息', '2', 'com.student.controller.ProfileController.edit()', '1', 'admin', '研发一部', '/system/user/profile/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:05:02');
+INSERT INTO sys_oper_log VALUES ('197', '个人信息', '2', 'com.student.controller.ProfileController.avatar()', '1', 'admin', '研发一部', '/system/user/profile/avatar/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:11:22');
+INSERT INTO sys_oper_log VALUES ('198', '个人信息', '2', 'com.student.controller.ProfileController.edit()', '1', 'admin', '研发一部', '/system/user/profile/edit/1', '127.0.0.1', null, '{}', '0', null, '2018-10-19 16:15:47');
+INSERT INTO sys_oper_log VALUES ('199', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:17:02');
+INSERT INTO sys_oper_log VALUES ('200', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:17:10');
+INSERT INTO sys_oper_log VALUES ('201', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:18:10');
+INSERT INTO sys_oper_log VALUES ('202', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:18:30');
+INSERT INTO sys_oper_log VALUES ('203', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:30:29');
+INSERT INTO sys_oper_log VALUES ('204', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:30:45');
+INSERT INTO sys_oper_log VALUES ('205', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:40:11');
+INSERT INTO sys_oper_log VALUES ('206', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:45:41');
+INSERT INTO sys_oper_log VALUES ('207', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:47:20');
+INSERT INTO sys_oper_log VALUES ('208', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:47:37');
+INSERT INTO sys_oper_log VALUES ('209', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:47:51');
+INSERT INTO sys_oper_log VALUES ('210', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:48:09');
+INSERT INTO sys_oper_log VALUES ('211', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:49:07');
+INSERT INTO sys_oper_log VALUES ('212', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:50:19');
+INSERT INTO sys_oper_log VALUES ('213', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 16:52:58');
+INSERT INTO sys_oper_log VALUES ('214', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 17:08:26');
+INSERT INTO sys_oper_log VALUES ('215', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', null, '{\"title\":[\"123\"],\"typeId\":[\"0\"],\"content\":[\"<p>123</p>\"],\"files\":[\"\"],\"avatar\":[\"\"],\"status\":[\"2\"]}', '0', null, '2018-10-19 17:08:45');
+INSERT INTO sys_oper_log VALUES ('216', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{\"title\":[\"123\"],\"typeId\":[\"0\"],\"content\":[\"<p>123</p>\"],\"files\":[\"\"],\"avatar\":[\"\"],\"status\":[\"2\"]}', '0', null, '2018-10-19 17:08:59');
+INSERT INTO sys_oper_log VALUES ('217', '个人信息', '2', 'com.student.controller.ProfileController.edit()', '1', 'admin', '研发一部', '/system/user/profile/edit/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 17:10:29');
+INSERT INTO sys_oper_log VALUES ('218', '个人信息', '2', 'com.student.controller.ProfileController.avatar()', '1', 'admin', '研发一部', '/system/user/profile/avatar/1', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 17:10:32');
+INSERT INTO sys_oper_log VALUES ('219', '个人信息', '3', 'com.student.controller.ProfileController.updateAvatar()', '1', 'admin', '研发一部', '/system/user/profile/updateAvatar', '127.0.0.1', 'XX 内网IP', '{\"id\":[\"1\"]}', '0', null, '2018-10-19 17:10:49');
+INSERT INTO sys_oper_log VALUES ('220', '个人信息', '2', 'com.student.controller.ProfileController.avatar()', '1', 'admin', '研发一部', '/system/user/profile/avatar/1', '127.0.0.1', null, '{}', '0', null, '2018-10-19 17:11:07');
+INSERT INTO sys_oper_log VALUES ('221', '个人信息', '3', 'com.student.controller.ProfileController.updateAvatar()', '1', 'admin', '研发一部', '/system/user/profile/updateAvatar', '127.0.0.1', 'XX 内网IP', '{\"id\":[\"1\"]}', '0', null, '2018-10-19 17:11:11');
+INSERT INTO sys_oper_log VALUES ('222', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 17:12:25');
+INSERT INTO sys_oper_log VALUES ('223', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{\"title\":[\"123\"],\"typeId\":[\"0\"],\"content\":[\"<p>123</p>\"],\"files\":[\"\"],\"avatar\":[\"\"],\"status\":[\"2\"]}', '0', null, '2018-10-19 17:12:47');
+INSERT INTO sys_oper_log VALUES ('224', '个人信息', '2', 'com.student.controller.ProfileController.avatar()', '1', 'admin', '研发一部', '/system/user/profile/avatar/1', '127.0.0.1', null, '{}', '0', null, '2018-10-19 17:14:05');
+INSERT INTO sys_oper_log VALUES ('225', '个人信息', '3', 'com.student.controller.ProfileController.updateAvatar()', '1', 'admin', '研发一部', '/system/user/profile/updateAvatar', '127.0.0.1', 'XX 内网IP', '{\"id\":[\"1\"]}', '0', null, '2018-10-19 17:14:11');
+INSERT INTO sys_oper_log VALUES ('226', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{\"title\":[\"123\"],\"typeId\":[\"0\"],\"content\":[\"<p>123</p>\"],\"files\":[\"\"],\"avatar\":[\"\"],\"status\":[\"2\"]}', '0', null, '2018-10-19 17:15:02');
+INSERT INTO sys_oper_log VALUES ('227', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 17:18:24');
+INSERT INTO sys_oper_log VALUES ('228', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{\"title\":[\"1\"],\"typeId\":[\"0\"],\"content\":[\"<p>1</p>\"],\"files\":[\"\"],\"avatar\":[\"\"],\"status\":[\"2\"]}', '0', null, '2018-10-19 17:18:41');
+INSERT INTO sys_oper_log VALUES ('229', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 17:20:34');
+INSERT INTO sys_oper_log VALUES ('230', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{\"title\":[\"1\"],\"typeId\":[\"0\"],\"content\":[\"<p>123</p>\"],\"files\":[\"\"],\"avatar\":[\"\"],\"status\":[\"2\"]}', '0', null, '2018-10-19 17:20:44');
+INSERT INTO sys_oper_log VALUES ('231', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{\"title\":[\"123\"],\"typeId\":[\"0\"],\"content\":[\"<p>123</p>\"],\"files\":[\"\"],\"avatar\":[\"\"],\"status\":[\"2\"]}', '0', null, '2018-10-19 17:25:56');
+INSERT INTO sys_oper_log VALUES ('232', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{}', '0', null, '2018-10-19 17:26:45');
+INSERT INTO sys_oper_log VALUES ('233', '通知文章', '1', 'com.student.controller.function.ArticleController.add()', '1', 'admin', '研发一部', '/function/article/add', '127.0.0.1', 'XX 内网IP', '{\"title\":[\"123\"],\"typeId\":[\"0\"],\"content\":[\"<p>123</p>\"],\"files\":[\"\"],\"avatar\":[\"\"],\"status\":[\"2\"]}', '0', null, '2018-10-19 17:27:16');
 
 -- ----------------------------
 -- Table structure for `sys_post`
@@ -722,7 +867,7 @@ CREATE TABLE `sys_role` (
 -- ----------------------------
 -- Records of sys_role
 -- ----------------------------
-INSERT INTO sys_role VALUES ('1', '管理员', 'admin', '1', '0', 'admin', '2018-03-16 11:33:00', 'admin', '2018-10-18 14:46:43', '管理员');
+INSERT INTO sys_role VALUES ('1', '管理员', 'admin', '1', '0', 'admin', '2018-03-16 11:33:00', 'admin', '2018-10-19 15:41:46', '管理员');
 INSERT INTO sys_role VALUES ('2', '普通角色', 'common', '2', '0', 'admin', '2018-03-16 11:33:00', 'ry', '2018-03-16 11:33:00', '普通角色');
 INSERT INTO sys_role VALUES ('5', '开心管理员', '1', '1', '0', 'admin', '2018-10-18 10:44:22', '', null, '123');
 
@@ -816,6 +961,11 @@ INSERT INTO sys_role_menu VALUES ('1', '1054');
 INSERT INTO sys_role_menu VALUES ('1', '1055');
 INSERT INTO sys_role_menu VALUES ('1', '1056');
 INSERT INTO sys_role_menu VALUES ('1', '1057');
+INSERT INTO sys_role_menu VALUES ('1', '1058');
+INSERT INTO sys_role_menu VALUES ('1', '1059');
+INSERT INTO sys_role_menu VALUES ('1', '1060');
+INSERT INTO sys_role_menu VALUES ('1', '1061');
+INSERT INTO sys_role_menu VALUES ('1', '1062');
 
 -- ----------------------------
 -- Table structure for `sys_user`
@@ -848,7 +998,7 @@ CREATE TABLE `sys_user` (
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO sys_user VALUES ('1', '106', 'admin', '蒋小姐', '00', 'jxj@163.com', '15888888888', '1', '', '29c67a30398638269fe600f73a054934', '111111', '0', '0', '127.0.0.1', '2018-10-18 16:41:11', 'admin', '2018-03-16 11:33:00', 'jxj', '2018-10-18 16:41:11', 'jxj');
+INSERT INTO sys_user VALUES ('1', '106', 'admin', '蒋小姐', '00', 'jxj@163.com', '15888888888', '1', '', '29c67a30398638269fe600f73a054934', '111111', '0', '0', '127.0.0.1', '2018-10-19 17:20:30', 'admin', '2018-03-16 11:33:00', 'jxj', '2018-10-19 17:20:29', 'jxj');
 INSERT INTO sys_user VALUES ('4', '106', 'jiangxiaojie', 'dargon', '00', '296569845@qq.com', '18324191811', '0', '', 'a0f4e09c52e8b79c1068f91ac62c2b04', '95e77a', '0', '2', '', null, 'admin', '2018-07-30 15:42:29', '', '2018-07-31 11:29:55', '');
 INSERT INTO sys_user VALUES ('5', '106', 'jiangxiaojie', 'jiangxiaojie', '00', '296569841@qq.com', '13478539991', '0', '', 'f3712626d1ef5a5131b11412e280d72f', '495a6d', '0', '0', '', null, 'admin', '2018-07-30 15:50:50', 'admin', '2018-07-31 11:36:32', '');
 
@@ -874,7 +1024,7 @@ CREATE TABLE `sys_user_online` (
 -- ----------------------------
 -- Records of sys_user_online
 -- ----------------------------
-INSERT INTO sys_user_online VALUES ('cfa0862c-b730-4519-91aa-5a834bfddf55', 'admin', '研发一部', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', 'on_line', '2018-10-18 16:41:05', '2018-10-18 16:43:19', '1800000');
+INSERT INTO sys_user_online VALUES ('5b25124d-b143-4f06-9b7a-c0953121294c', 'admin', '研发一部', '127.0.0.1', 'XX 内网IP', 'Chrome', 'Windows 7', 'on_line', '2018-10-19 17:20:22', '2018-10-19 17:26:37', '1800000');
 
 -- ----------------------------
 -- Table structure for `sys_user_post`
