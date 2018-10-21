@@ -7,26 +7,28 @@
 <link href="/ajax/libs/cropbox/cropbox.css" th:href="@{/ajax/libs/cropbox/cropbox.css}" rel="stylesheet"/>
 <body class="white-bg">
     <div class="wrapper wrapper-content animated fadeInRight ibox-content">
-        <form class="form-horizontal m" id="form-article-add">
+        <form class="form-horizontal m" id="form-article-edit" th:object="${article}">
+			<input id="id" name="id" th:field="*{id}"  type="hidden">
+			<input id="pictureUrl"  th:field="*{pictureUrl}"  type="hidden">
 			<div class="form-group">	
 				<label class="col-sm-3 control-label">标题：</label>
 				<div class="col-sm-8">
-					<input id="title" name="title" class="form-control" type="text">
+					<input id="title" name="title" th:field="*{title}"  class="form-control" type="text">
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">类型：</label>
 				<div class="col-sm-8">
 					<select name="typeId" id="typeId" class="form-control m-b" th:with="type=${@dictService.selectDictData('function_article_type')}">
-	                    <option th:each="dict : ${type}" th:text="${dict['dictLabel']}" th:value="${dict['dictValue']}"></option>
+	                    <option th:each="dict : ${type}" th:text="${dict['dictLabel']}" th:value="${dict['dictValue']}"  th:field="*{typeId}"></option>
 	                </select>
 				</div>
 			</div>
 			<div class="form-group">	
 				<label class="col-sm-3 control-label">内容：</label>
 				<div class="col-sm-8">
-				    <input id="content" name="content" type="hidden">
-				    <div class="summernote"></div>
+				    <input id="content" name="content" type="hidden" th:field="*{content}">
+					<div id="editor" class="summernote"></div>
 				</div>
 			</div>
 
@@ -51,7 +53,7 @@
 				<label class="col-sm-3 control-label">状态：</label>
 				<div class="col-sm-8" th:with="type=${@dictService.selectDictData('function_article_status')}">
 					<div th:each="dict : ${type}" th:class="${dict['cssClass']}">
-						<input type="radio" th:id="${dict['id']}" name="status" id="status" th:value="${dict['dictValue']}" th:checked="${dict['isDefault'] == 'Y' ? true : false}">
+						<input type="radio" th:id="${dict['id']}" name="status" id="status" th:value="${dict['dictValue']}" th:field="*{status}">
 						<label th:for="${dict['id']}" th:text="${dict['dictLabel']}"></label>
 					</div>
 				</div>
@@ -70,11 +72,20 @@
 	<script th:src="@{/ajax/libs/cropbox/cropbox.js}"></script>
 
 	<script type="text/javascript">
+
         $(window).load(function() {
+            $('.summernote').summernote({
+                height : '220px',
+                lang : 'zh-CN'
+            });
+            var content = $("#content").val();
+            $('#editor').code(content);
+
+            var image = $("#pictureUrl").val();
             var options = {
                 thumbBox: '.thumbBox',
                 spinner: '.spinner',
-                imgSrc: '/img/profile.jpg'
+                imgSrc: imageHome + image
             }
             var cropper = $('.imageBox').cropbox(options);
             $('#avatar').on('change',
@@ -92,23 +103,21 @@
                     reader.readAsDataURL(this.files[0]);
                 }
 			)
-            $('.summernote').summernote({
-                height : '220px',
-                lang : 'zh-CN'
-            });
 
             var prefix = ctx + "function/article"
-            $("#form-article-add").validate({
+            $("#form-article-edit").validate({
                 rules:{
                     title:{
                         required:true,
                     }
                 },
                 submitHandler: function(form) {
+                    debugger
                     var sHTML = $('.summernote').code();
                     $("#content").val(sHTML);
                     var formdata = new FormData();
                     var img = cropper.getBlob();
+                    formdata.append("id", $("#id").val());
                     formdata.append("image", img);
                     formdata.append("title", $("#title").val());
                     formdata.append("content", $("#content").val());
@@ -116,8 +125,8 @@
                     formdata.append("status", $("input[name='status']:checked").val());
                     $.modal.loading("正在处理中，请稍后...");
                     $.ajax({
-                        url: ctx + "function/article/save",
-                        data: formdata,
+                        url: prefix,
+                        data: formdata + "/save",
                         type: "post",
                         processData: false,
                         contentType: false,

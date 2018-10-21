@@ -31,7 +31,7 @@ public class Article extends BaseEntity {
     private Long commentId;
 
     /** 分类id */
-    private Long typeId;
+    private Integer typeId;
 
     /** 大图 */
     private String pictureUrl;

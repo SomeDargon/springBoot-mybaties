@@ -21,7 +21,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </resultMap>
     
     <sql id="selectArticleVo">
-        select id, title, content, like_num, browse_num, type_id, picture_url  status, create_by, create_time, update_by, update_time, remark from sys_article
+        select id, title, content, like_num, browse_num, type_id, picture_url,  status, create_by, create_time, update_by, update_time, remark from sys_article
     </sql>
     
     <select id="selectArticleById" parameterType="Integer" resultMap="ArticleResult">
@@ -35,7 +35,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<if test="title != null and title != ''">
 				AND title like concat('%', #{title}, '%')
 			</if>
-			<if test="typeId != null and typeId != ''">
+			<if test="typeId != null and typeId != '' or typeId == '0'.toString()">
 				AND type_id = #{typeId}
 			</if>
 			<if test="createBy != null and createBy != ''">
@@ -78,7 +78,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </update>
 	
     <delete id="deleteArticleByIds" parameterType="String">
-        delete from sys_Article where id in 
+        delete from sys_article where id in
         <foreach item="id" collection="array" open="(" separator="," close=")">
             #{id}
         </foreach>

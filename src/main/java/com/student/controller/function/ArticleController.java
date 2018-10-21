@@ -23,7 +23,6 @@ import java.util.List;
 
 /**
  * 文章 管理
-
  */
 @Controller
 @RequestMapping("/function/article")
@@ -36,8 +35,7 @@ public class ArticleController extends BaseController {
 
     @RequiresPermissions("function:article:view")
     @GetMapping()
-    public String notice()
-    {
+    public String notice() {
         return prefix + "/article";
     }
 
@@ -77,9 +75,9 @@ public class ArticleController extends BaseController {
         try {
             if (!file.isEmpty()) {
                 String avatar = FileUploadUtils.upload(file);
-                System.out.println(avatar);
+                article.setPictureUrl(avatar);
             }
-            return error();
+            return articleService.saveArticle(article) > 0 ? success() : error();
         } catch (Exception e) {
             return error(e.getMessage());
         }
@@ -87,17 +85,31 @@ public class ArticleController extends BaseController {
 
 
     /**
-     * 修改公告
+     * 修改文章
      */
     @RequiresPermissions("function:article:edit")
     @Log(title = "通知文章", action = BusinessType.UPDATE)
-    @GetMapping("/edit/{articleId}")
-    public String edit(@PathVariable("articleId") Integer articleId, Model model) {
-        Article article = articleService.selectArticleById(articleId);
+    @GetMapping("/edit/{id}")
+    public String edit(@PathVariable("id") Integer id, Model model) {
+        Article article = articleService.selectArticleById(id);
         model.addAttribute("article", article);
         return prefix + "/edit";
     }
 
 
 
+    /**
+     * 删除文章
+     */
+    @RequiresPermissions("function:article:remove")
+    @Log(title = "通知文章", action = BusinessType.DELETE)
+    @PostMapping("/remove")
+    @ResponseBody
+    public AjaxResult remove(String ids) {
+        int rows = articleService.deleteArticleByIds(ids);
+        if (rows > 0) {
+            return success();
+        }
+        return error();
+    }
 }
