@@ -1,4 +1,4 @@
-package com.student.entity.article;
+package com.student.entity.fucntion;
 
 import com.student.entity.BaseEntity;
 import lombok.Data;
@@ -26,9 +26,6 @@ public class Article extends BaseEntity {
 
     /** 浏览数 */
     private Integer browseNum;
-
-    /** 评论id */
-    private Long commentId;
 
     /** 分类id */
     private Integer typeId;

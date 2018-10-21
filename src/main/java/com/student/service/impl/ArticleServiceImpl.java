@@ -1,7 +1,7 @@
 package com.student.service.impl;
 
 import com.student.dao.mapper.function.ArticleMapper;
-import com.student.entity.article.Article;
+import com.student.entity.fucntion.Article;
 import com.student.service.ArticleService;
 import com.student.support.Convert;
 import com.student.util.StringUtils;

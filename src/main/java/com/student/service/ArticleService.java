@@ -1,6 +1,6 @@
 package com.student.service;
 
-import com.student.entity.article.Article;
+import com.student.entity.fucntion.Article;
 
 import java.util.List;
 
