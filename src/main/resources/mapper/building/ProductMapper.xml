@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.student.dao.mapper.building.ProductMapper">
+
+	<resultMap type="Product" id="ProductResult">
+		<id     property="id"     column="id"     />
+		<result property="productName" column="product_name" />
+		<result property="productAbbreviation"   column="product_abbreviation"   />
+		<result property="productNumber"   column="product_number"   />
+		<result property="productType"   column="product_type"   />
+		<result property="productStatus"     column="product_status"      />
+		<result property="startTime"      column="start_time"       />
+		<result property="endTime"      column="end_time"       />
+		<result property="productLabel"     column="product_label"      />
+		<result property="productMoney" column="product_money" />
+		<result property="productArea" column="product_area" />
+		<result property="productLength" column="product_length" />
+		<result property="productCompany" column="product_company" />
+		<result property="productFirstPart" column="product_first_party" />
+		<result property="province" column="province" />
+		<result property="city" column="city" />
+		<result property="area" column="area" />
+		<result property="specificAddress" column="specificAddress" />
+		<result property="address" column="address" />
+		<result property="remark" column="remark" />
+		<result property="createBy"   column="create_by"   />
+		<result property="createTime" column="create_time" />
+		<result property="updateBy"   column="update_by"   />
+		<result property="updateTime" column="update_time" />
+	</resultMap>
+
+	<sql id="selectProductVo">
+        select t.id, product_abbreviation, t.product_number, t.product_type, t.product_status, t.start_time, t.end_time, t.product_label, t.product_money, t.product_area, t.product_length, t.product_company, t.product_first_party, t.province, t.city, t.area, t.specific_address, t.address, t.remark, t.create_by, t.create_time, t.update_by, t.update_time from sys_building_product t
+    </sql>
+
+
+	<select id="checkProductNumberUnique" parameterType="String" resultMap="ProductResult">
+	    <include refid="selectProductVo"/>
+		where product_number=#{productNumber}
+	</select>
+
+	<insert id="insertProduct" parameterType="Product" useGeneratedKeys="true" keyProperty="id">
+		insert into sys_building_product(
+			<if test="id != null and id != 0">id,</if>
+			<if test="productName != null">product_name,</if>
+			<if test="productAbbreviation != null">product_abbreviation,</if>
+			<if test="productNumber != null">product_number,</if>
+			<if test="productType != null ">product_type,</if>
+			<if test="productStatus != null ">product_status,</if>
+			<if test="startTime != null ">start_time,</if>
+			<if test="endTime != null ">end_time,</if>
+			<if test="productLabel != null ">product_label,</if>
+			<if test="productMoney != null" >product_money</if>
+			<if test="productArea != null ">product_area,</if>
+			<if test="productLength != null ">product_length,</if>
+			<if test="productCompany != null ">product_company,</if>
+			<if test="productFirstPart != null ">product_first_party,</if>
+			<if test="province != null ">province,</if>
+			<if test="city != null ">city,</if>
+			<if test="area != null ">area,</if>
+			<if test="address != null ">address,</if>
+			<if test="remark != null ">remark,</if>
+			<if test="createBy != null ">create_by,</if>
+			create_time
+		) values (
+			<if test="id != null and id != 0">#{id},</if>
+			<if test="productName != null">#{productName},</if>
+			<if test="productAbbreviation != null">#{productAbbreviation},</if>
+			<if test="productNumber != null">#{productNumber},</if>
+			<if test="productType != null ">#{productType},</if>
+			<if test="productStatus != null ">#{productStatus},</if>
+			<if test="startTime != null ">#{startTime},</if>
+			<if test="endTime != null ">#{endTime},</if>
+			<if test="productLabel != null ">#{productLabel},</if>
+			<if test="productMoney != null" >#{productMoney}</if>
+			<if test="productArea != null ">#{productArea},</if>
+			<if test="productLength != null ">#{productLength},</if>
+			<if test="productCompany != null ">#{productCompany},</if>
+			<if test="productFirstPart != null ">#{productFirstPart},</if>
+			<if test="province != null ">#{province},</if>
+			<if test="city != null ">#{city},</if>
+			<if test="area != null ">#{area},</if>
+			<if test="address != null ">#{address},</if>
+			<if test="remark != null ">#{remark},</if>
+			<if test="createBy != null ">#{createBy},</if>
+			sysdate()
+		)
+	</insert>
+
+	<!--<select id="selectDeptById" parameterType="Long" resultMap="DeptResult">-->
+		<!--select t.id, t.parent_id, t.dept_name, t.order_num, t.leader, t.phone, t.email, t.status,-->
+			<!--(select dept_name from sys_dept where id = t.parent_id) parent_name-->
+		<!--from sys_dept t-->
+		<!--where id = #{id}-->
+	<!--</select>-->
+
+	<!--<update id="updateDept" parameterType="Dept">-->
+ 		<!--update sys_dept-->
+ 		<!--<set>-->
+ 			<!--<if test="parentId != null and parentId != 0">parent_id = #{parentId},</if>-->
+ 			<!--<if test="deptName != null and deptName != ''">dept_name = #{deptName},</if>-->
+ 			<!--<if test="orderNum != null and orderNum != ''">order_num = #{orderNum},</if>-->
+ 			<!--<if test="leader != null and leader != ''">leader = #{leader},</if>-->
+ 			<!--<if test="phone != null and phone != ''">phone = #{phone},</if>-->
+ 			<!--<if test="email != null and email != ''">email = #{email},</if>-->
+ 			<!--<if test="status != null and status != ''">status = #{status},</if>-->
+ 			<!--<if test="updateBy != null and updateBy != ''">update_by = #{updateBy},</if>-->
+ 			<!--update_time = sysdate()-->
+ 		<!--</set>-->
+ 		<!--where 1=1-->
+ 		<!--<if test="id != null and id  != ''">and id = #{id}</if>-->
+	<!--</update>-->
+
+	<!--<delete id="deleteDeptById" parameterType="Long">-->
+		<!--delete from sys_dept where id = #{id}-->
+	<!--</delete>-->
+
+</mapper> 
