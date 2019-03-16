@@ -6,7 +6,6 @@ import com.student.constant.BusinessStatus;
 import com.student.entity.OperLog;
 import com.student.entity.User;
 import com.student.service.OperLogService;
-import com.student.util.AddressUtils;
 import com.student.util.ServletUtils;
 import com.student.util.StringUtils;
 import com.student.util.security.ShiroUtils;
@@ -86,7 +85,7 @@ public class LogAspect {
             String ip = ShiroUtils.getIp();
             operLog.setOperIp(ip);
             // 操作地点
-            operLog.setOperLocation(AddressUtils.getRealAddressByIP(ip));
+//            operLog.setOperLocation(AddressUtils.getRealAddressByIP(ip));
 
             operLog.setOperUrl(ServletUtils.getRequest().getRequestURI());
             if (currentUser != null) {

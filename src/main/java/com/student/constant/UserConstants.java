@@ -67,6 +67,13 @@ public class UserConstants {
     public final static String ROLE_NAME_NOT_UNIQUE = "1";
 
     /**
+     *  项目编号 是否唯一的返回结果
+     */
+    public final static String PRODUCT_NUMBER_UNIQUE = "0";
+    public final static String PRODUCT_NUMBER_NOT_UNIQUE = "1";
+
+
+    /**
      * 菜单名称是否唯一的返回结果码
      */
     public final static String MENU_NAME_UNIQUE = "0";
@@ -89,6 +96,8 @@ public class UserConstants {
      */
     public static final int PASSWORD_MIN_LENGTH = 5;
     public static final int PASSWORD_MAX_LENGTH = 20;
+
+
 
     /**
      * 手机号码格式限制
