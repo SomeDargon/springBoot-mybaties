@@ -52,7 +52,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<if test="startTime != null ">start_time,</if>
 			<if test="endTime != null ">end_time,</if>
 			<if test="productLabel != null ">product_label,</if>
-			<if test="productMoney != null" >product_money</if>
+			<if test="productMoney != null and productMoney != ''">product_money,</if>
 			<if test="productArea != null ">product_area,</if>
 			<if test="productLength != null ">product_length,</if>
 			<if test="productCompany != null ">product_company,</if>
@@ -74,7 +74,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<if test="startTime != null ">#{startTime},</if>
 			<if test="endTime != null ">#{endTime},</if>
 			<if test="productLabel != null ">#{productLabel},</if>
-			<if test="productMoney != null" >#{productMoney}</if>
+			<if test="productMoney != null and productMoney != ''">#{productMoney},</if>
 			<if test="productArea != null ">#{productArea},</if>
 			<if test="productLength != null ">#{productLength},</if>
 			<if test="productCompany != null ">#{productCompany},</if>
