@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html  lang="zh" xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<link th:href="@{/ajax/libs/summernote/summernote.css}" rel="stylesheet"/>
+<link th:href="@{/ajax/libs/summernote/summernote-bs3.css}" rel="stylesheet"/>
+<link href="/ajax/libs/cropbox/cropbox.css" th:href="@{/ajax/libs/cropbox/cropbox.css}" rel="stylesheet"/>
+<body class="white-bg">
+    <div class="wrapper wrapper-content animated fadeInRight ibox-content">
+        <form class="form-horizontal m" id="form-article-add">
+			<div class="form-group">	
+				<label class="col-sm-3 control-label">标题：</label>
+				<div class="col-sm-8">
+					<input id="title" name="title" class="form-control" type="text">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">类型：</label>
+				<div class="col-sm-8">
+					<select name="typeId" id="typeId" class="form-control m-b" th:with="type=${@dictService.selectDictData('function_article_type')}">
+	                    <option th:each="dict : ${type}" th:text="${dict['dictLabel']}" th:value="${dict['dictValue']}"></option>
+	                </select>
+				</div>
+			</div>
+			<div class="form-group">	
+				<label class="col-sm-3 control-label">内容：</label>
+				<div class="col-sm-8">
+				    <input id="content" name="content" type="hidden">
+				    <div class="summernote"></div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label">图片：</label>
+				<div class="col-sm-8">
+					<div class="container">
+						<div class="imageBox">
+							<div class="thumbBox"></div>
+							<div class="spinner" style="display: none">Loading...</div>
+						</div>
+						<div class="action">
+							<div class="new-contentarea tc">
+								<a href="javascript:void(0)" class="upload-img"> <label for="avatar">上传图像</label> </a>
+								<input type="file" class="" name="avatar" id="avatar" accept="image/*"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">状态：</label>
+				<div class="col-sm-8" th:with="type=${@dictService.selectDictData('function_article_status')}">
+					<div th:each="dict : ${type}" th:class="${dict['cssClass']}">
+						<input type="radio" th:id="${dict['id']}" name="status" id="status" th:value="${dict['dictValue']}" th:checked="${dict['isDefault'] == 'Y' ? true : false}">
+						<label th:for="${dict['id']}" th:text="${dict['dictLabel']}"></label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="form-control-static col-sm-offset-9">
+					<button type="submit" class="btn btn-primary">提交</button>
+					<button onclick="$.modal.close()" class="btn btn-danger" type="button">关闭</button>
+				</div>
+			</div>
+		</form>
+	</div>
+    <div th:include="include::footer"></div>
+    <script th:src="@{/ajax/libs/summernote/summernote.min.js}"></script>
+    <script th:src="@{/ajax/libs/summernote/summernote-zh-CN.js}"></script>
+	<script th:src="@{/ajax/libs/cropbox/cropbox.js}"></script>
+
+	<script type="text/javascript">
+        $(window).load(function() {
+            var options = {
+                thumbBox: '.thumbBox',
+                spinner: '.spinner',
+                imgSrc: '/img/profile.jpg'
+            }
+            var cropper = $('.imageBox').cropbox(options);
+            $('#avatar').on('change',
+                function() {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        options.imgSrc = e.target.result;
+                        //根据MIME判断上传的文件是不是图片类型
+                        if((options.imgSrc).indexOf("image/")==-1){
+                            parent.layer.alert("文件格式错误，请上传图片类型,如：JPG,JEPG，PNG后缀的文件。", {icon: 2,title:"系统提示"});
+                        } else {
+                            cropper = $('.imageBox').cropbox(options);
+                        }
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+			)
+            $('.summernote').summernote({
+                height : '220px',
+                lang : 'zh-CN'
+            });
+
+            var prefix = ctx + "function/article"
+            $("#form-article-add").validate({
+                rules:{
+                    title:{
+                        required:true,
+                    }
+                },
+                submitHandler: function(form) {
+                    var sHTML = $('.summernote').code();
+                    $("#content").val(sHTML);
+                    var formdata = new FormData();
+                    var img = cropper.getBlob();
+                    formdata.append("image", img);
+                    formdata.append("title", $("#title").val());
+                    formdata.append("content", $("#content").val());
+                    formdata.append("typeId", $("#typeId").val());
+                    formdata.append("status", $("input[name='status']:checked").val());
+                    $.modal.loading("正在处理中，请稍后...");
+                    $.ajax({
+                        url: ctx + "function/article/save",
+                        data: formdata,
+                        type: "post",
+                        processData: false,
+                        contentType: false,
+                        success: function(result) {
+                            $.operate.saveSuccess(result);
+                        }
+                    })
+                }
+            });
+        });
+	</script>
+
+</body>
+</html>
