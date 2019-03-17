@@ -63,7 +63,7 @@
         )
     </insert>
 
-    <select id="selectProjectWorkLogResultList" parameterType="ProjectWorkLog" resultMap="ProjectWorkLogResult">
+    <select id="selectProjectWorkLogList" parameterType="ProjectWorkLog" resultMap="ProjectWorkLogResult">
         <include refid="selectProjectWorkLogVo"/> where 1=1
         <if test="workRecord != null and workRecord != ''">
             AND u.work_record like concat('%', #{workRecord}, '%')

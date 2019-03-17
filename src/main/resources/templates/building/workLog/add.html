@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" >
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<link href="/ajax/libs/iCheck/custom.css" th:href="@{/ajax/libs/iCheck/custom.css}" rel="stylesheet"/>
+<body class="white-bg">
+	<div class="wrapper wrapper-content animated fadeInRight ibox-content">
+		<form class="form-horizontal m" id="form-menu-add">
+			<div class="form-group">
+				<label class="col-sm-3 control-label "><span style="color:red;">*</span> 项目名称：</label>
+				<div class="col-sm-8">
+					<input class="form-control" type="text"  id="workRecord" name="workRecord"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label"><span style="color:red;">*</span>人工：</label>
+				<div class="col-sm-8">
+					<input class="form-control" type="text"  id="labor" name="labor" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">设备：</label>
+				<div class="col-sm-3">
+					<input class="form-control" type="text" name="machineList" id="machineList">
+				</div>
+				<label class="col-sm-2 control-label">技术质量安全工作：</label>
+				<div class="col-sm-3">
+					<input id="technicalWorkRecord" name="technicalWorkRecord" class="form-control" type="text">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">检查时间：</label>
+				<div class="input-group date col-sm-8">
+					<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+					<input type="text" class="form-control" value="2018-04-20" >
+				</div>
+				<input type="hidden" id="workTime" name="workTime" value="" /><br/>
+
+			</div>
+			<div class="form-group">
+				<div class="form-control-static col-sm-offset-9">
+					<button type="submit" class="btn btn-primary">提交</button>
+					<button onclick="$.modal.close()" class="btn btn-danger" type="button">关闭</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div th:include="include::footer"></div>
+	<script th:src="@{/ajax/libs/iCheck/icheck.min.js}"></script>
+	<script th:src="@{/ajax/libs/datapicker/bootstrap-datepicker.js}"></script>
+	<script th:src="@{/ajax/libs/jquery-distpicker/distpicker.data.js}"></script>
+	<script th:src="@{/ajax/libs/jquery-distpicker/distpicker.js}"></script>
+	<script th:src="@{/ajax/libs/jquery-distpicker/main.js}"></script>
+
+	 <script>
+        var prefix = ctx + "building/workLog"
+		$(".input-group.date").datepicker({todayBtn: "linked",keyboardNavigation: !1,forceParse: !1,calendarWeeks: !0,autoclose: !0});
+
+		$("#form-menu-add").validate({
+        	submitHandler:function(form){
+        		$.operate.save(prefix + "/save", $('#form-menu-add').serialize());
+        	}
+        });
+
+    </script>
+</body>
+</html>

@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- *
+ *  施工日志
  */
 @Getter
 @Setter

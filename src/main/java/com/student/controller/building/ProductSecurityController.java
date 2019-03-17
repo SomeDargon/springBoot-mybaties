@@ -3,10 +3,9 @@ package com.student.controller.building;
 import com.student.annotation.Log;
 import com.student.constant.BusinessType;
 import com.student.controller.BaseController;
-import com.student.entity.ProjectWorkLog;
-import com.student.entity.User;
+import com.student.entity.ProductSecurity;
 import com.student.entity.page.TableDataInfo;
-import com.student.service.ProjectWorkLogService;
+import com.student.service.ProductSecurityService;
 import com.student.web.result.AjaxResult;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,39 +16,39 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 /**
- * 施工日志
- *
+ * 安全检查
  */
 @Controller
-@RequestMapping(value = "/building/workLog")
-public class ProjectWorkLogController extends BaseController {
+@RequestMapping(value = "/building/security")
+public class ProductSecurityController extends BaseController {
 
-    private String prefix = "building/workLog";
-
+    private String prefix = "building/security";
+    
     @Autowired
-    private ProjectWorkLogService projectWorkLogService;
+    private ProductSecurityService productSecurityService;
+    
 
-
-    @RequiresPermissions("building:product:view")
+    @RequiresPermissions("building:security:view")
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public String product() {
-        return prefix + "/workLog";
+    public String security() {
+        return prefix + "/security";
     }
 
     @PostMapping("/list")
     @ResponseBody
-    public TableDataInfo list(ProjectWorkLog projectWorkLog) {
-		startPage();
-        List<ProjectWorkLog> list = projectWorkLogService.selectProjectWorkLogList(projectWorkLog);
+    public TableDataInfo list(ProductSecurity productSecurity) {
+        startPage();
+        List<ProductSecurity> list = productSecurityService.selectProductSecurityList(productSecurity);
         return getDataTable(list);
     }
 
     @Log(title = "施工日志管理", action = BusinessType.UPDATE)
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable("id") Long id, Model model) {
-        ProjectWorkLog projectWorkLog = projectWorkLogService.selectProjectWorkLogById(id);
-        model.addAttribute("projectWorkLog", projectWorkLog);
+        ProductSecurity productSecurity = productSecurityService.selectProductSecurityById(id);
+        model.addAttribute("productSecurity", productSecurity);
         return prefix + "/edit";
     }
 
@@ -65,8 +64,8 @@ public class ProjectWorkLogController extends BaseController {
     @PostMapping("/save")
     @Transactional(rollbackFor = Exception.class)
     @ResponseBody
-    public AjaxResult save(ProjectWorkLog projectWorkLog) {
-        return projectWorkLogService.save(projectWorkLog)==1?success():error();
+    public AjaxResult save(ProductSecurity productSecurity) {
+        return productSecurityService.save(productSecurity)==1?success():error();
     }
 
 
@@ -75,7 +74,7 @@ public class ProjectWorkLogController extends BaseController {
     @ResponseBody
     public AjaxResult remove(String ids) {
         try {
-            projectWorkLogService.deleteProjectWorkLogByIds(ids);
+            productSecurityService.deleteProductSecurityByIds(ids);
             return success();
         } catch (Exception e) {
             return error(e.getMessage());

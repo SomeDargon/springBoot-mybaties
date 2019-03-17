@@ -4,6 +4,7 @@ import com.student.dao.mapper.building.ProjectWorkLogMapper;
 import com.student.entity.ProjectWorkLog;
 import com.student.service.ProjectWorkLogService;
 import com.student.support.Convert;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,6 +18,7 @@ import java.util.List;
 @Service
 public class ProjectWorkLogServiceImpl implements ProjectWorkLogService {
 
+	@Autowired
 	private ProjectWorkLogMapper projectWorkLogMapper;
 
 

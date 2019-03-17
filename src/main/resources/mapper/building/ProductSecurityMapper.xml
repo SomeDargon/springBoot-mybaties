@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.student.dao.mapper.building.ProductSecurityMapper">
+
+	<resultMap type="ProductSecurity" id="ProductSecurityResult">
+		<id     property="id"     column="id"     />
+		<result property="beginDate" column="begin_date" />
+		<result property="companyId"   column="company_id"   />
+		<result property="employeeId"   column="employee_id"   />
+		<result property="endDate"   column="end_date"   />
+		<result property="planName"     column="plan_name"      />
+		<result property="projectObservation"      column="project_observation"       />
+		<result property="serialNo"      column="serial_no"       />
+		<result property="timeLimit"     column="time_limit"      />
+		<result property="securityType" column="security_type" />
+		<result property="rectificationStatus" column="rectification_status" />
+	</resultMap>
+
+
+	<!--表名 -->
+	<sql id="tableName">
+		sys_product_security
+	</sql>
+	
+	<!-- 字段 -->
+	<sql id="selectProductSecurityVo">
+		select
+			t.id,
+			t.begin_date,
+			t.company_id,
+			t.employee_id,
+			t.end_date,
+			t.plan_name,
+			t.project_observation ,
+			t.serial_no,
+			t.time_limit,
+			t.security_type,
+			t.updatetime,
+			t.rectification_status
+		from <include refid="tableName" /> t
+	</sql>
+
+	<select id="selectProductSecurityById" parameterType="Long" resultMap="ProductSecurityResult">
+		<include refid="selectProductSecurityVo"/>
+		where id=#{id}
+	</select>
+
+	<insert id="insertProductSecurity" parameterType="ProductSecurity" useGeneratedKeys="true" keyProperty="id">
+		insert into <include refid="tableName" /> (
+			<if test="beginDate != null">product_name,</if>
+			<if test="companyId != null">product_abbreviation,</if>
+			<if test="employeeId != null">product_number,</if>
+			<if test="endDate != null ">product_type,</if>
+			<if test="planName != null ">product_status,</if>
+			<if test="projectObservation != null ">start_time,</if>
+			<if test="serialNo != null ">end_time,</if>
+			<if test="timeLimit != null ">product_label,</if>
+			<if test="securityType != null and productMoney != ''">product_money,</if>
+			<if test="rectificationStatus != null ">product_area</if>
+		) values (
+			<if test="beginDate != null">#{beginDate},</if>
+			<if test="companyId != null">#{companyId},</if>
+			<if test="employeeId != null">#{employeeId},</if>
+			<if test="endDate != null ">#{endDate},</if>
+			<if test="planName != null ">#{planName},</if>
+			<if test="projectObservation != null ">#{projectObservation},</if>
+			<if test="serialNo != null ">#{serialNo},</if>
+			<if test="timeLimit != null ">#{timeLimit},</if>
+			<if test="securityType != null and securityType != ''">#{securityType},</if>
+			<if test="rectificationStatus != null ">#{rectificationStatus}</if>
+		)
+	</insert>
+
+	<select id="selectProductSecurityList" parameterType="ProductSecurity" resultMap="ProductSecurityResult">
+		<include refid="selectProductSecurityVo"/> where 1=1
+		<if test="planName != null and planName != ''">
+			AND u.plan_name like concat('%', #{planName}, '%')
+		</if>
+	</select>
+
+	<delete id="deleteProductSecurityById" parameterType="Long">
+ 		delete from <include refid="tableName" /> where id = #{id}
+ 	</delete>
+
+	<update id="updateProductSecurity" parameterType="ProductSecurity" >
+		update  <include refid="tableName" />
+		<set>
+			<if test="productName != null">product_name = #{productName},</if>
+			<if test="productAbbreviation != null">product_abbreviation = #{productAbbreviation},</if>
+			<if test="productNumber != null">product_number = #{productNumber},</if>
+			<if test="productType != null ">product_type = #{productType},</if>
+			<if test="productStatus != null ">product_status = #{productStatus},</if>
+			<if test="startTime != null ">start_time = #{startTime},</if>
+			<if test="endTime != null ">end_time = #{endTime},</if>
+			<if test="productLabel != null ">product_label = #{productLabel},</if>
+			<if test="productMoney != null and productMoney != ''">product_money = #{productMoney},</if>
+			<if test="productArea != null ">product_area = #{productArea},</if>
+			<if test="productLength != null ">product_length = #{productLength},</if>
+			<if test="productCompany != null ">product_company = #{productCompany},</if>
+			<if test="productFirstPart != null ">product_first_party = #{productFirstPart},</if>
+			<if test="province != null ">province = #{province},</if>
+			<if test="city != null ">city = #{city},</if>
+			<if test="area != null ">area = #{area},</if>
+			<if test="address != null ">address = #{address},</if>
+			<if test="remark != null ">remark = #{remark},</if>
+			update_time = sysdate()
+		</set>
+		where 1=1
+		<if test="id != null and id  != ''">and id = #{id}</if>
+	</update>
+
+	<delete id="deleteProductSecurityByIds" parameterType="Long">
+		delete from  <include refid="tableName" />  where id in
+		<foreach collection="array" item="id" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+	
+</mapper>
