@@ -4,9 +4,12 @@ import com.student.constant.UserConstants;
 import com.student.dao.mapper.building.ProductMapper;
 import com.student.entity.Product;
 import com.student.service.ProductService;
+import com.student.support.Convert;
 import com.student.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  *
@@ -37,5 +40,27 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Integer save(Product product) {
         return productMapper.insertProduct(product);
+    }
+
+    @Override
+    public Integer update(Product product) {
+        return productMapper.updateProduct(product);
+    }
+
+    @Override
+    public void deleteProductByIds(String ids) {
+        Long[] proIds = Convert.toLongArray(ids);
+        productMapper.deleteUserByIds(proIds);
+    }
+
+
+    @Override
+    public List<Product> selectProductList(Product product) {
+        return productMapper.selectProductList(product);
+    }
+
+    @Override
+    public Product selectProductById(Long id) {
+        return productMapper.selectProductById(id);
     }
 }

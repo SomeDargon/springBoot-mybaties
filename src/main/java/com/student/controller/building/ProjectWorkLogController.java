@@ -3,12 +3,10 @@ package com.student.controller.building;
 import com.student.annotation.Log;
 import com.student.constant.BusinessType;
 import com.student.controller.BaseController;
-import com.student.entity.Product;
+import com.student.entity.ProjectWorkLog;
+import com.student.entity.User;
 import com.student.entity.page.TableDataInfo;
-import com.student.service.PostService;
-import com.student.service.ProductService;
-import com.student.service.RoleService;
-import com.student.service.UserService;
+import com.student.service.ProjectWorkLogService;
 import com.student.web.result.AjaxResult;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,40 +18,32 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * 用户信息
+ * 施工日志
  *
  */
 @Controller
-@RequestMapping("/building/product")
-public class ProductController extends BaseController {
+@RequestMapping(value = "/building/workLog")
+public class ProjectWorkLogController extends BaseController {
 
-    private String prefix = "building/product";
+    private String prefix = "building/workLog";
 
     @Autowired
-    private ProductService productService;
+    private ProjectWorkLogService projectWorkLogService;
 
-    @RequiresPermissions("building:product:view")
-    @RequestMapping(value = "", method = RequestMethod.GET)
-    public String product() {
-        return prefix + "/product";
-    }
-
-    @RequiresPermissions("building:product:list")
+    @RequiresPermissions("building:workLog:view")
     @PostMapping("/list")
     @ResponseBody
-    public TableDataInfo list(Product product) {
-        startPage();
-        List<Product> list = productService.selectProductList(product);
-        return getDataTable(list);
+    public List<ProjectWorkLog> list(ProjectWorkLog projectWorkLog) {
+		startPage();
+        List<ProjectWorkLog> list = projectWorkLogService.selectProjectWorkLogList(projectWorkLog);
+        return list;
     }
 
-
-    @RequiresPermissions("building:product:edit")
-    @Log(title = "项目管理", action = BusinessType.UPDATE)
+    @Log(title = "施工日志管理", action = BusinessType.UPDATE)
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable("id") Long id, Model model) {
-        Product product = productService.selectProductById(id);
-        model.addAttribute("product", product);
+        ProjectWorkLog projectWorkLog = projectWorkLogService.selectProjectWorkLogById(id);
+        model.addAttribute("projectWorkLog", projectWorkLog);
         return prefix + "/edit";
     }
 
@@ -71,8 +61,8 @@ public class ProductController extends BaseController {
     @PostMapping("/save")
     @Transactional(rollbackFor = Exception.class)
     @ResponseBody
-    public AjaxResult save(Product product) {
-        return productService.save(product)==1?success():error();
+    public AjaxResult save(ProjectWorkLog projectWorkLog) {
+        return projectWorkLogService.save(projectWorkLog)==1?success():error();
     }
 
 
@@ -82,25 +72,10 @@ public class ProductController extends BaseController {
     @ResponseBody
     public AjaxResult remove(String ids) {
         try {
-            productService.deleteProductByIds(ids);
+            projectWorkLogService.deleteProjectWorkLogByIds(ids);
             return success();
         } catch (Exception e) {
             return error(e.getMessage());
         }
-    }
-
-    /**
-     * 检查手机是否重复
-     * @param product
-     * @return
-     */
-    @PostMapping("/checkProductNumber")
-    @ResponseBody
-    public String checkProductNumber(Product product) {
-        String uniqueFlag = "0";
-        if (product != null) {
-            uniqueFlag = productService.checkProductNumber(product);
-        }
-        return uniqueFlag;
     }
 }

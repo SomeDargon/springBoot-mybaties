@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.student.dao.mapper.building.ProjectWorkLogMapper">
+
+    <resultMap type="com.student.entity.ProjectWorkLog" id="ProjectWorkLogResult">
+        <id     property="id"     column="id"     />
+        <result property="labor" column="labor" />
+        <result property="machineList"   column="machineList"   />
+        <result property="technicalWorkRecord"   column="technical_work_record"   />
+        <result property="totalAmount"   column="totalAmount"   />
+        <result property="workRecord"     column="work_record"      />
+        <result property="materialScience"      column="material_science"       />
+        <result property="workTime"      column="workTime"       />
+    </resultMap>
+    <!--表名 -->
+    <sql id="tableName">
+		sys_project_work_log
+	</sql>
+
+
+    <sql id="selectProjectWorkLogVo">
+        select
+            t.id,
+            t.labor,
+            t.machine_list,
+            t.technical_work_record,
+            t.total_amount,
+            t.work_record,
+            t.material_science,
+            t.work_time
+		from
+          <include refid="tableName" /> t
+	</sql>
+
+    <select id="selectProjectWorkLogById" parameterType="Long" resultMap="ProjectWorkLogResult">
+        <include refid="selectProjectWorkLogVo"/>
+        where id=#{id}
+    </select>
+
+    <insert id="insertProjectWorkLog" parameterType="ProjectWorkLog" useGeneratedKeys="true" keyProperty="id">
+        insert into <include refid="tableName" /> (
+        <if test="id != null and id != 0">id,</if>
+        <if test="labor != null">labor,</if>
+        <if test="machineList != null">machine_list,</if>
+        <if test="technicalWorkRecord != null">technical_work_record,</if>
+        <if test="totalAmount != null ">total_amount,</if>
+        <if test="workRecord != null ">work_record,</if>
+        <if test="materialScience != null ">material_science,</if>
+        <if test="workTime != null ">work_time,</if>
+        create_time
+        ) values (
+        <if test="id != null and id != 0">#{id},</if>
+        <if test="labor != null">#{labor},</if>
+        <if test="machineList != null">#{machineList},</if>
+        <if test="technicalWorkRecord != null">#{technicalWorkRecord},</if>
+        <if test="totalAmount != null ">#{totalAmount},</if>
+        <if test="workRecord != null ">#{workRecord},</if>
+        <if test="materialScience != null ">#{materialScience},</if>
+        <if test="workTime != null ">#{workTime},</if>
+        sysdate()
+        )
+    </insert>
+
+    <select id="selectProjectWorkLogResultList" parameterType="ProjectWorkLog" resultMap="ProjectWorkLogResult">
+        <include refid="selectProjectWorkLogVo"/> where 1=1
+        <if test="workRecord != null and workRecord != ''">
+            AND u.work_record like concat('%', #{workRecord}, '%')
+        </if>
+        <if test="id != null and id != ''">
+            AND u.id = #{id}
+        </if>
+    </select>
+
+    <delete id="deleteProjectWorkLogById" parameterType="Long">
+ 		delete from <include refid="tableName" /> where id = #{id}
+ 	</delete>
+
+    <update id="updateProjectWorkLog" parameterType="ProjectWorkLog" >
+        update  <include refid="tableName" />
+        <set>
+            <if test="labor != null">labor = #{labor},</if>
+            <if test="machineList != null">machine_list = #{machineList},</if>
+            <if test="technicalWorkRecord != null">technical_work_record = #{technicalWorkRecord},</if>
+            <if test="totalAmount != null ">total_amount = #{totalAmount},</if>
+            <if test="workRecord != null ">work_record = #{workRecord},</if>
+            <if test="materialScience != null ">material_science = #{materialScience},</if>
+            <if test="workTime != null ">work_time = #{workTime},</if>
+            update_time = sysdate()
+        </set>
+        where 1=1
+        <if test="id != null and id  != ''">and id = #{id}</if>
+    </update>
+
+    <delete id="deleteProjectWorkLogByIds" parameterType="Long">
+        delete from  <include refid="tableName" />  where id in
+        <foreach collection="array" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>
