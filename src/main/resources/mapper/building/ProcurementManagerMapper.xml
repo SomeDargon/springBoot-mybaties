@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.student.dao.mapper.building.ProductMapper">
+
+    <resultMap type="ProcurementManager" id="ProcurementManagerResult">
+        <id     property="id"     column="id"     />
+        <result property="procurementName" column="procurement_name" />
+        <result property="materialsName"   column="materials_name"   />
+        <result property="ProcurementDate"   column="procurement_date"   />
+        <result property="unit"   column="unit"   />
+        <result property="num"     column="num"      />
+        <result property="unitPrice"      column="unit_price"       />
+        <result property="remark" column="remark" />
+        <result property="createBy"   column="create_by"   />
+        <result property="createTime" column="create_time" />
+        <result property="updateBy"   column="update_by"   />
+        <result property="updateTime" column="update_time" />
+    </resultMap>
+
+    <!--表名 -->
+    <sql id="tableName">
+        sys_procurement_manager
+	</sql>
+
+    <sql id="selectProcurementManagerVo">
+        select t.id, t.procurement_name, t.materials_name, t.procurement_date, t.unit, t.num, t.unit_price, t.remark, t.create_by, t.create_time, t.update_by, t.update_time from <include refid="tableName"/> t
+    </sql>
+
+
+    <select id="selectProcurementManagerById" parameterType="Long" resultMap="ProcurementManagerResult">
+        <include refid="selectProcurementManagerVo"/>
+        where id=#{id}
+    </select>
+
+    <insert id="insertProcurementManager" parameterType="ProcurementManager" useGeneratedKeys="true" keyProperty="id">
+        insert into <include refid="tableName"/> (
+            <if test="id != null and id != 0">id,</if>
+            <if test="procurementName != null">procurement_name,</if>
+            <if test="materialsName != null">materials_name,</if>
+            <if test="procurementDate != null">procurement_date,</if>
+            <if test="unit != null ">unit,</if>
+            <if test="num != null ">num,</if>
+            <if test="unitPrice != null ">unit_price,</if>
+            <if test="remark != null ">remark,</if>
+            <if test="createBy != null ">create_by,</if>
+            create_time
+        ) values (
+            <if test="id != null and id != 0">#{id},</if>
+            <if test="procurementName != null">#{name},</if>
+            <if test="materialsName != null">#{materialsName},</if>
+            <if test="procurementDate != null">#{procurementDate},</if>
+            <if test="unit != null ">#{unit},</if>
+            <if test="unitPrice != null ">#{unitPrice},</if>
+            <if test="remark != null ">#{remark},</if>
+            <if test="createBy != null ">#{createBy},</if>
+            sysdate()
+        )
+    </insert>
+
+    <select id="selectProcurementManagerList" parameterType="ProcurementManager" resultMap="ProcurementManagerResult">
+        <include refid="selectProcurementManagerVo"/> where 1=1
+        <if test="procurementName != null and procurementName != ''">
+            AND u.procurement_name like concat('%', #{procurementName}, '%')
+        </if>
+        <if test="materialsName != null and materialsName != ''">
+            AND u.materials_name = #{materialsName}
+        </if>
+    </select>
+
+    <delete id="deleteProcurementManagerById" parameterType="Long">
+ 		delete from <include refid="tableName"/>  where id = #{id}
+ 	</delete>
+
+    <update id="updateProcurementManager" parameterType="ProcurementManager" >
+        update  <include refid="tableName"/>
+        <set>
+            <if test="procurementName != null">procurement_name = #{procurementName},</if>
+            <if test="materialsName != null">materials_name = #{materialsName},</if>
+            <if test="procurementDate != null">procurement_date = #{procurementDate},</if>
+            <if test="unit != null ">unit = #{unit},</if>
+            <if test="num != null ">num = #{num},</if>
+            <if test="unitPrice != null ">unit_price = #{unitPrice},</if>
+            <if test="remark != null ">remark = #{remark},</if>
+            update_time = sysdate()
+        </set>
+        where 1=1
+        <if test="id != null and id  != ''">and id = #{id}</if>
+    </update>
+
+    <delete id="deleteProcurementManagerByIds" parameterType="Long">
+        delete from  <include refid="tableName"/>  where id in
+        <foreach collection="array" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>
