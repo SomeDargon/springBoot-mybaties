@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.student.dao.mapper.building.QualityInspectMapper">
+
+    <resultMap type="com.student.entity.QualityInspect" id="QualityInspectResult">
+        <id     property="id"     column="id"     />
+        <result property="productName" column="product_name" />
+        <result property="inspectType"   column="inspect_type"   />
+        <result property="inspectName"   column="inspect_name"   />
+        <result property="inspectDate"   column="inspect_date"   />
+        <result property="productId"     column="product_id"      />
+        <result property="productResult" column="product_result" />
+        <result property="createDate" column="create_date" />
+    </resultMap>
+    <!--表名 -->
+    <sql id="tableName">
+		sys_quality_inspect
+	</sql>
+
+
+    <sql id="selectQualityInspectVo">
+        select
+            t.id,
+            t.product_name,
+            t.inspect_type,
+            t.inspect_name,
+            t.inspect_date,
+            t.product_id,
+            t.product_result,
+            t.create_date
+        from
+        <include refid="tableName" /> t
+    </sql>
+
+    <select id="selectQualityInspectById" parameterType="Long" resultMap="QualityInspectResult">
+        <include refid="selectQualityInspectVo"/>
+        where id=#{id}
+    </select>
+
+    <insert id="insertQualityInspect" parameterType="QualityInspect" useGeneratedKeys="true" keyProperty="id">
+        insert into <include refid="tableName" /> (
+            <if test="id != null and id != 0">id,</if>
+            <if test="productName != null">product_name,</if>
+            <if test="inspectType != null">inspect_type,</if>
+            <if test="inspectName != null">inspect_name,</if>
+            <if test="inspectDate != null ">inspect_date,</if>
+            <if test="productId != null ">product_id,</if>
+            <if test="productResult">product_result</if>
+            create_time
+        ) values (
+            <if test="id != null and id != 0">#{id},</if>
+            <if test="productName != null">#{productName},</if>
+            <if test="inspectType != null">#{inspectType},</if>
+            <if test="inspectName != null">#{inspectName},</if>
+            <if test="inspectDate != null ">#{inspectDate},</if>
+            <if test="productId != null ">#{productId},</if>
+            <if test="productResult != null ">#{productResult},</if>
+            sysdate()
+        )
+    </insert>
+
+    <select id="selectQualityInspectList" parameterType="QualityInspect" resultMap="QualityInspectResult">
+        <include refid="selectQualityInspectVo"/> where 1=1
+        <if test="productName != null and productName != ''">
+            AND u.product_name like concat('%', #{productName}, '%')
+        </if>
+        <if test="id != null and id != ''">
+            AND u.id = #{id}
+        </if>
+    </select>
+
+    <delete id="deleteQualityInspectById" parameterType="Long">
+        delete from <include refid="tableName" /> where id = #{id}
+    </delete>
+
+    <update id="updateQualityInspect" parameterType="QualityInspect" >
+        update  <include refid="tableName" />
+        <set>
+            <if test="productName != null">product_name = #{productName},</if>
+            <if test="inspectType != null">inspect_type = #{inspectType},</if>
+            <if test="inspectName != null">inspect_name = #{inspectName},</if>
+            <if test="inspectDate != null ">inspect_date = #{inspectDate},</if>
+            <if test="productId != null ">product_id = #{productId}</if>
+            <if test="productResult != null ">product_result = #{productResult}</if>
+        </set>
+        where 1=1
+        <if test="id != null and id  != ''">and id = #{id}</if>
+    </update>
+
+    <delete id="deleteQualityInspectByIds" parameterType="Long">
+        delete from  <include refid="tableName" />  where id in
+        <foreach collection="array" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>

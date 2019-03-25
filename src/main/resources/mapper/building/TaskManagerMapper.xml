@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.student.dao.mapper.building.TaskManagerMapper">
+
+    <resultMap type="com.student.entity.TaskManager" id="TaskManagerResult">
+        <id     property="id"     column="id"     />
+        <result property="productName" column="product_name" />
+        <result property="taskDescription"   column="task_description"   />
+        <result property="workload"   column="workload"   />
+        <result property="houseAddress"   column="house_address"   />
+        <result property="phone"     column="phone"      />
+        <result property="finishDate"      column="finish_date"       />
+        <result property="createDate"      column="create_date"       />
+    </resultMap>
+    <!--表名 -->
+    <sql id="tableName">
+		sys_task_manager
+	</sql>
+
+
+    <sql id="selectTaskManagerVo">
+        select
+            t.id,
+            t.product_name,
+            t.task_description,
+            t.workload,
+            t.house_address,
+            t.phone,
+            t.finish_date,
+            t.create_date
+        from
+         <include refid="tableName" /> t
+    </sql>
+
+    <select id="selectTaskManagerById" parameterType="Long" resultMap="TaskManagerResult">
+        <include refid="selectTaskManagerVo"/>
+        where id=#{id}
+    </select>
+
+    <insert id="insertTaskManager" parameterType="TaskManager" useGeneratedKeys="true" keyProperty="id">
+        insert into <include refid="tableName" /> (
+            <if test="id != null and id != 0">id,</if>
+            <if test="productName != null">product_name,</if>
+            <if test="taskDescription != null">task_description,</if>
+            <if test="workload != null">workload,</if>
+            <if test="houseAddress != null ">house_address,</if>
+            <if test="phone != null ">phone,</if>
+            <if test="finishDate != null ">finish_date,</if>
+        create_time
+        ) values (
+            <if test="id != null and id != 0">#{id},</if>
+            <if test="productName != null">#{productName},</if>
+            <if test="taskDescription != null">#{taskDescription},</if>
+            <if test="workload != null">#{workload},</if>
+            <if test="houseAddress != null ">#{houseAddress},</if>
+            <if test="phone != null ">#{phone},</if>
+            <if test="finishDate != null ">#{finishDate},</if>
+        sysdate()
+        )
+    </insert>
+
+    <select id="selectTaskManagerList" parameterType="TaskManager" resultMap="TaskManagerResult">
+        <include refid="selectTaskManagerVo"/> where 1=1
+        <if test="productName != null and productName != ''">
+            AND u.product_name like concat('%', #{productName}, '%')
+        </if>
+        <if test="id != null and id != ''">
+            AND u.id = #{id}
+        </if>
+    </select>
+
+    <delete id="deleteTaskManagerById" parameterType="Long">
+        delete from <include refid="tableName" /> where id = #{id}
+    </delete>
+
+    <update id="updateTaskManager" parameterType="TaskManager" >
+        update  <include refid="tableName" />
+        <set>
+            <if test="productName != null">product_name = #{productName},</if>
+            <if test="taskDescription != null">task_description = #{taskDescription},</if>
+            <if test="workload != null">workload = #{workload},</if>
+            <if test="houseAddress != null ">house_address = #{houseAddress},</if>
+            <if test="phone != null ">phone = #{phone},</if>
+            <if test="finishDate != null ">finish_date = #{finishDate},</if>
+            update_time = sysdate()
+        </set>
+        where 1=1
+        <if test="id != null and id  != ''">and id = #{id}</if>
+    </update>
+
+    <delete id="deleteTaskManagerByIds" parameterType="Long">
+        delete from  <include refid="tableName" />  where id in
+        <foreach collection="array" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>
