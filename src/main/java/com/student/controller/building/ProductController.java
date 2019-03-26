@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * 用户信息
+ * 项目信息
  *
  */
 @Controller

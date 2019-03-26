@@ -18,10 +18,10 @@
 				<div class="select-list gd">
 					<ul>
 						<li>
-							项目名称：<input type="text" name="loginName"/>
+							项目名称：<input type="text" name="id"/>
 						</li>
 						<li>
-							施工合同编号：<input type="text" name="productNumber"/>
+							项目ID：<input type="text" name="productNumber"/>
 						</li>
 						<li>
 							<a class="btn btn-primary btn-rounded btn-sm"
@@ -52,9 +52,7 @@
 <script th:src="@{/ajax/libs/jquery-layout/jquery.layout-latest.js}"></script>
 <script th:src="@{/ajax/libs/jquery-ztree/3.5/js/jquery.ztree.all-3.5.js}"></script>
 <script th:inline="javascript">
-	var editFlag = [[${@permissionService.hasPermi('building:product:edit')}]];
-	var removeFlag = [[${@permissionService.hasPermi('building:product:remove')}]];
-	var prefix = ctx + "building/procurement"
+	var prefix = ctx + "building/qualityInspect"
 
 	$(document).ready(function () {
 		$('body').layout({west__size: 185});
@@ -81,28 +79,28 @@
 					title: '项目ID'
 				},
 				{
-					field: 'procurementName',
-					title: '采购人',
+					field: 'productName',
+					title: '项目名称',
 				},
 				{
-					field: 'materialsName',
-					title: '材料名称'
+					field: 'inspectType',
+					title: '检查性质'
 				},
 				{
-					field: 'procurementDate',
-					title: '采购日期'
+					field: 'inspectName',
+					title: '检查人'
 				},
 				{
-					field: 'unit',
-					title: '单位'
+					field: 'inspectDate',
+					title: '检查日期'
 				},
 				{
-					field: 'num',
-					title: '数量'
+					field: 'productId',
+					title: '项目编号'
 				},
 				{
-					field: 'unitPrice',
-					title: '单价'
+					field: 'productResult',
+					title: '检查结果'
 				},
 				{
 					title: '操作',

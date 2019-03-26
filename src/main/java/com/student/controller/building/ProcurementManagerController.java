@@ -21,14 +21,14 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/building/procurement")
 public class ProcurementManagerController extends BaseController {
 
-    private static final String prefix = "/building/procurement";
+    private static final String prefix = "/building/qualityInspect";
 
     @Autowired
     private ProcurementManagerService procurementManagerService;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String procurement() {
-        return prefix + "/procurement";
+        return prefix + "/qualityInspect";
     }
 
 

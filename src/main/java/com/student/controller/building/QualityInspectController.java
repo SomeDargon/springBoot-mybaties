@@ -28,13 +28,6 @@ public class QualityInspectController extends BaseController {
 
     private String prefix = "building/qualityInspect";
 
-    @RequiresPermissions("building:quality:view")
-    @PostMapping("/list")
-    @ResponseBody
-    public String list() {
-        return "";
-    }
-
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String product() {
         return prefix + "/qualityInspect";
