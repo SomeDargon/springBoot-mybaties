@@ -16,6 +16,9 @@ public class TaskManager extends BaseEntity  {
     /** 项目管理 */
     private String productName;
 
+    /** 项目编号 */
+    private String productId;
+
     /** 任务描述 */
     private String taskDescription;
 

@@ -1,8 +1,16 @@
 package com.student.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Date;
 
-public class Stock {
+/**
+ * 库存
+ */
+@Getter
+@Setter
+public class Stock  extends BaseEntity{
 
 
     /** 材料名称 */

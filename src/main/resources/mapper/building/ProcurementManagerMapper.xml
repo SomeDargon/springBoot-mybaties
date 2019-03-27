@@ -8,7 +8,7 @@
         <id     property="id"     column="id"     />
         <result property="procurementName" column="procurement_name" />
         <result property="materialsName"   column="materials_name"   />
-        <result property="ProcurementDate"   column="procurement_date"   />
+        <result property="procurementDate"   column="procurement_date"   />
         <result property="unit"   column="unit"   />
         <result property="num"     column="num"      />
         <result property="unitPrice"      column="unit_price"       />

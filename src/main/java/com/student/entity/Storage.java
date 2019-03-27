@@ -1,27 +1,26 @@
 package com.student.entity;
 
-
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
 
+
 /**
- * 采购管理
- *
+ * 入库表
  */
 @Getter
 @Setter
-public class ProcurementManager extends BaseEntity {
+public class Storage extends BaseEntity{
 
-    /** 采购人 */
-    private String procurementName;
+    /** 入库人 */
+    private String storageName;
 
     /** 材料名称 */
     private String materialsName;
 
-    /** 采购日期 */
-    private Date procurementDate;
+    /** 入库日期 */
+    private Date storageDate;
 
     /** 单位 */
     private String unit;
@@ -31,5 +30,4 @@ public class ProcurementManager extends BaseEntity {
 
     /** 单价 */
     private Double unitPrice;
-
 }

@@ -3,8 +3,8 @@ package com.student.controller.building;
 import com.student.annotation.Log;
 import com.student.constant.BusinessType;
 import com.student.controller.BaseController;
-import com.student.entity.ProcurementManager;
-import com.student.service.ProcurementManagerService;
+import com.student.entity.Stock;
+import com.student.service.StockService;
 import com.student.web.result.AjaxResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,55 +14,55 @@ import org.springframework.web.bind.annotation.*;
 
 
 /**
- * 采购管理
+ * 库存管理
  *
  */
 @Controller
-@RequestMapping("/building/procurement")
-public class ProcurementManagerController extends BaseController {
+@RequestMapping("/building/stock")
+public class StockController extends BaseController {
 
-    private static final String prefix = "/building/procurement";
+    private static final String prefix = "/building/stock";
 
     @Autowired
-    private ProcurementManagerService procurementManagerService;
+    private StockService StockService;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public String procurement() {
-        return prefix + "/procurement";
+    public String stock() {
+        return prefix + "/stock";
     }
 
 
-    @Log(title = "采购管理", action = BusinessType.UPDATE)
+    @Log(title = "库存管理", action = BusinessType.UPDATE)
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable("id") Long id, Model model) {
-        ProcurementManager procurementManager = procurementManagerService.selectProcurementManagerById(id);
-        model.addAttribute("procurementManager", procurementManager);
+        Stock Stock = StockService.selectStockById(id);
+        model.addAttribute("Stock", Stock);
         return prefix + "/edit";
     }
 
 
-    @Log(title = "添加采购", action = BusinessType.INSERT)
+    @Log(title = "添加库存", action = BusinessType.INSERT)
     @GetMapping("/add")
     public String add() {
         return prefix + "/add";
     }
 
 
-    @Log(title = "采购保存", action = BusinessType.SAVE)
+    @Log(title = "库存保存", action = BusinessType.SAVE)
     @PostMapping("/save")
     @Transactional(rollbackFor = Exception.class)
     @ResponseBody
-    public AjaxResult save(ProcurementManager procurementManager) {
-        return procurementManagerService.insertProcurementManager(procurementManager)==1?success():error();
+    public AjaxResult save(Stock Stock) {
+        return StockService.insertStock(Stock)==1?success():error();
     }
 
 
-    @Log(title = "采购删除", action = BusinessType.DELETE)
+    @Log(title = "库存删除", action = BusinessType.DELETE)
     @PostMapping("/remove")
     @ResponseBody
     public AjaxResult remove(String ids) {
         try {
-            procurementManagerService.deleteProcurementManagerByIds(ids);
+            StockService.deleteStockByIds(ids);
             return success();
         } catch (Exception e) {
             return error(e.getMessage());

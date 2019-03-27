@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.student.dao.mapper.building.StorageMapper">
+
+    <resultMap type="com.student.entity.Storage" id="StorageResult">
+        <id     property="id"     column="id"     />
+        <result property="storageName" column="storage_name" />
+        <result property="materialsName" column="materials_name" />
+        <result property="procurementDate"   column="procurement_date"   />
+        <result property="unit"   column="unit"   />
+        <result property="num"   column="num"   />
+        <result property="unitPrice"     column="unit_price"      />
+        <result property="createDate" column="create_date" />
+    </resultMap>
+    <!--表名 -->
+    <sql id="tableName">
+		sys_storage
+	</sql>
+
+
+    <sql id="selectStorageVo">
+        select
+            t.id,
+            t.storage_name,
+            t.materials_name,
+            t.procurement_date,
+            t.unit,
+            t.num,
+            t.unit_price,
+            t.create_date
+        from
+        <include refid="tableName" /> t
+    </sql>
+
+    <select id="selectStorageById" parameterType="Long" resultMap="StorageResult">
+        <include refid="selectStorageVo"/>
+        where id=#{id}
+    </select>
+
+    <insert id="insertStorage" parameterType="Storage" useGeneratedKeys="true" keyProperty="id">
+        insert into <include refid="tableName" /> (
+            <if test="id != null and id != 0">id,</if>
+            <if test="storageName != null">storage_name,</if>
+            <if test="materialsName != null">materials_name,</if>
+            <if test="procurementDate != null">procurement_date,</if>
+            <if test="unit != null">unit,</if>
+            <if test="unitPrice != null ">unit_price,</if>
+            <if test="num != null ">num,</if>
+        create_time
+        ) values (
+            <if test="id != null and id != 0">#{id},</if>
+            <if test="storageName != null">#{storageName},</if>
+            <if test="materialsName != null">#{materialsName},</if>
+            <if test="procurementDate != null">#{procurementDate},</if>
+            <if test="unit != null">#{unit},</if>
+            <if test="unitPrice != null ">#{unitPrice},</if>
+            <if test="num != null ">#{num},</if>
+        sysdate()
+        )
+    </insert>
+
+    <select id="selectStorageList" parameterType="Storage" resultMap="StorageResult">
+        <include refid="selectStorageVo"/> where 1=1
+        <if test="materialsName != null and materialsName != ''">
+            AND u.materials_name like concat('%', #{materialsName}, '%')
+        </if>
+        <if test="storageName != null and storageName != ''">
+            AND u.storage_name = #{storageName}
+        </if>
+    </select>
+
+    <delete id="deleteStorageById" parameterType="Long">
+        delete from <include refid="tableName" /> where id = #{id}
+    </delete>
+
+    <update id="updateStorage" parameterType="Storage" >
+        update  <include refid="tableName" />
+        <set>
+            <if test="storageName != null">storage_name = #{storageName},</if>
+            <if test="materialsName != null">materials_Name = #{materialsName},</if>
+            <if test="procurementDate != null">procurement_date = #{procurementDate},</if>
+            <if test="unit != null">unit = #{unit},</if>
+            <if test="num != null ">num = #{num},</if>
+            <if test="unitPrice != null ">product_id = #{productId}</if>
+        </set>
+        where 1=1
+        <if test="id != null and id  != ''">and id = #{id}</if>
+    </update>
+
+    <delete id="deleteStorageByIds" parameterType="Long">
+        delete from  <include refid="tableName" />  where id in
+        <foreach collection="array" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>
