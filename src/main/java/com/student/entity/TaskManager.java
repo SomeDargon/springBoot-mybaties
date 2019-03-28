@@ -32,5 +32,5 @@ public class TaskManager extends BaseEntity  {
     private String phone;
 
     /** 完成时间 */
-    private Date finishDate;
+    private String finishDate;
 }

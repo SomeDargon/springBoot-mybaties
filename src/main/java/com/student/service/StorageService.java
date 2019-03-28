@@ -22,28 +22,12 @@ public interface StorageService {
     List<Storage> selectStorageList(Storage storage);
 
     /**
-     * 新增
-     *
-     * @param storage
-     * @return
-     */
-    int insertStorage(Storage storage);
-
-    /**
-     * 修改
-     *
-     * @param storage
-     * @return 结果
-     */
-    int updateStorage(Storage storage);
-
-    /**
      * 保存文章
      *
      * @param storage 文章信息
      * @return 结果
      */
-    int saveStorage(Storage storage);
+    int save(Storage storage);
 
     /**
      * 删除文章信息

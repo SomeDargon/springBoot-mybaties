@@ -13,7 +13,7 @@
         <result property="houseAddress"   column="house_address"   />
         <result property="phone"     column="phone"      />
         <result property="finishDate"      column="finish_date"       />
-        <result property="createDate"      column="create_date"       />
+        <result property="createTime"      column="create_time"       />
     </resultMap>
     <!--表名 -->
     <sql id="tableName">
@@ -31,7 +31,7 @@
             t.house_address,
             t.phone,
             t.finish_date,
-            t.create_date
+            t.create_time
         from
          <include refid="tableName" /> t
     </sql>

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.student.dao.mapper.building.ProductMapper">
+<mapper namespace="com.student.dao.mapper.building.ProcurementManagerMapper">
 
     <resultMap type="ProcurementManager" id="ProcurementManagerResult">
         <id     property="id"     column="id"     />
@@ -23,7 +23,7 @@
 	</sql>
 
     <sql id="selectProcurementManagerVo">
-        select t.id, t.procurement_name, t.materials_name, t.procurement_date, t.unit, t.num, t.unit_price, t.remark, t.create_by, t.create_time, t.update_by, t.update_time from <include refid="tableName"/> t
+        select t.id, t.procurement_name, t.materials_name, t.procurement_date, t.unit, t.num, t.unit_price, t.remark, t.create_time, t.update_time from <include refid="tableName"/> t
     </sql>
 
 
@@ -45,10 +45,11 @@
             create_time
         ) values (
             <if test="id != null and id != 0">#{id},</if>
-            <if test="procurementName != null">#{name},</if>
+            <if test="procurementName != null">#{procurementName},</if>
             <if test="materialsName != null">#{materialsName},</if>
             <if test="procurementDate != null">#{procurementDate},</if>
             <if test="unit != null ">#{unit},</if>
+            <if test="num != null ">#{num},</if>
             <if test="unitPrice != null ">#{unitPrice},</if>
             <if test="remark != null ">#{remark},</if>
             sysdate()

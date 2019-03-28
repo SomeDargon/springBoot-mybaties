@@ -20,7 +20,7 @@ public class Storage extends BaseEntity{
     private String materialsName;
 
     /** 入库日期 */
-    private Date storageDate;
+    private String storageDate;
 
     /** 单位 */
     private String unit;

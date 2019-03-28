@@ -27,17 +27,8 @@ public class StorageServiceImpl implements StorageService {
     }
 
     @Override
-    public int insertStorage(Storage storage) {
-        return storageMapper.insertStorage(storage);
-    }
-
-    @Override
-    public int updateStorage(Storage storage) {
-        return storageMapper.updateStorage(storage);
-    }
-
-    @Override
-    public int saveStorage(Storage storage) {
+    public int save(Storage storage) {
+        if (storage.getId() != null) return storageMapper.updateStorage(storage);
         return storageMapper.insertStorage(storage);
     }
 

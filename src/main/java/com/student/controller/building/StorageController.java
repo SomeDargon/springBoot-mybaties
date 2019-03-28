@@ -4,6 +4,7 @@ import com.student.annotation.Log;
 import com.student.constant.BusinessType;
 import com.student.controller.BaseController;
 import com.student.entity.Storage;
+import com.student.entity.page.TableDataInfo;
 import com.student.service.StorageService;
 import com.student.web.result.AjaxResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 /**
@@ -24,18 +27,26 @@ public class StorageController extends BaseController {
     private static final String prefix = "/building/storage";
 
     @Autowired
-    private StorageService StorageService;
+    private StorageService storageService;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String storage() {
         return prefix + "/storage";
     }
 
+    @PostMapping("/list")
+    @ResponseBody
+    public TableDataInfo list(Storage storage) {
+        startPage();
+        List<Storage> list = storageService.selectStorageList(storage);
+        return getDataTable(list);
+    }
+
 
     @Log(title = "库存管理", action = BusinessType.UPDATE)
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable("id") Long id, Model model) {
-        Storage Storage = StorageService.selectStorageById(id);
+        Storage Storage = storageService.selectStorageById(id);
         model.addAttribute("Storage", Storage);
         return prefix + "/edit";
     }
@@ -52,8 +63,8 @@ public class StorageController extends BaseController {
     @PostMapping("/save")
     @Transactional(rollbackFor = Exception.class)
     @ResponseBody
-    public AjaxResult save(Storage Storage) {
-        return StorageService.insertStorage(Storage)==1?success():error();
+    public AjaxResult save(Storage storage) {
+        return storageService.save(storage)==1?success():error();
     }
 
 
@@ -62,7 +73,7 @@ public class StorageController extends BaseController {
     @ResponseBody
     public AjaxResult remove(String ids) {
         try {
-            StorageService.deleteStorageByIds(ids);
+            storageService.deleteStorageByIds(ids);
             return success();
         } catch (Exception e) {
             return error(e.getMessage());

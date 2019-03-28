@@ -27,17 +27,8 @@ public class ProcurementManagerServiceImpl implements ProcurementManagerService 
     }
 
     @Override
-    public int insertProcurementManager(ProcurementManager procurementManager) {
-        return procurementManagerMapper.insertProcurementManager(procurementManager);
-    }
-
-    @Override
-    public int updateProcurementManager(ProcurementManager procurementManager) {
-        return procurementManagerMapper.updateProcurementManager(procurementManager);
-    }
-
-    @Override
-    public int saveProcurementManager(ProcurementManager procurementManager) {
+    public int save(ProcurementManager procurementManager) {
+        if (procurementManager.getId() != null) return procurementManagerMapper.updateProcurementManager(procurementManager);
         return procurementManagerMapper.insertProcurementManager(procurementManager);
     }
 

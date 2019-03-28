@@ -4,6 +4,7 @@ import com.student.annotation.Log;
 import com.student.constant.BusinessType;
 import com.student.controller.BaseController;
 import com.student.entity.ProcurementManager;
+import com.student.entity.page.TableDataInfo;
 import com.student.service.ProcurementManagerService;
 import com.student.web.result.AjaxResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 /**
@@ -40,6 +43,13 @@ public class ProcurementManagerController extends BaseController {
         return prefix + "/edit";
     }
 
+    @PostMapping("/list")
+    @ResponseBody
+    public TableDataInfo list(ProcurementManager procurementManager) {
+        startPage();
+        List<ProcurementManager> list = procurementManagerService.selectProcurementManagerList(procurementManager);
+        return getDataTable(list);
+    }
 
     @Log(title = "添加采购", action = BusinessType.INSERT)
     @GetMapping("/add")
@@ -53,7 +63,7 @@ public class ProcurementManagerController extends BaseController {
     @Transactional(rollbackFor = Exception.class)
     @ResponseBody
     public AjaxResult save(ProcurementManager procurementManager) {
-        return procurementManagerService.insertProcurementManager(procurementManager)==1?success():error();
+        return procurementManagerService.save(procurementManager)==1?success():error();
     }
 
 

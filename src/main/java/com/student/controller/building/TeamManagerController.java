@@ -71,7 +71,7 @@ public class TeamManagerController extends BaseController {
     @ResponseBody
     public AjaxResult remove(String ids) {
         try {
-            teamManagerService.deleteTeamManagerByIds(ids);
+             teamManagerService.deleteTeamManagerByIds(ids);
             return success();
         } catch (Exception e) {
             return error(e.getMessage());

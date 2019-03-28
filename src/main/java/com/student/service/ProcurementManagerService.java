@@ -28,23 +28,8 @@ public interface ProcurementManagerService {
      * @param procurementManager
      * @return
      */
-    int insertProcurementManager(ProcurementManager procurementManager);
+    int save(ProcurementManager procurementManager);
 
-    /**
-     * 修改
-     *
-     * @param procurementManager
-     * @return 结果
-     */
-    int updateProcurementManager(ProcurementManager procurementManager);
-
-    /**
-     * 保存文章
-     *
-     * @param procurementManager 文章信息
-     * @return 结果
-     */
-    int saveProcurementManager(ProcurementManager procurementManager);
 
     /**
      * 删除文章信息

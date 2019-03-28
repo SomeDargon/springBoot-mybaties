@@ -4,6 +4,7 @@ import com.student.dao.mapper.building.TeamManagerMapper;
 import com.student.entity.TeamManager;
 import com.student.service.TeamManagerService;
 import com.student.support.Convert;
+import com.student.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,11 @@ public class TeamManagerServiceImpl implements TeamManagerService {
 
     @Override
     public Integer save(TeamManager teamManager) {
-        return teamManagerMapper.insertTeamManager(teamManager);
+        if (StringUtils.isNotNull(teamManager.getId())) {
+            return teamManagerMapper.updateTeamManager(teamManager);
+        } else {
+            return teamManagerMapper.insertTeamManager(teamManager);
+        }
     }
 
     @Override
@@ -28,7 +33,7 @@ public class TeamManagerServiceImpl implements TeamManagerService {
     @Override
     public void deleteTeamManagerByIds(String ids) {
         Long[] teamIds = Convert.toLongArray(ids);
-        teamManagerMapper.deleteUserByIds(teamIds);
+        teamManagerMapper.deleteTeamManagerByIds(teamIds);
     }
 
     @Override

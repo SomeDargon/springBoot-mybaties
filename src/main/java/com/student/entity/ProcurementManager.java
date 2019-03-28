@@ -21,7 +21,7 @@ public class ProcurementManager extends BaseEntity {
     private String materialsName;
 
     /** 采购日期 */
-    private Date procurementDate;
+    private String procurementDate;
 
     /** 单位 */
     private String unit;

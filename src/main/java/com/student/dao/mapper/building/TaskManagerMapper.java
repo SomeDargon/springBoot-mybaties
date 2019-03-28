@@ -49,5 +49,5 @@ public interface TaskManagerMapper {
      * 批量删除
      * @param ids
      */
-    void deleteUserByIds(Long[] ids);
+    void deleteTaskManagerByIds(Long[] ids);
 }

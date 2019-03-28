@@ -48,5 +48,5 @@ public interface TeamManagerMapper {
      * 批量删除
      * @param ids
      */
-    void deleteUserByIds(Long[] ids);
+    void deleteTeamManagerByIds(Long[] ids);
 }

@@ -39,6 +39,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Integer save(Product product) {
+        if (product.getId() !=null ) return productMapper.updateProduct(product);
         return productMapper.insertProduct(product);
     }
 
@@ -50,7 +51,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void deleteProductByIds(String ids) {
         Long[] proIds = Convert.toLongArray(ids);
-        productMapper.deleteUserByIds(proIds);
+        productMapper.deleteProductByIds(proIds);
     }
 
 

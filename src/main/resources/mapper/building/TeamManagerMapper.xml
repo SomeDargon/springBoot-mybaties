@@ -11,7 +11,7 @@
         <result property="phone"   column="phone"   />
         <result property="address"   column="address"   />
         <result property="productId"     column="product_id"      />
-        <result property="createDate" column="create_date" />
+        <result property="createTime" column="create_time" />
     </resultMap>
     <!--表名 -->
     <sql id="tableName">
@@ -27,6 +27,7 @@
             t.phone,
             t.address,
             t.product_id,
+            create_time
         from
         <include refid="tableName" /> t
     </sql>
@@ -44,7 +45,7 @@
             <if test="phone != null">phone,</if>
             <if test="address != null ">address,</if>
             <if test="productId != null ">product_id,</if>
-        create_time
+            create_time
         ) values (
             <if test="id != null and id != 0">#{id},</if>
             <if test="userName != null">#{userName},</if>
@@ -52,7 +53,7 @@
             <if test="phone != null">#{phone},</if>
             <if test="address != null ">#{address},</if>
             <if test="productId != null ">#{productId},</if>
-        sysdate()
+            sysdate()
         )
     </insert>
 
@@ -73,7 +74,7 @@
     <update id="updateTeamManager" parameterType="TeamManager" >
         update  <include refid="tableName" />
         <set>
-            <if test="userName != null">labor = #{userName},</if>
+            <if test="userName != null">user_name = #{userName},</if>
             <if test="sex != null">sex = #{sex},</if>
             <if test="phone != null">phone = #{phone},</if>
             <if test="address != null ">address = #{address},</if>

@@ -17,7 +17,11 @@ public class TaskManagerServiceImpl implements TaskManagerService {
 
     @Override
     public Integer save(TaskManager taskManager) {
+        if (taskManager.getId() != null) {
+            return taskManagerMapper.updateTaskManager(taskManager);
+        }
         return taskManagerMapper.insertTaskManager(taskManager);
+
     }
 
     @Override
@@ -28,7 +32,7 @@ public class TaskManagerServiceImpl implements TaskManagerService {
     @Override
     public void deleteTaskManagerByIds(String ids) {
         Long[] proIds = Convert.toLongArray(ids);
-        taskManagerMapper.deleteUserByIds(proIds);
+        taskManagerMapper.deleteTaskManagerByIds(proIds);
     }
 
     @Override

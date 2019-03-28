@@ -61,6 +61,6 @@ public interface ProductMapper {
      * 批量删除
      * @param ids
      */
-    void deleteUserByIds(Long[] ids);
+    void deleteProductByIds(Long[] ids);
 
 }
