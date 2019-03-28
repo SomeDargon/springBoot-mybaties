@@ -13,9 +13,7 @@
         <result property="num"     column="num"      />
         <result property="unitPrice"      column="unit_price"       />
         <result property="remark" column="remark" />
-        <result property="createBy"   column="create_by"   />
         <result property="createTime" column="create_time" />
-        <result property="updateBy"   column="update_by"   />
         <result property="updateTime" column="update_time" />
     </resultMap>
 
@@ -44,7 +42,6 @@
             <if test="num != null ">num,</if>
             <if test="unitPrice != null ">unit_price,</if>
             <if test="remark != null ">remark,</if>
-            <if test="createBy != null ">create_by,</if>
             create_time
         ) values (
             <if test="id != null and id != 0">#{id},</if>
@@ -54,7 +51,6 @@
             <if test="unit != null ">#{unit},</if>
             <if test="unitPrice != null ">#{unitPrice},</if>
             <if test="remark != null ">#{remark},</if>
-            <if test="createBy != null ">#{createBy},</if>
             sysdate()
         )
     </insert>

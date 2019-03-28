@@ -6,6 +6,7 @@
 
     <resultMap type="com.student.entity.TaskManager" id="TaskManagerResult">
         <id     property="id"     column="id"     />
+        <result property="productId" column="product_id" />
         <result property="productName" column="product_name" />
         <result property="taskDescription"   column="task_description"   />
         <result property="workload"   column="workload"   />
@@ -23,6 +24,7 @@
     <sql id="selectTaskManagerVo">
         select
             t.id,
+            t.product_id,
             t.product_name,
             t.task_description,
             t.workload,
@@ -42,6 +44,7 @@
     <insert id="insertTaskManager" parameterType="TaskManager" useGeneratedKeys="true" keyProperty="id">
         insert into <include refid="tableName" /> (
             <if test="id != null and id != 0">id,</if>
+            <if test="productId != null">product_id,</if>
             <if test="productName != null">product_name,</if>
             <if test="taskDescription != null">task_description,</if>
             <if test="workload != null">workload,</if>
@@ -51,6 +54,7 @@
         create_time
         ) values (
             <if test="id != null and id != 0">#{id},</if>
+            <if test="productId != null">#{productId},</if>
             <if test="productName != null">#{productName},</if>
             <if test="taskDescription != null">#{taskDescription},</if>
             <if test="workload != null">#{workload},</if>
@@ -78,6 +82,7 @@
     <update id="updateTaskManager" parameterType="TaskManager" >
         update  <include refid="tableName" />
         <set>
+            <if test="productId != null">product_id = #{productId},</if>
             <if test="productName != null">product_name = #{productName},</if>
             <if test="taskDescription != null">task_description = #{taskDescription},</if>
             <if test="workload != null">workload = #{workload},</if>
