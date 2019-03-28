@@ -58,7 +58,7 @@
 
     <select id="selectTeamManagerList" parameterType="TeamManager" resultMap="TeamManagerResult">
         <include refid="selectTeamManagerVo"/> where 1=1
-        <if test="workRecord != null and workRecord != ''">
+        <if test="userName != null and userName != ''">
             AND u.user_name like concat('%', #{userName}, '%')
         </if>
         <if test="id != null and id != ''">

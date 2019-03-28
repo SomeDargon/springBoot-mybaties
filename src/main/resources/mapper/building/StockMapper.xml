@@ -15,7 +15,7 @@
     </resultMap>
     <!--表名 -->
     <sql id="tableName">
-		sys_stock
+		sys_stock_manager
 	</sql>
 
 

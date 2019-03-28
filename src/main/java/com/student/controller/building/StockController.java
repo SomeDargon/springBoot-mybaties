@@ -24,7 +24,7 @@ public class StockController extends BaseController {
     private static final String prefix = "/building/stock";
 
     @Autowired
-    private StockService StockService;
+    private StockService stockService;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String stock() {
@@ -35,7 +35,7 @@ public class StockController extends BaseController {
     @Log(title = "库存管理", action = BusinessType.UPDATE)
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable("id") Long id, Model model) {
-        Stock Stock = StockService.selectStockById(id);
+        Stock Stock = stockService.selectStockById(id);
         model.addAttribute("Stock", Stock);
         return prefix + "/edit";
     }
@@ -53,7 +53,7 @@ public class StockController extends BaseController {
     @Transactional(rollbackFor = Exception.class)
     @ResponseBody
     public AjaxResult save(Stock Stock) {
-        return StockService.insertStock(Stock)==1?success():error();
+        return stockService.insertStock(Stock)==1?success():error();
     }
 
 
@@ -62,7 +62,7 @@ public class StockController extends BaseController {
     @ResponseBody
     public AjaxResult remove(String ids) {
         try {
-            StockService.deleteStockByIds(ids);
+            stockService.deleteStockByIds(ids);
             return success();
         } catch (Exception e) {
             return error(e.getMessage());
