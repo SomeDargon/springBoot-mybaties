@@ -12,7 +12,7 @@
         <result property="inspectDate"   column="inspect_date"   />
         <result property="productId"     column="product_id"      />
         <result property="productResult" column="product_result" />
-        <result property="createDate" column="create_date" />
+        <result property="createTime" column="create_time" />
     </resultMap>
     <!--表名 -->
     <sql id="tableName">
@@ -29,7 +29,7 @@
             t.inspect_date,
             t.product_id,
             t.product_result,
-            t.create_date
+            t.create_time
         from
         <include refid="tableName" /> t
     </sql>
@@ -47,7 +47,7 @@
             <if test="inspectName != null">inspect_name,</if>
             <if test="inspectDate != null ">inspect_date,</if>
             <if test="productId != null ">product_id,</if>
-            <if test="productResult">product_result</if>
+            <if test="productResult">product_result,</if>
             create_time
         ) values (
             <if test="id != null and id != 0">#{id},</if>
@@ -66,9 +66,6 @@
         <if test="productName != null and productName != ''">
             AND u.product_name like concat('%', #{productName}, '%')
         </if>
-        <if test="id != null and id != ''">
-            AND u.id = #{id}
-        </if>
     </select>
 
     <delete id="deleteQualityInspectById" parameterType="Long">
@@ -82,7 +79,7 @@
             <if test="inspectType != null">inspect_type = #{inspectType},</if>
             <if test="inspectName != null">inspect_name = #{inspectName},</if>
             <if test="inspectDate != null ">inspect_date = #{inspectDate},</if>
-            <if test="productId != null ">product_id = #{productId}</if>
+            <if test="productId != null ">product_id = #{productId},</if>
             <if test="productResult != null ">product_result = #{productResult}</if>
         </set>
         where 1=1

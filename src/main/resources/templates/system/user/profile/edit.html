@@ -5,7 +5,7 @@
 <body class="white-bg">
 	<div class="wrapper wrapper-content animated fadeInRight ibox-content">
 		<form class="form-horizontal m" id="form-user-edit" th:object="${user}">
-			<input name="userId"  type="hidden"  th:field="*{userId}" />
+			<input name="id"  type="hidden"  th:field="*{id}" />
 			<div class="form-group">
 				<label class="col-sm-3 control-label ">登录名称：</label>
 				<div class="col-sm-8">
@@ -74,7 +74,7 @@
 		                dataType: "json",
 		                data: {
 		                	"userId": function() {
-		                        return $("input[name='userId']").val();
+		                        return $("input[name='id']").val();
 		                    },
 		        			"email": function() {
 		                        return $("input[name='email']").val();

@@ -12,7 +12,7 @@
         <result property="unit"   column="unit"   />
         <result property="num"   column="num"   />
         <result property="unitPrice"     column="unit_price"      />
-        <result property="createDate" column="create_date" />
+        <result property="createTime" column="create_time" />
     </resultMap>
     <!--表名 -->
     <sql id="tableName">
@@ -29,7 +29,7 @@
             t.unit,
             t.num,
             t.unit_price,
-            t.create_date
+            t.create_time
         from
         <include refid="tableName" /> t
     </sql>

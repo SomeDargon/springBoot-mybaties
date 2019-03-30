@@ -70,9 +70,6 @@
         <if test="productName != null and productName != ''">
             AND u.product_name like concat('%', #{productName}, '%')
         </if>
-        <if test="id != null and id != ''">
-            AND u.id = #{id}
-        </if>
     </select>
 
     <delete id="deleteTaskManagerById" parameterType="Long">

@@ -5,36 +5,44 @@
 <link href="/ajax/libs/iCheck/custom.css" th:href="@{/ajax/libs/iCheck/custom.css}" rel="stylesheet"/>
 <body class="white-bg">
 	<div class="wrapper wrapper-content animated fadeInRight ibox-content">
-		<form class="form-horizontal m" id="form-menu-add">
+		<form class="form-horizontal m" id="form-menu-add" th:object="${storage}">
+			<input name="id" type="hidden" th:field="*{id}" />
+			<div class="form-group">
+				<label class="col-sm-3 control-label "><span style="color:red;">*</span> 入库人：</label>
+				<div class="col-sm-8">
+					<input class="form-control" type="text"  id="storageName" name="storageName" th:field="*{storageName}"/>
+				</div>
+			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label"><span style="color:red;">*</span>材料名称：</label>
 				<div class="col-sm-8">
-					<input class="form-control" type="text"  id="materialsName" name="materialsName" />
+					<input class="form-control" type="text"  id="materialsName" name="materialsName" th:field="*{materialsName}"/>
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">单位：</label>
 				<div class="col-sm-8">
-					<input class="form-control" type="text" name="unit">
+					<input class="form-control" type="text" name="unit" th:field="*{unit}">
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="col-sm-3 control-label">采购日期：</label>
+				<label class="col-sm-3 control-label">入库日期：</label>
 				<div class="input-group date col-sm-8">
 					<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-					<input type="text" name="procurementDate" class="form-control" value="2018-04-20" >
+					<input type="text" class="form-control" value="2018-04-20" >
 				</div>
+				<input type="hidden" id="storageDate" name="storageDate" value="" /><br/>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">数量：</label>
 				<div class="col-sm-8">
-					<input class="form-control" type="text" name="num">
+					<input class="form-control" type="text" name="num" th:field="*{num}">
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">单价：</label>
 				<div class="col-sm-8">
-					<input class="form-control" type="text" name="unitPrice">
+					<input class="form-control" type="text" name="unitPrice" th:field="*{unitPrice}">
 				</div>
 			</div>
 			<div class="form-group">
@@ -53,7 +61,7 @@
 	<script th:src="@{/ajax/libs/jquery-distpicker/main.js}"></script>
 
 	 <script>
-        var prefix = ctx + "building/stock"
+        var prefix = ctx + "building/storage"
 		$(".input-group.date").datepicker({todayBtn: "linked",keyboardNavigation: !1,forceParse: !1,calendarWeeks: !0,autoclose: !0});
 
 		$("#form-menu-add").validate({

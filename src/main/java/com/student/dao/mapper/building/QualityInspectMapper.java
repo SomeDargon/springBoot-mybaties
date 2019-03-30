@@ -48,5 +48,5 @@ public interface QualityInspectMapper {
      * 批量删除
      * @param ids
      */
-    void deleteUserByIds(Long[] ids);
+    void deleteQualityInspectByIds(Long[] ids);
 }

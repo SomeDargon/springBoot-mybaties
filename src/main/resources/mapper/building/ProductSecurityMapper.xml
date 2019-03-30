@@ -35,7 +35,6 @@
 			t.serial_no,
 			t.time_limit,
 			t.security_type,
-			t.updatetime,
 			t.rectification_status
 		from <include refid="tableName" /> t
 	</sql>
@@ -47,16 +46,16 @@
 
 	<insert id="insertProductSecurity" parameterType="ProductSecurity" useGeneratedKeys="true" keyProperty="id">
 		insert into <include refid="tableName" /> (
-			<if test="beginDate != null">product_name,</if>
-			<if test="companyId != null">product_abbreviation,</if>
-			<if test="employeeId != null">product_number,</if>
-			<if test="endDate != null ">product_type,</if>
-			<if test="planName != null ">product_status,</if>
-			<if test="projectObservation != null ">start_time,</if>
-			<if test="serialNo != null ">end_time,</if>
-			<if test="timeLimit != null ">product_label,</if>
-			<if test="securityType != null and productMoney != ''">product_money,</if>
-			<if test="rectificationStatus != null ">product_area</if>
+			<if test="beginDate != null">begin_date,</if>
+			<if test="companyId != null">company_id,</if>
+			<if test="employeeId != null">employee_id,</if>
+			<if test="endDate != null ">end_date,</if>
+			<if test="planName != null ">plan_name,</if>
+			<if test="projectObservation != null ">project_observation,</if>
+			<if test="serialNo != null ">serial_no,</if>
+			<if test="timeLimit != null ">time_limit,</if>
+			<if test="securityType != null and securityType != ''">security_type,</if>
+			<if test="rectificationStatus != null ">rectification_status</if>
 		) values (
 			<if test="beginDate != null">#{beginDate},</if>
 			<if test="companyId != null">#{companyId},</if>
@@ -85,25 +84,16 @@
 	<update id="updateProductSecurity" parameterType="ProductSecurity" >
 		update  <include refid="tableName" />
 		<set>
-			<if test="productName != null">product_name = #{productName},</if>
-			<if test="productAbbreviation != null">product_abbreviation = #{productAbbreviation},</if>
-			<if test="productNumber != null">product_number = #{productNumber},</if>
-			<if test="productType != null ">product_type = #{productType},</if>
-			<if test="productStatus != null ">product_status = #{productStatus},</if>
-			<if test="startTime != null ">start_time = #{startTime},</if>
-			<if test="endTime != null ">end_time = #{endTime},</if>
-			<if test="productLabel != null ">product_label = #{productLabel},</if>
-			<if test="productMoney != null and productMoney != ''">product_money = #{productMoney},</if>
-			<if test="productArea != null ">product_area = #{productArea},</if>
-			<if test="productLength != null ">product_length = #{productLength},</if>
-			<if test="productCompany != null ">product_company = #{productCompany},</if>
-			<if test="productFirstPart != null ">product_first_party = #{productFirstPart},</if>
-			<if test="province != null ">province = #{province},</if>
-			<if test="city != null ">city = #{city},</if>
-			<if test="area != null ">area = #{area},</if>
-			<if test="address != null ">address = #{address},</if>
-			<if test="remark != null ">remark = #{remark},</if>
-			update_time = sysdate()
+			<if test="beginDate != null">begin_date = #{beginDate},</if>
+			<if test="companyId != null">company_id = #{companyId},</if>
+			<if test="employeeId != null">employee_id = #{employeeId},</if>
+			<if test="endDate != null ">end_date = #{endDate},</if>
+			<if test="planName != null ">plan_name = #{planName},</if>
+			<if test="projectObservation != null ">project_observation = #{projectObservation},</if>
+			<if test="serialNo != null ">serial_no = #{serialNo},</if>
+			<if test="timeLimit != null ">time_limit = #{timeLimit},</if>
+			<if test="securityType != null ">security_type = #{securityType},</if>
+			<if test="rectificationStatus != null ">rectification_status = #{rectificationStatus}</if>
 		</set>
 		where 1=1
 		<if test="id != null and id  != ''">and id = #{id}</if>

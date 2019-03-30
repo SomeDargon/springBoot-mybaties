@@ -17,7 +17,7 @@ public class Stock  extends BaseEntity{
     private String materialsName;
 
     /** 采购日期 */
-    private Date procurementDate;
+    private String procurementDate;
 
     /** 单位 */
     private String unit;
@@ -27,4 +27,5 @@ public class Stock  extends BaseEntity{
 
     /** 单价 */
     private Double unitPrice;
+
 }

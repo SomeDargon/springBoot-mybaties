@@ -49,5 +49,5 @@ public interface ProjectWorkLogMapper {
      * 批量删除
      * @param ids
      */
-    void deleteUserByIds(Long[] ids);
+    void deleteProjectWorkLogByIds(Long[] ids);
 }

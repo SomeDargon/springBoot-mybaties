@@ -16,6 +16,7 @@ public class QualityInspectServiceImpl implements QualityInspectService {
 
     @Override
     public Integer save(QualityInspect qualityInspect) {
+        if (qualityInspect.getId() != null) return qualityInspectMapper.updateQualityInspect(qualityInspect);
         return qualityInspectMapper.insertQualityInspect(qualityInspect);
     }
 
@@ -27,7 +28,7 @@ public class QualityInspectServiceImpl implements QualityInspectService {
     @Override
     public void deleteQualityInspectByIds(String ids) {
         Long[] proIds = Convert.toLongArray(ids);
-        qualityInspectMapper.deleteUserByIds(proIds);
+        qualityInspectMapper.deleteQualityInspectByIds(proIds);
     }
 
     @Override

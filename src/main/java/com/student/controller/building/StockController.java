@@ -4,6 +4,7 @@ import com.student.annotation.Log;
 import com.student.constant.BusinessType;
 import com.student.controller.BaseController;
 import com.student.entity.Stock;
+import com.student.entity.page.TableDataInfo;
 import com.student.service.StockService;
 import com.student.web.result.AjaxResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 /**
@@ -31,12 +34,20 @@ public class StockController extends BaseController {
         return prefix + "/stock";
     }
 
+    @PostMapping("/list")
+    @ResponseBody
+    public TableDataInfo list(Stock stock) {
+        startPage();
+        List<Stock> list = stockService.selectStockList(stock);
+        return getDataTable(list);
+    }
+
 
     @Log(title = "库存管理", action = BusinessType.UPDATE)
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable("id") Long id, Model model) {
-        Stock Stock = stockService.selectStockById(id);
-        model.addAttribute("Stock", Stock);
+        Stock stock = stockService.selectStockById(id);
+        model.addAttribute("stock", stock);
         return prefix + "/edit";
     }
 

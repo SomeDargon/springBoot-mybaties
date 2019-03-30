@@ -7,13 +7,25 @@
 	<div class="wrapper wrapper-content animated fadeInRight ibox-content">
 		<form class="form-horizontal m" id="form-menu-add">
 			<div class="form-group">
-				<label class="col-sm-3 control-label "><span style="color:red;">*</span> 项目名称：</label>
+				<label class="col-sm-3 control-label "> 项目名称：</label>
 				<div class="col-sm-8">
 					<input class="form-control" type="text"  id="workRecord" name="workRecord"/>
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="col-sm-3 control-label"><span style="color:red;">*</span>人工：</label>
+				<label class="col-sm-3 control-label">总价：</label>
+				<div class="col-sm-8">
+					<input class="form-control" type="text"  id="totalAmount" name="totalAmount" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">材料：</label>
+				<div class="col-sm-8">
+					<input class="form-control" type="text"  id="materialScience" name="materialScience" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">人工：</label>
 				<div class="col-sm-8">
 					<input class="form-control" type="text"  id="labor" name="labor" />
 				</div>
@@ -32,9 +44,8 @@
 				<label class="col-sm-3 control-label">检查时间：</label>
 				<div class="input-group date col-sm-8">
 					<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-					<input type="text" class="form-control" value="2018-04-20" >
+					<input type="text" class="form-control" value="2018-04-20"  name="workTime">
 				</div>
-				<input type="hidden" id="workTime" name="workTime" value="" /><br/>
 
 			</div>
 			<div class="form-group">

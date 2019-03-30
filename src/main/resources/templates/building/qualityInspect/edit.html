@@ -5,36 +5,43 @@
 <link href="/ajax/libs/iCheck/custom.css" th:href="@{/ajax/libs/iCheck/custom.css}" rel="stylesheet"/>
 <body class="white-bg">
 	<div class="wrapper wrapper-content animated fadeInRight ibox-content">
-		<form class="form-horizontal m" id="form-menu-add">
+		<form class="form-horizontal m" id="form-menu-add" th:object="${qualityInspect}">
+			<input name="id" type="hidden" th:field="*{id}" />
 			<div class="form-group">
-				<label class="col-sm-3 control-label"><span style="color:red;">*</span>材料名称：</label>
+				<label class="col-sm-3 control-label "><span style="color:red;">*</span> 项目名称：</label>
 				<div class="col-sm-8">
-					<input class="form-control" type="text"  id="materialsName" name="materialsName" />
+					<input class="form-control" type="text"  id="productName" name="productName" th:field="*{productName}"/>
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="col-sm-3 control-label">单位：</label>
+				<label class="col-sm-3 control-label"><span style="color:red;">*</span>检查性质：</label>
 				<div class="col-sm-8">
-					<input class="form-control" type="text" name="unit">
+					<input class="form-control" type="text"  id="inspectType" name="inspectType" th:field="*{inspectType}"/>
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="col-sm-3 control-label">采购日期：</label>
+				<label class="col-sm-3 control-label">检查人：</label>
+				<div class="col-sm-8">
+					<input class="form-control" type="text" name="inspectName" th:field="*{inspectName}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">检查时间：</label>
 				<div class="input-group date col-sm-8">
 					<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-					<input type="text" name="procurementDate" class="form-control" value="2018-04-20" >
+					<input type="text" class="form-control" value="2018-04-20" name="inspectDate">
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="col-sm-3 control-label">数量：</label>
+				<label class="col-sm-3 control-label">项目编号：</label>
 				<div class="col-sm-8">
-					<input class="form-control" type="text" name="num">
+					<input class="form-control" type="text" name="productId" th:field="*{productId}">
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="col-sm-3 control-label">单价：</label>
+				<label class="col-sm-3 control-label">检查结果：</label>
 				<div class="col-sm-8">
-					<input class="form-control" type="text" name="unitPrice">
+					<input class="form-control" type="text" name="productResult" th:field="*{productResult}">
 				</div>
 			</div>
 			<div class="form-group">
@@ -53,7 +60,7 @@
 	<script th:src="@{/ajax/libs/jquery-distpicker/main.js}"></script>
 
 	 <script>
-        var prefix = ctx + "building/stock"
+        var prefix = ctx + "building/qualityInspect"
 		$(".input-group.date").datepicker({todayBtn: "linked",keyboardNavigation: !1,forceParse: !1,calendarWeeks: !0,autoclose: !0});
 
 		$("#form-menu-add").validate({

@@ -46,8 +46,8 @@ public class StorageController extends BaseController {
     @Log(title = "库存管理", action = BusinessType.UPDATE)
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable("id") Long id, Model model) {
-        Storage Storage = storageService.selectStorageById(id);
-        model.addAttribute("Storage", Storage);
+        Storage storage = storageService.selectStorageById(id);
+        model.addAttribute("storage", storage);
         return prefix + "/edit";
     }
 

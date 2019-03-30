@@ -28,6 +28,7 @@ public class StockServiceImpl implements StockService {
 
     @Override
     public int insertStock(Stock stock) {
+        if (stock.getId() != null) return stockMapper.updateStock(stock);
         return stockMapper.insertStock(stock);
     }
 

@@ -19,6 +19,7 @@ public class ProductSecurityServiceImpl implements ProductSecurityService {
 
     @Override
     public Integer save(ProductSecurity product) {
+        if (product.getId() != null) return productSercurityMapper.updateProductSecurity(product);
         return productSercurityMapper.insertProductSecurity(product);
     }
 

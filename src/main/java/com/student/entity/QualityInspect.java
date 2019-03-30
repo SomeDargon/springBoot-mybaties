@@ -22,7 +22,7 @@ public class QualityInspect extends BaseEntity {
     private String inspectName;
 
     /** 检查日期 */
-    private Date inspectDate;
+    private String inspectDate;
 
     /** 项目编号 */
     private Long productId;

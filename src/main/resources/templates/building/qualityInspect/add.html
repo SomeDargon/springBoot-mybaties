@@ -28,9 +28,8 @@
 				<label class="col-sm-3 control-label">检查时间：</label>
 				<div class="input-group date col-sm-8">
 					<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-					<input type="text" class="form-control" value="2018-04-20" >
+					<input type="text" class="form-control" value="2018-04-20" name="inspectDate">
 				</div>
-				<input type="hidden" id="inspectDate" name="inspectDate" value="" /><br/>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">项目编号：</label>
@@ -60,38 +59,10 @@
 	<script th:src="@{/ajax/libs/jquery-distpicker/main.js}"></script>
 
 	 <script>
-        var prefix = ctx + "building/product"
+        var prefix = ctx + "building/qualityInspect"
 		$(".input-group.date").datepicker({todayBtn: "linked",keyboardNavigation: !1,forceParse: !1,calendarWeeks: !0,autoclose: !0});
 
 		$("#form-menu-add").validate({
-        	rules:{
-				productNumber:{
-        			required:true,
-        			remote: {
-                        url: prefix + "/checkProductNumber",
-                        type: "post",
-                        dataType: "json",
-                        data: {
-                        	"productNumber" : function() {
-                                return $.trim($("#productNumber").val());
-                            }
-                        },
-                        dataFilter: function(data, type) {
-                            if (data == "0") return true;
-                            else return false;
-                        }
-                    }
-        		},
-        		orderNum:{
-        			required:true,
-        			digits:true
-        		},
-        	},
-        	messages: {
-                "productNumber": {
-                    remote: "项目编号已经存在"
-                }
-            },
         	submitHandler:function(form){
         		$.operate.save(prefix + "/save", $('#form-menu-add').serialize());
         	}

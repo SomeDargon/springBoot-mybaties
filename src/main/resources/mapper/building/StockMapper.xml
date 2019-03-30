@@ -11,7 +11,7 @@
         <result property="unit"   column="unit"   />
         <result property="num"   column="num"   />
         <result property="unitPrice"     column="unit_price"      />
-        <result property="createDate" column="create_date" />
+        <result property="createTime" column="create_time" />
     </resultMap>
     <!--表名 -->
     <sql id="tableName">
@@ -27,7 +27,7 @@
             t.unit,
             t.num,
             t.unit_price,
-            t.create_date
+            t.create_time
         from
         <include refid="tableName" /> t
     </sql>
@@ -39,7 +39,6 @@
 
     <insert id="insertStock" parameterType="Stock" useGeneratedKeys="true" keyProperty="id">
         insert into <include refid="tableName" /> (
-            <if test="id != null and id != 0">id,</if>
             <if test="materialsName != null">materials_name,</if>
             <if test="procurementDate != null">procurement_date,</if>
             <if test="unit != null">unit,</if>
@@ -47,7 +46,6 @@
             <if test="num != null ">num,</if>
         create_time
         ) values (
-            <if test="id != null and id != 0">#{id},</if>
             <if test="materialsName != null">#{materialsName},</if>
             <if test="procurementDate != null">#{procurementDate},</if>
             <if test="unit != null">#{unit},</if>
@@ -62,9 +60,7 @@
         <if test="materialsName != null and materialsName != ''">
             AND u.materials_name like concat('%', #{materialsName}, '%')
         </if>
-        <if test="id != null and id != ''">
-            AND u.id = #{id}
-        </if>
+
     </select>
 
     <delete id="deleteStockById" parameterType="Long">
@@ -78,7 +74,7 @@
             <if test="procurementDate != null">procurement_date = #{procurementDate},</if>
             <if test="unit != null">unit = #{unit},</if>
             <if test="num != null ">num = #{num},</if>
-            <if test="unitPrice != null ">product_id = #{productId}</if>
+            <if test="unitPrice != null ">unit_price = #{unitPrice}</if>
         </set>
         where 1=1
         <if test="id != null and id  != ''">and id = #{id}</if>

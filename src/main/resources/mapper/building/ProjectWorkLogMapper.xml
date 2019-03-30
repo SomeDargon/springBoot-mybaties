@@ -7,12 +7,12 @@
     <resultMap type="com.student.entity.ProjectWorkLog" id="ProjectWorkLogResult">
         <id     property="id"     column="id"     />
         <result property="labor" column="labor" />
-        <result property="machineList"   column="machineList"   />
+        <result property="machineList"   column="machine_list"   />
         <result property="technicalWorkRecord"   column="technical_work_record"   />
-        <result property="totalAmount"   column="totalAmount"   />
+        <result property="totalAmount"   column="total_amount"   />
         <result property="workRecord"     column="work_record"      />
         <result property="materialScience"      column="material_science"       />
-        <result property="workTime"      column="workTime"       />
+        <result property="workTime"      column="work_time"       />
     </resultMap>
     <!--表名 -->
     <sql id="tableName">
@@ -67,9 +67,6 @@
         <include refid="selectProjectWorkLogVo"/> where 1=1
         <if test="workRecord != null and workRecord != ''">
             AND u.work_record like concat('%', #{workRecord}, '%')
-        </if>
-        <if test="id != null and id != ''">
-            AND u.id = #{id}
         </if>
     </select>
 

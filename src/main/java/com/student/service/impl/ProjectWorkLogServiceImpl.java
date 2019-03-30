@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/** 
+/**
  * 说明： 施工日志
  * 创建人：Liuxh
  * 创建时间：2019-03-16
@@ -24,6 +24,7 @@ public class ProjectWorkLogServiceImpl implements ProjectWorkLogService {
 
 	@Override
 	public Integer save(ProjectWorkLog projectWorkLog) {
+		if (projectWorkLog.getId() != null) return projectWorkLogMapper.updateProjectWorkLog(projectWorkLog);
 		return projectWorkLogMapper.insertProjectWorkLog(projectWorkLog);
 	}
 
@@ -35,7 +36,7 @@ public class ProjectWorkLogServiceImpl implements ProjectWorkLogService {
 	@Override
 	public void deleteProjectWorkLogByIds(String ids) {
 		Long[] proIds = Convert.toLongArray(ids);
-		projectWorkLogMapper.deleteUserByIds(proIds);
+		projectWorkLogMapper.deleteProjectWorkLogByIds(proIds);
 	}
 
 	@Override
