@@ -6,7 +6,7 @@
 <body class="white-bg">
 	<div class="wrapper wrapper-content animated fadeInRight ibox-content">
 		<form class="form-horizontal m" id="form-role-edit" th:object="${role}">
-			<input id="roleId" name="roleId" type="hidden" th:field="*{roleId}"/>
+			<input id="id" name="id" type="hidden" th:field="*{id}"/>
 			<div class="form-group">
 				<label class="col-sm-3 control-label ">角色名称：</label>
 				<div class="col-sm-8">
@@ -73,7 +73,7 @@
 				}
 			}
 		}, menuTrees, loadTree = function(){
-			$.get(ctx + "system/menu/roleMenuTreeData?roleId=" + $("#roleId").val(), function(data) {
+			$.get(ctx + "system/menu/roleMenuTreeData?id=" + $("#id").val(), function(data) {
 				menuTrees = $.fn.zTree.init($("#menuTrees"), setting, data); //.expandAll(true);
 			}, null, null, "正在加载，请稍后...");
 		};loadTree();
@@ -87,8 +87,8 @@
 		                type: "post",
 		                dataType: "json",
 		                data: {
-							"roleId": function() {
-							    return $("input[name='roleId']").val();
+							"id": function() {
+							    return $("input[name='id']").val();
 							},
 							"roleName": function() {
 							    return $("input[name='roleName']").val();
@@ -132,7 +132,7 @@
 		}
 	
 		function edit() {
-			var roleId = $("input[name='roleId']").val();
+			var id = $("input[name='id']").val();
 			var roleName = $("input[name='roleName']").val();
 			var roleKey = $("input[name='roleKey']").val();
 			var roleSort = $("input[name='roleSort']").val();
@@ -144,7 +144,7 @@
 				type : "POST",
 				url : ctx + "system/role/save",
 				data : {
-					"roleId": roleId,
+					"id": id,
 					"roleName": roleName,
 					"roleKey": roleKey,
 					"roleSort": roleSort,

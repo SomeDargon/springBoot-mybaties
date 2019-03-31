@@ -73,7 +73,7 @@
 		                type: "post",
 		                dataType: "json",
 		                data: {
-		                	"userId": function() {
+		                	"id": function() {
 		                        return $("input[name='id']").val();
 		                    },
 		        			"email": function() {
@@ -94,8 +94,8 @@
 		                type: "post",
 		                dataType: "json",
 		                data: {
-		                	"userId": function() {
-		                        return $("input[name='userId']").val();
+		                	"id": function() {
+		                        return $("input[name='id']").val();
 		                    },
 		        			"phoneNumber": function() {
 		                        return $("input[name='phoneNumber']").val();

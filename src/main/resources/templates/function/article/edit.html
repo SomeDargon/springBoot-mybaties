@@ -8,7 +8,7 @@
 <body class="white-bg">
     <div class="wrapper wrapper-content animated fadeInRight ibox-content">
         <form class="form-horizontal m" id="form-article-edit" th:object="${article}">
-			<input id="id" name="id" th:field="*{id}"  type="hidden">
+			<input id="id" name="userId" th:field="*{id}"  type="hidden">
 			<input id="pictureUrl"  th:field="*{pictureUrl}"  type="hidden">
 			<div class="form-group">	
 				<label class="col-sm-3 control-label">标题：</label>
@@ -117,7 +117,7 @@
                     $("#content").val(sHTML);
                     var formdata = new FormData();
                     var img = cropper.getBlob();
-                    formdata.append("id", $("#id").val());
+                    formdata.append("id", $("#userId").val());
                     formdata.append("image", img);
                     formdata.append("title", $("#title").val());
                     formdata.append("content", $("#content").val());
