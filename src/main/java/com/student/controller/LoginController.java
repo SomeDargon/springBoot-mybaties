@@ -25,6 +25,11 @@ public class LoginController extends BaseController {
         return "welcome";
     }
 
+    @GetMapping("registration")
+    public String registration() {
+        return "registration";
+    }
+
     @GetMapping("/login")
     public String login(HttpServletRequest request, HttpServletResponse response, Model model) {
         // 如果是Ajax请求，返回Json字符串。

@@ -6,6 +6,9 @@ $(function() {
 		var url = ctx + "captcha/captchaImage?type=" + captchaType + "&s=" + Math.random();
 		$(".imgcode").attr("src", url);
 	});
+	$("#registration").click(function () {
+        location.href = ctx + 'registration';
+    })
 });
 
 $.validator.setDefaults({
