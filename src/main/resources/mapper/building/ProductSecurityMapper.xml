@@ -77,6 +77,20 @@
 		</if>
 	</select>
 
+	<select id="selectProductSecurityListNotPass" parameterType="ProductSecurity" resultMap="ProductSecurityResult">
+		<include refid="selectProductSecurityVo"/> where 1=1 and rectification_status != '2'
+		<if test="planName != null and planName != ''">
+			AND u.plan_name like concat('%', #{planName}, '%')
+		</if>
+	</select>
+
+	<select id="selectProductSecurityListPass" parameterType="ProductSecurity" resultMap="ProductSecurityResult">
+		<include refid="selectProductSecurityVo"/> where 1=1 and rectification_status = '2'
+		<if test="planName != null and planName != ''">
+			AND u.plan_name like concat('%', #{planName}, '%')
+		</if>
+	</select>
+
 	<delete id="deleteProductSecurityById" parameterType="Long">
  		delete from <include refid="tableName" /> where id = #{id}
  	</delete>
@@ -93,7 +107,7 @@
 			<if test="serialNo != null ">serial_no = #{serialNo},</if>
 			<if test="timeLimit != null ">time_limit = #{timeLimit},</if>
 			<if test="securityType != null ">security_type = #{securityType},</if>
-			<if test="rectificationStatus != null ">rectification_status = #{rectificationStatus}</if>
+			<if test="rectificationStatus != null ">rectification_status = #{rectificationStatus},</if>
 		</set>
 		where 1=1
 		<if test="id != null and id  != ''">and id = #{id}</if>

@@ -30,12 +30,6 @@
 		</div>
 
 		<div class="btn-group hidden-xs" id="toolbar" role="group">
-			<a class="btn btn-outline btn-success btn-rounded" onclick="$.operate.add()">
-				<i class="fa fa-plus"></i> 新增
-			</a>
-			<a class="btn btn-outline btn-danger btn-rounded" onclick="$.operate.batRemove()">
-				<i class="fa fa-trash-o"></i> 删除
-			</a>
 		</div>
 
 		<div class="col-sm-12 select-info order-table">
@@ -55,11 +49,7 @@
 
     function queryUserList() {
         var options = {
-            url: prefix + "/list",
-            createUrl: prefix + "/add",
-            updateUrl: prefix + "/edit/{id}",
-            removeUrl: prefix + "/remove",
-            exportUrl: prefix + "/export",
+            url: prefix + "/notList",
             sortOrder: "desc",
             modalName: "安全",
             search: false,
@@ -96,32 +86,15 @@
 					align: 'rectificationStatus',
 					formatter: function (value, row, index) {
 						var actions = [];
-						if (row.rectificationStatus == '1') {
-							actions.push('合格');
-						} else if (row.rectificationStatus == '3') {
-							actions.push('已合格');
-						} else {
-							actions.push('<a class="btn btn-success btn-xs " href="#" onclick="updateStatus(' + row.id + ', 1)"><i class="fa fa-edit"></i>合格</a> ');
-							actions.push('<a class="btn btn-danger btn-xs " href="#" onclick="updateStatus(' + row.id + ', 2)"><i class="fa fa-remove"></i>不合格</a> ');
-						}
+						actions.push('<a class="btn btn-success btn-xs " href="#" onclick="updateStatus(' + row.id + ', 3)""><i class="fa fa-edit"></i>合格</a> ');
 						return actions.join('');
 					}
-				},
-                {
-                    title: '操作',
-                    align: 'center',
-                    formatter: function (value, row, index) {
-                        var actions = [];
-
-                        actions.push('<a class="btn btn-success btn-xs " href="#" onclick="$.operate.edit(' + row.id + ')"><i class="fa fa-edit"></i>编辑</a> ');
-                        actions.push('<a class="btn btn-danger btn-xs " href="#" onclick="$.operate.remove(' + row.id + ')"><i class="fa fa-remove"></i>删除</a> ');
-                        return actions.join('');
-                    }
-                }]
+				}
+               ]
         };
         $.table.init(options);
     }
-    function updateStatus(id, status) {
+	function updateStatus(id, status) {
 		$.ajax({
 			type : "POST",
 			url : ctx + "building/security/updateStatus",
@@ -135,11 +108,10 @@
 			},
 			success : function() {
 				alert("修改成功")
-				window.location.href=ctx + 'building/security';
+				window.location.href=ctx + 'building/rectification';
 			}
 		})
 	}
-
 </script>
 </body>
 </html>

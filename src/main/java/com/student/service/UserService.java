@@ -123,4 +123,7 @@ public interface UserService {
      * @return 结果
      */
     String selectUserPostGroup(Long userId);
+
+
+    int registryUser(User user);
 }

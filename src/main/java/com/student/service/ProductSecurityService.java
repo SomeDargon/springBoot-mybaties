@@ -42,4 +42,13 @@ public interface ProductSecurityService {
      * @return
      */
     ProductSecurity selectProductSecurityById(Long id);
+
+    List<ProductSecurity> selectProductSecurityListNotPass(ProductSecurity product);
+    List<ProductSecurity> selectProductSecurityListPass(ProductSecurity product);
+
+    /**
+     * 更新
+     * @return
+     */
+    Integer updateStatus(Long id, String status);
 }

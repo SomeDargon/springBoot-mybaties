@@ -21,6 +21,10 @@ public interface ProductSecurityMapper {
      */
     List<ProductSecurity> selectProductSecurityList(ProductSecurity product);
 
+
+    List<ProductSecurity> selectProductSecurityListNotPass(ProductSecurity product);
+    List<ProductSecurity> selectProductSecurityListPass(ProductSecurity product);
+
     /**
      * 批量删除用户信息
      *

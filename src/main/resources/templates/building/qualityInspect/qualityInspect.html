@@ -63,7 +63,7 @@
 			exportUrl: prefix + "/export",
 			sortName: "createTime",
 			sortOrder: "desc",
-			modalName: "用户",
+			modalName: "质量管理",
 			search: false,
 			showExport: false,
 			columns: [{
@@ -94,8 +94,20 @@
 					title: '项目编号'
 				},
 				{
-					field: 'productResult',
-					title: '检查结果'
+					title: '状态',
+					align: 'rectificationStatus',
+					formatter: function (value, row, index) {
+						var actions = [];
+						if (row.productResult == '1') {
+							actions.push('合格');
+						} else if (row.productResult == '3') {
+							actions.push('已合格');
+						} else {
+							actions.push('<a class="btn btn-success btn-xs " href="#" onclick="updateStatus(' + row.id + ', 1)"><i class="fa fa-edit"></i>合格</a> ');
+							actions.push('<a class="btn btn-danger btn-xs " href="#" onclick="updateStatus(' + row.id + ', 2)"><i class="fa fa-remove"></i>不合格</a> ');
+						}
+						return actions.join('');
+					}
 				},
 				{
 					title: '操作',
@@ -110,7 +122,24 @@
 		};
 		$.table.init(options);
 	}
-
+	function updateStatus(id, status) {
+		$.ajax({
+			type : "POST",
+			url : ctx + "building/qualityInspect/updateStatus",
+			data : {
+				"id": id,
+				"status": status
+			},
+			async : false,
+			error : function() {
+				alert("系统错误");
+			},
+			success : function() {
+				alert("修改成功")
+				window.location.href=ctx + 'building/qualityInspect';
+			}
+		})
+	}
 </script>
 </body>
 </html>

@@ -40,9 +40,18 @@ public class ProductSecurityController extends BaseController {
     @ResponseBody
     public TableDataInfo list(ProductSecurity productSecurity) {
         startPage();
-        List<ProductSecurity> list = productSecurityService.selectProductSecurityList(productSecurity);
+        List<ProductSecurity> list = productSecurityService.selectProductSecurityListNotPass(productSecurity);
         return getDataTable(list);
     }
+
+    @PostMapping("/notList")
+    @ResponseBody
+    public TableDataInfo notList(ProductSecurity productSecurity) {
+        startPage();
+        List<ProductSecurity> list = productSecurityService.selectProductSecurityListPass(productSecurity);
+        return getDataTable(list);
+    }
+
 
     @Log(title = "施工日志管理", action = BusinessType.UPDATE)
     @GetMapping("/edit/{id}")
@@ -79,5 +88,13 @@ public class ProductSecurityController extends BaseController {
         } catch (Exception e) {
             return error(e.getMessage());
         }
+    }
+
+    @Log(title = "修改状态", action = BusinessType.SAVE)
+    @PostMapping("/updateStatus")
+    @Transactional(rollbackFor = Exception.class)
+    @ResponseBody
+    public AjaxResult updateStatus(Long id, String status) {
+        return productSecurityService.updateStatus(id, status)==1?success():error();
     }
 }

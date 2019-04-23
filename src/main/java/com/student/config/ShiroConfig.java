@@ -235,6 +235,11 @@ public class ShiroConfig {
         // 不需要拦截的访问
         filterChainDefinitionMap.put("/login", "anon,captchaValidate");
         filterChainDefinitionMap.put("/welcome", "anon,captchaValidate");
+        filterChainDefinitionMap.put("/registry/checkLoginNameUnique", "anon,captchaValidate");
+        filterChainDefinitionMap.put("/registry/checkPhoneUnique", "anon,captchaValidate");
+        filterChainDefinitionMap.put("/registry/checkEmailUnique", "anon,captchaValidate");
+        filterChainDefinitionMap.put("/registry/save", "anon,captchaValidate");
+        filterChainDefinitionMap.put("/registry", "anon,captchaValidate");
         // 系统权限列表
 //        filterChainDefinitionMap.putAll(SpringUtils.getBean(MenuService.class).selectPermsAll());
 
@@ -247,7 +252,7 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setFilters(filters);
 
         // 所有请求需要认证
-        filterChainDefinitionMap.put("/**", "user");
+//        filterChainDefinitionMap.put("/**", "user");
         // 系统请求记录当前会话
         filterChainDefinitionMap.put("/main", "onlineSession,syncOnlineSession");
         filterChainDefinitionMap.put("/system/**", "onlineSession,syncOnlineSession");
