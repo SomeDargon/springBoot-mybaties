@@ -37,7 +37,24 @@ public class QualityInspectServiceImpl implements QualityInspectService {
     }
 
     @Override
+    public List<QualityInspect> selectQualityInspectListNotPass(QualityInspect qualityInspect) {
+        return qualityInspectMapper.selectQualityInspectListNotPass(qualityInspect);
+    }
+
+    @Override
+    public List<QualityInspect> selectQualityInspectListPass(QualityInspect qualityInspect) {
+        return qualityInspectMapper.selectQualityInspectListPass(qualityInspect);
+    }
+
+    @Override
     public QualityInspect selectQualityInspectById(Long id) {
         return qualityInspectMapper.selectQualityInspectById(id);
+    }
+
+    @Override
+    public int updateStatus(Long id, String status) {
+        QualityInspect qualityInspect = qualityInspectMapper.selectQualityInspectById(id);
+        qualityInspect.setProductResult(status);
+        return qualityInspectMapper.updateQualityInspect(qualityInspect);
     }
 }

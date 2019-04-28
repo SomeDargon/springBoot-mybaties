@@ -19,6 +19,8 @@ public interface QualityInspectMapper {
      * @return 项目信息集合信息
      */
     List<QualityInspect> selectQualityInspectList(QualityInspect qualityInspect);
+    List<QualityInspect> selectQualityInspectListNotPass(QualityInspect qualityInspect);
+    List<QualityInspect> selectQualityInspectListPass(QualityInspect qualityInspect);
 
     /**
      * 批量删除

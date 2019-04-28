@@ -43,4 +43,21 @@ public class ProductSecurityServiceImpl implements ProductSecurityService {
     public ProductSecurity selectProductSecurityById(Long id) {
         return productSercurityMapper.selectProductSecurityById(id);
     }
+
+    @Override
+    public List<ProductSecurity> selectProductSecurityListNotPass(ProductSecurity product) {
+        return productSercurityMapper.selectProductSecurityListNotPass(product);
+    }
+
+    @Override
+    public List<ProductSecurity> selectProductSecurityListPass(ProductSecurity product) {
+        return productSercurityMapper.selectProductSecurityListPass(product);
+    }
+
+    @Override
+    public Integer updateStatus(Long id, String status) {
+        ProductSecurity productSecurity = productSercurityMapper.selectProductSecurityById(id);
+        productSecurity.setRectificationStatus(status);
+        return productSercurityMapper.updateProductSecurity(productSecurity);
+    }
 }

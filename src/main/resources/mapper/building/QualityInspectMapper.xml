@@ -68,6 +68,20 @@
         </if>
     </select>
 
+    <select id="selectQualityInspectListNotPass" parameterType="QualityInspect" resultMap="QualityInspectResult">
+        <include refid="selectQualityInspectVo"/> where 1=1 and product_result != '2'
+        <if test="productName != null and productName != ''">
+            AND u.product_name like concat('%', #{productName}, '%')
+        </if>
+    </select>
+
+    <select id="selectQualityInspectListPass" parameterType="QualityInspect" resultMap="QualityInspectResult">
+        <include refid="selectQualityInspectVo"/> where 1=1 and product_result = '2'
+        <if test="productName != null and productName != ''">
+            AND u.product_name like concat('%', #{productName}, '%')
+        </if>
+    </select>
+
     <delete id="deleteQualityInspectById" parameterType="Long">
         delete from <include refid="tableName" /> where id = #{id}
     </delete>

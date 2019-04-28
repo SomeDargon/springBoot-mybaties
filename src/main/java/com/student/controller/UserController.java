@@ -184,4 +184,12 @@ public class UserController extends BaseController {
         }
         return uniqueFlag;
     }
+
+    @Log(title = "用户管理", action = BusinessType.SAVE)
+    @PostMapping("/registry")
+    @Transactional(rollbackFor = Exception.class)
+    @ResponseBody
+    public AjaxResult registry(User user) {
+        return userService.saveUser(user) > 0 ? success() : error();
+    }
 }

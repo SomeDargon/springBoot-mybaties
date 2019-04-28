@@ -38,6 +38,9 @@ public interface QualityInspectService {
      */
     List<QualityInspect> selectQualityInspectList(QualityInspect qualityInspect);
 
+    List<QualityInspect> selectQualityInspectListNotPass(QualityInspect qualityInspect);
+    List<QualityInspect> selectQualityInspectListPass(QualityInspect qualityInspect);
+
     /**
      * 查询id
      *
@@ -45,4 +48,6 @@ public interface QualityInspectService {
      * @return
      */
     QualityInspect selectQualityInspectById(Long id);
+
+    int updateStatus(Long id, String status);
 }

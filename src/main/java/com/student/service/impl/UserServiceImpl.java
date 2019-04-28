@@ -309,4 +309,18 @@ public class UserServiceImpl implements UserService {
         }
         return idsStr.toString();
     }
+
+    @Override
+    public int registryUser(User user) {
+        user.setDeptId(100L);
+        user.randomSalt();
+        user.setPassword(passwordService.encryptPassword(user.getLoginName(), user.getPassword(), user.getSalt()));
+        // 新增用户信息
+        userMapper.insertUser(user);
+        // 新增用户岗位关联
+        insertUserPost(user);
+        // 新增用户与角色管理
+        insertUserRole(user);
+        return 0;
+    }
 }

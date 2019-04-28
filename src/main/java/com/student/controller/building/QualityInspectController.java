@@ -37,7 +37,15 @@ public class QualityInspectController extends BaseController {
     @ResponseBody
     public TableDataInfo list(QualityInspect qualityInspect) {
         startPage();
-        List<QualityInspect> list = qualityInspectService.selectQualityInspectList(qualityInspect);
+        List<QualityInspect> list = qualityInspectService.selectQualityInspectListNotPass(qualityInspect);
+        return getDataTable(list);
+    }
+
+    @PostMapping("/notList")
+    @ResponseBody
+    public TableDataInfo notList(QualityInspect qualityInspect) {
+        startPage();
+        List<QualityInspect> list = qualityInspectService.selectQualityInspectListPass(qualityInspect);
         return getDataTable(list);
     }
 
@@ -76,5 +84,13 @@ public class QualityInspectController extends BaseController {
         } catch (Exception e) {
             return error(e.getMessage());
         }
+    }
+
+    @Log(title = "修改状态", action = BusinessType.SAVE)
+    @PostMapping("/updateStatus")
+    @Transactional(rollbackFor = Exception.class)
+    @ResponseBody
+    public AjaxResult updateStatus(Long id, String status) {
+        return qualityInspectService.updateStatus(id, status)==1?success():error();
     }
 }
