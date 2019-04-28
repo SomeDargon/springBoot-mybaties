@@ -1,8 +1,6 @@
 package com.student.controller;
 
 
-import com.student.annotation.Log;
-import com.student.constant.BusinessType;
 import com.student.entity.User;
 import com.student.service.UserService;
 import com.student.util.ServletUtils;
@@ -14,7 +12,6 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
