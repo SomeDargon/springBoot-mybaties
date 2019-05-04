@@ -18,6 +18,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 项目信息
@@ -102,5 +103,23 @@ public class ProductController extends BaseController {
             uniqueFlag = productService.checkProductNumber(product);
         }
         return uniqueFlag;
+    }
+
+    /**
+     * 选择部门树
+     */
+    @GetMapping("/productTree")
+    public String productTree( Model model) {
+        return prefix + "/productTree";
+    }
+
+    /**
+     * 加载部门列表树
+     */
+    @GetMapping("/treeData")
+    @ResponseBody
+    public List<Map<String, Object>> treeData() {
+        List<Map<String, Object>> tree = productService.selectProductTree();
+        return tree;
     }
 }

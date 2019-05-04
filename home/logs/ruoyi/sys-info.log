@@ -1,26 +1,31 @@
-21:28:04.411 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on liaoxiaolong-PC with PID 6942 (/home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties/target/classes started by liaoxiaolong in /home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties)
-21:28:04.417 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
-21:28:05.659 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
-21:28:05.659 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
-21:28:05.904 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
-21:28:06.215 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
-21:28:06.830 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-8080"]
-21:28:06.836 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
-21:28:06.836 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
-21:28:06.839 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-21:28:06.885 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
-21:28:07.217 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+22:02:37.907 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on liaoxiaolong-PC with PID 9981 (/home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties/target/classes started by liaoxiaolong in /home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties)
+22:02:37.914 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+22:02:39.927 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+22:02:39.928 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+22:02:40.286 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+22:02:59.151 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on liaoxiaolong-PC with PID 10175 (/home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties/target/classes started by liaoxiaolong in /home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties)
+22:02:59.157 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+22:03:00.670 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+22:03:00.671 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
+22:03:00.902 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
+22:03:01.400 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
+22:03:02.116 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-8080"]
+22:03:02.125 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+22:03:02.125 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
+22:03:02.128 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22:03:02.189 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+22:03:02.530 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-21:28:07.257 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
-21:28:07.258 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
-21:28:07.287 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-21:28:07.375 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:28:08.162 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1208] - Using default implementation for ThreadExecutor
-21:28:08.176 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-21:28:08.176 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.0 created.
-21:28:08.177 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
-21:28:08.177 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+22:03:02.581 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
+22:03:02.583 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+22:03:02.617 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22:03:02.716 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+22:03:03.630 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1208] - Using default implementation for ThreadExecutor
+22:03:03.641 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+22:03:03.642 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.0 created.
+22:03:03.643 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+22:03:03.643 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -28,357 +33,36 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-21:28:08.177 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1362] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-21:28:08.177 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1366] - Quartz scheduler version: 2.3.0
-21:28:08.178 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2287] - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@32d0ccd5
-21:28:09.271 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-21:28:10.223 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
-21:28:10.233 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
-21:28:10.263 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
-21:28:10.351 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-21:28:10.358 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-8080"]
-21:28:10.362 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
-21:28:10.375 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 6.344 seconds (JVM running for 7.133)
-21:28:12.857 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
-21:28:12.886 [http-nio-8080-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
-21:28:12.888 [http-nio-8080-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
-21:28:13.886 [pool-2-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
-21:28:13.895 [pool-2-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
-21:28:26.428 [http-nio-8080-exec-2] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
-21:28:33.204 [http-nio-8080-exec-6] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Logout][退出成功]
-21:29:35.821 [http-nio-8080-exec-5] INFO  sys-user - [log,32] - [127.0.0.1]null[admin][Success][登录成功]
-21:37:28.173 [Thread-24] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-21:37:28.177 [Thread-24] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-21:37:28.177 [Thread-24] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-21:37:28.177 [Thread-24] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-21:37:28.182 [Thread-24] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
-21:37:49.249 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [buildDefaultMergedContextConfiguration,308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.student.StudentMybatisApplicationTests], using SpringBootContextLoader
-21:37:49.253 [main] INFO  o.s.t.c.s.AbstractContextLoader - [generateDefaultLocations,264] - Could not detect default resource locations for test class [com.student.StudentMybatisApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-21:37:49.254 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - [detectDefaultConfigurationClasses,83] - Could not detect default configuration classes for test class [com.student.StudentMybatisApplicationTests]: StudentMybatisApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-21:37:49.336 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [getOrFindConfigurationClasses,244] - Found @SpringBootConfiguration com.student.Application for test class com.student.StudentMybatisApplicationTests
-21:37:49.420 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [getDefaultTestExecutionListenerClassNames,248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-21:37:49.436 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [getTestExecutionListeners,177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2ed2d9cb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@d5b810e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@43dac38f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@342c38f8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@c88a337, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5d0a1059, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@485966cc, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1de76cc7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@54bff557, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@593aaf41, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5a56cdac, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7c711375]
-21:37:49.752 [main] INFO  c.s.StudentMybatisApplicationTests - [logStarting,50] - Starting StudentMybatisApplicationTests on liaoxiaolong-PC with PID 7561 (started by liaoxiaolong in /home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties)
-21:37:49.753 [main] INFO  c.s.StudentMybatisApplicationTests - [logStartupProfileInfo,663] - The following profiles are active: dev
-21:37:51.440 [main] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
-21:37:51.441 [main] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
-21:37:51.773 [main] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
-21:37:52.300 [main] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
-21:37:53.068 [main] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-21:37:53.142 [main] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
-21:37:53.143 [main] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
-21:37:53.185 [main] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-21:37:53.309 [main] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:37:54.628 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1208] - Using default implementation for ThreadExecutor
-21:37:54.655 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-21:37:54.656 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.0 created.
-21:37:54.657 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
-21:37:54.658 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-21:37:54.659 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1362] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-21:37:54.659 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1366] - Quartz scheduler version: 2.3.0
-21:37:54.659 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2287] - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@22aefae0
-21:37:55.941 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-21:37:57.153 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
-21:37:57.176 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
-21:37:57.220 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
-21:37:57.362 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-21:37:57.375 [main] INFO  c.s.StudentMybatisApplicationTests - [logStarted,59] - Started StudentMybatisApplicationTests in 7.91 seconds (JVM running for 8.589)
-21:37:57.579 [Thread-5] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-21:37:57.593 [Thread-5] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-21:37:57.594 [Thread-5] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-21:37:57.594 [Thread-5] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-21:37:57.600 [Thread-5] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
-21:38:15.217 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on liaoxiaolong-PC with PID 7700 (/home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties/target/classes started by liaoxiaolong in /home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties)
-21:38:15.220 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
-21:38:16.556 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
-21:38:16.557 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
-21:38:16.833 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
-21:38:17.183 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
-21:38:17.893 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-8080"]
-21:38:17.902 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
-21:38:17.902 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
-21:38:17.906 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-21:38:17.966 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
-21:38:18.311 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-21:38:18.362 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
-21:38:18.363 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
-21:38:18.394 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-21:38:18.498 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:38:19.443 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1208] - Using default implementation for ThreadExecutor
-21:38:19.452 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-21:38:19.453 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.0 created.
-21:38:19.453 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
-21:38:19.454 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-21:38:19.454 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1362] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-21:38:19.454 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1366] - Quartz scheduler version: 2.3.0
-21:38:19.454 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2287] - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@49dfae40
-21:38:20.734 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-21:38:21.838 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
-21:38:21.850 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
-21:38:21.884 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
-21:38:21.987 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-21:38:21.994 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-8080"]
-21:38:22.000 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
-21:38:22.013 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 7.201 seconds (JVM running for 7.993)
-21:38:39.761 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
-21:38:39.797 [http-nio-8080-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
-21:38:39.799 [http-nio-8080-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
-21:38:40.798 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
-21:38:40.845 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. [1] sessions were stopped.
-21:38:46.604 [http-nio-8080-exec-8] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
-21:39:54.313 [Thread-26] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-21:39:54.316 [Thread-26] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-21:39:54.316 [Thread-26] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-21:39:54.316 [Thread-26] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-21:39:54.319 [Thread-26] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
-21:39:58.561 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on liaoxiaolong-PC with PID 7962 (/home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties/target/classes started by liaoxiaolong in /home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties)
-21:39:58.567 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
-21:39:59.831 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
-21:39:59.832 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
-21:40:00.127 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
-21:40:00.508 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
-21:40:01.243 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-8080"]
-21:40:01.251 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
-21:40:01.251 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
-21:40:01.254 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-21:40:01.307 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
-21:40:01.656 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-21:40:01.702 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
-21:40:01.704 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
-21:40:01.731 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-21:40:01.838 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:40:02.754 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1208] - Using default implementation for ThreadExecutor
-21:40:02.762 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-21:40:02.762 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.0 created.
-21:40:02.762 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
-21:40:02.763 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-21:40:02.763 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1362] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-21:40:02.763 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1366] - Quartz scheduler version: 2.3.0
-21:40:02.763 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2287] - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@ecf29ab
-21:40:04.054 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-21:40:05.146 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
-21:40:05.161 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
-21:40:05.195 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
-21:40:05.293 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-21:40:05.303 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-8080"]
-21:40:05.307 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
-21:40:05.321 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 7.092 seconds (JVM running for 7.707)
-21:40:08.218 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
-21:40:08.243 [http-nio-8080-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
-21:40:08.244 [http-nio-8080-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
-21:40:09.243 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
-21:40:09.297 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. [1] sessions were stopped.
-21:40:16.586 [http-nio-8080-exec-9] INFO  sys-user - [log,32] - [127.0.0.1]null[admin][Success][登录成功]
-21:40:37.047 [http-nio-8080-exec-7] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Logout][退出成功]
-21:40:43.751 [http-nio-8080-exec-2] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
-21:40:45.887 [http-nio-8080-exec-9] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Logout][退出成功]
-21:42:19.943 [http-nio-8080-exec-6] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin1][Error][用户不存在/密码错误]
-21:42:30.945 [http-nio-8080-exec-1] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin123][Success][登录成功]
-21:42:47.134 [http-nio-8080-exec-8] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin123][Logout][退出成功]
-21:45:01.571 [http-nio-8080-exec-1] INFO  sys-user - [log,32] - [127.0.0.1]null[admin][Success][登录成功]
-21:50:08.444 [Thread-25] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-21:50:08.446 [Thread-25] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-21:50:08.446 [Thread-25] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-21:50:08.446 [Thread-25] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-21:50:08.449 [Thread-25] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
-21:50:12.197 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on liaoxiaolong-PC with PID 8800 (/home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties/target/classes started by liaoxiaolong in /home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties)
-21:50:12.201 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
-21:50:13.487 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
-21:50:13.488 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
-21:50:13.714 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
-21:50:39.008 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on liaoxiaolong-PC with PID 9006 (/home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties/target/classes started by liaoxiaolong in /home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties)
-21:50:39.011 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
-21:50:40.097 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
-21:50:40.098 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
-21:50:40.331 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
-21:50:40.614 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
-21:50:41.177 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-8080"]
-21:50:41.186 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
-21:50:41.186 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
-21:50:41.189 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-21:50:41.236 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
-21:50:41.548 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-21:50:41.588 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
-21:50:41.589 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
-21:50:41.612 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-21:50:41.698 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:50:42.493 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1208] - Using default implementation for ThreadExecutor
-21:50:42.500 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-21:50:42.500 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.0 created.
-21:50:42.501 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
-21:50:42.501 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-21:50:42.501 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1362] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-21:50:42.501 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1366] - Quartz scheduler version: 2.3.0
-21:50:42.502 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2287] - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@3a9fd131
-21:50:43.534 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-21:50:44.434 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
-21:50:44.444 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
-21:50:44.474 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
-21:50:44.558 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-21:50:44.565 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-8080"]
-21:50:44.569 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
-21:50:44.580 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 5.88 seconds (JVM running for 6.444)
-21:51:12.170 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
-21:51:12.199 [http-nio-8080-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
-21:51:12.201 [http-nio-8080-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
-21:51:13.200 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
-21:51:13.248 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. [1] sessions were stopped.
-21:51:19.123 [http-nio-8080-exec-10] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Error][验证码错误]
-21:51:22.177 [http-nio-8080-exec-1] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
-21:52:22.544 [Thread-23] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-21:52:22.548 [Thread-23] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-21:52:22.548 [Thread-23] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-21:52:22.548 [Thread-23] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-21:52:22.553 [Thread-23] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
-21:56:04.253 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on liaoxiaolong-PC with PID 10029 (/home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties/target/classes started by liaoxiaolong in /home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties)
-21:56:04.256 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
-21:56:05.426 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
-21:56:05.427 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
-21:56:05.656 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
-21:56:05.982 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
-21:56:06.599 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-8080"]
-21:56:06.604 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
-21:56:06.605 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
-21:56:06.607 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-21:56:06.657 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
-21:56:06.969 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-21:56:07.023 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
-21:56:07.024 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
-21:56:07.048 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-21:56:07.134 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:56:07.903 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1208] - Using default implementation for ThreadExecutor
-21:56:07.914 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-21:56:07.914 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.0 created.
-21:56:07.915 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
-21:56:07.915 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-21:56:07.915 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1362] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-21:56:07.915 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1366] - Quartz scheduler version: 2.3.0
-21:56:07.916 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2287] - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@18679ebc
-21:56:09.058 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-21:56:10.026 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
-21:56:10.036 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
-21:56:10.066 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
-21:56:10.150 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-21:56:10.157 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-8080"]
-21:56:10.161 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
-21:56:10.174 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 6.175 seconds (JVM running for 7.559)
-21:56:30.199 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
-21:56:30.227 [http-nio-8080-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
-21:56:30.228 [http-nio-8080-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
-21:56:31.228 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
-21:56:31.272 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. [1] sessions were stopped.
-21:56:42.990 [http-nio-8080-exec-2] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
-21:58:31.281 [http-nio-8080-exec-8] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Logout][退出成功]
-21:59:35.337 [http-nio-8080-exec-8] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin123][Success][登录成功]
-22:04:19.317 [Thread-23] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-22:04:19.320 [Thread-23] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-22:04:19.320 [Thread-23] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-22:04:19.320 [Thread-23] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-22:04:19.324 [Thread-23] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
-22:04:23.366 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on liaoxiaolong-PC with PID 11102 (/home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties/target/classes started by liaoxiaolong in /home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties)
-22:04:23.369 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
-22:04:24.530 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,158] - Cache with name 'com.student.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
-22:04:24.530 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,165] - Added EhCache named [com.student.shiro.UserRealm.authorizationCache]
-22:04:24.757 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,928] - {dataSource-1} inited
-22:04:25.040 [restartedMain] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [loginRecordCache]
-22:04:25.616 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-8080"]
-22:04:25.622 [restartedMain] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
-22:04:25.622 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.31
-22:04:25.625 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-22:04:25.671 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
-22:04:25.985 [restartedMain] INFO  o.h.j.i.u.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-22:04:26.026 [restartedMain] INFO  o.hibernate.Version - [logVersion,45] - HHH000412: Hibernate Core {5.2.17.Final}
-22:04:26.028 [restartedMain] INFO  o.h.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
-22:04:26.052 [restartedMain] INFO  o.h.a.common.Version - [<clinit>,66] - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-22:04:26.134 [restartedMain] INFO  o.h.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-22:04:26.885 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1208] - Using default implementation for ThreadExecutor
-22:04:26.893 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-22:04:26.894 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.0 created.
-22:04:26.894 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
-22:04:26.895 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-22:04:26.895 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1362] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-22:04:26.895 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1366] - Quartz scheduler version: 2.3.0
-22:04:26.895 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2287] - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@2c4dfac8
-22:04:27.946 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-22:04:28.867 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
-22:04:28.877 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
-22:04:28.907 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
-22:04:28.990 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-22:04:28.997 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-8080"]
-22:04:29.001 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
-22:04:29.013 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 6.041 seconds (JVM running for 6.783)
-22:04:31.438 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
-22:04:31.465 [http-nio-8080-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
-22:04:31.467 [http-nio-8080-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
-22:04:32.466 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
-22:04:32.495 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. [1] sessions were stopped.
-22:04:39.361 [http-nio-8080-exec-10] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
-22:04:43.919 [http-nio-8080-exec-6] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Logout][退出成功]
-22:04:52.559 [http-nio-8080-exec-8] INFO  sys-user - [log,32] - [127.0.0.1]null[admin123][Success][登录成功]
-22:14:32.466 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
-22:14:32.493 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. [1] sessions were stopped.
-22:24:32.466 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
-22:24:32.514 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. [1] sessions were stopped.
-22:25:05.748 [Thread-19] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-22:25:05.750 [Thread-19] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-22:25:05.751 [Thread-19] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-22:25:05.751 [Thread-19] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-22:25:05.756 [Thread-19] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed
-22:25:06.109 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on liaoxiaolong-PC with PID 11102 (/home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties/target/classes started by liaoxiaolong in /home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties)
-22:25:06.109 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
-22:25:11.113 [restartedMain] INFO  c.s.Application - [logStarting,50] - Starting Application on liaoxiaolong-PC with PID 11102 (/home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties/target/classes started by liaoxiaolong in /home/liaoxiaolong/Product/springboot-mybatis/springBoot-mybaties)
-22:25:11.114 [restartedMain] INFO  c.s.Application - [logStartupProfileInfo,663] - The following profiles are active: dev
+22:03:03.643 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1362] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+22:03:03.643 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1366] - Quartz scheduler version: 2.3.0
+22:03:03.644 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2287] - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@35ade02b
+22:03:05.010 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+22:03:06.099 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,147] - Context refreshed
+22:03:06.112 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,150] - Found 1 custom documentation plugin(s)
+22:03:06.153 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+22:03:06.278 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+22:03:06.292 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-8080"]
+22:03:06.299 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+22:03:06.321 [restartedMain] INFO  c.s.Application - [logStarted,59] - Started Application in 7.714 seconds (JVM running for 8.557)
+22:03:26.563 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+22:03:26.590 [http-nio-8080-exec-1] INFO  o.a.s.s.m.AbstractValidatingSessionManager - [enableSessionValidation,233] - Enabling session validation scheduler...
+22:03:26.591 [http-nio-8080-exec-1] INFO  o.a.s.c.e.EhCacheManager - [getCache,169] - Using existing EHCache named [shiro-activeSessionCache]
+22:03:27.591 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+22:03:27.625 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+22:03:38.960 [http-nio-8080-exec-5] INFO  sys-user - [log,32] - [127.0.0.1]null[admin123][Error][密码输入错误1次，admin]
+22:03:56.602 [http-nio-8080-exec-7] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin123][Success][登录成功]
+22:13:27.591 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+22:13:27.627 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. [1] sessions were stopped.
+22:23:27.590 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+22:23:27.597 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+22:28:50.588 [http-nio-8080-exec-5] INFO  sys-user - [log,32] - [127.0.0.1]null[admin123][Logout][退出成功]
+22:33:27.590 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+22:33:27.596 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+22:43:27.590 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,73] - invalidation sessions...
+22:43:27.595 [pool-1-thread-1] INFO  c.s.w.s.OnlineWebSessionManager - [validateSessions,118] - Finished invalidation session. No sessions were stopped.
+22:43:45.943 [http-nio-8080-exec-1] INFO  sys-user - [log,32] - [127.0.0.1]XX 内网IP[admin][Success][登录成功]
+22:51:32.319 [Thread-27] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+22:51:32.322 [Thread-27] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+22:51:32.322 [Thread-27] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+22:51:32.322 [Thread-27] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+22:51:32.328 [Thread-27] INFO  c.a.d.p.DruidDataSource - [close,1823] - {dataSource-1} closed

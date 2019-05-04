@@ -72,6 +72,11 @@
         		$.operate.save(prefix + "/save", $('#form-menu-add').serialize());
         	}
         });
+        /*项目*/
+        function selectDeptTree() {
+            var url = ctx + "building/product/productTree";
+            $.modal.open("选择项目", url, '380', '380');
+        }
 
     </script>
 </body>

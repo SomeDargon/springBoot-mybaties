@@ -34,6 +34,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<sql id="selectProductVo">
         select t.id, product_name, product_abbreviation, t.product_number, t.product_type, t.product_status, t.start_time, t.end_time, t.product_label, t.product_money, t.product_area, t.product_length, t.product_company, t.product_first_party, t.province, t.city, t.area, t.specific_address, t.address, t.remark, t.create_by, t.create_time, t.update_by, t.update_time from sys_building_product t
     </sql>
+	<select id="selectProductAll"  resultMap="ProductResult">
+		<include refid="selectProductVo"/>
+	</select>
 
 
 	<select id="checkProductNumberUnique" parameterType="String" resultMap="ProductResult">

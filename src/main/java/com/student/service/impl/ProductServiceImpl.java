@@ -2,6 +2,7 @@ package com.student.service.impl;
 
 import com.student.constant.UserConstants;
 import com.student.dao.mapper.building.ProductMapper;
+import com.student.entity.Dept;
 import com.student.entity.Product;
 import com.student.service.ProductService;
 import com.student.support.Convert;
@@ -9,7 +10,10 @@ import com.student.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -63,5 +67,20 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Product selectProductById(Long id) {
         return productMapper.selectProductById(id);
+    }
+
+    @Override
+    public List<Map<String, Object>> selectProductTree() {
+        List<Map<String, Object>> trees = new ArrayList<Map<String, Object>>();
+        List<Product> products = productMapper.selectProductAll();
+        for (Product product : products) {
+                Map<String, Object> deptMap = new HashMap<String, Object>();
+                deptMap.put("id", product.getId());
+                deptMap.put("pId", "");
+                deptMap.put("name", product.getProductName());
+                deptMap.put("title", product.getProductName());
+                trees.add(deptMap);
+        }
+        return trees;
     }
 }

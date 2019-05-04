@@ -63,4 +63,6 @@ public interface ProductMapper {
      */
     void deleteProductByIds(Long[] ids);
 
+    List<Product> selectProductAll();
+
 }
